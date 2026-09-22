@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Parties on Ice — Frostiva</title>
+  <meta name="description" content="Host unforgettable birthday parties and celebrations on ice at Frostiva. Private party suites, skate hosts, and delicious catering.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="header-wrapper">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Frostiva Home">
+        <svg class="frostiva-logo-svg" dir="ltr" viewBox="0 0 240 56" fill="none" style="height: 42px; width: auto;">
+          <g transform="translate(6, 4)">
+            <polygon points="24,4 40,14 40,34 24,44 8,34 8,14" stroke="#4FA9D8" stroke-width="2.5" fill="rgba(79, 169, 216, 0.1)"/>
+            <line x1="24" y1="8" x2="24" y2="40" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="16" x2="38" y2="32" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="32" x2="38" y2="16" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+            <path d="M4 38 Q24 48 44 38 L42 41 Q24 51 6 41 Z" fill="#DDF4FF" stroke="#4FA9D8" stroke-width="0.8"/>
+            <circle cx="24" cy="24" r="3.5" fill="#FF6B5A" />
+          </g>
+          <text x="62" y="32" font-family="'Outfit', sans-serif" font-size="24" font-weight="800" letter-spacing="1.5" class="brand-text-title" fill="currentColor" text-anchor="start" direction="ltr">
+            FROST<tspan fill="#4FA9D8">IVA</tspan>
+          </text>
+          <text x="63" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" letter-spacing="2" fill="#64748B" text-anchor="start" direction="ltr">
+            SKATE • GLIDE • CELEBRATE
+          </text>
+        </svg>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <div class="nav-dropdown">
+          <a href="index.html" class="nav-link">
+            Home <i class="fas fa-chevron-down"></i>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="nav-dropdown-item">
+              <span>Home 1</span>
+              <span class="badge badge-ice">Classic</span>
+            </a>
+            <a href="home2.html" class="nav-dropdown-item">
+              <span>Home 2</span>
+              <span class="badge badge-coral">Arena</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="sessions.html" class="nav-link">Public Sessions</a>
+        <a href="lessons.html" class="nav-link">Lessons &amp; Leagues</a>
+        <a href="pricing.html" class="nav-link">Pricing &amp; Passes</a>
+        <a href="parties.html" class="nav-link active">Birthday Parties</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+        <button class="icon-btn rtl-toggle-btn" aria-label="Toggle RTL" style="width: auto; padding: 0 12px; font-weight: 700; font-size: 0.8rem;">
+          <span>RTL</span>
+        </button>
+        <a href="login.html" class="btn btn-primary btn-sm"><i class="fas fa-user"></i> Login</a>
+        <button class="hamburger-btn" aria-label="Open Navigation Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu-overlay">
+    <div class="mobile-menu">
+      <div class="mobile-menu-header">
+        <a href="index.html" class="nav-brand" aria-label="Frostiva Home">
+          <svg class="frostiva-logo-svg" dir="ltr" viewBox="0 0 240 56" fill="none" style="height: 38px; width: auto;">
+            <g transform="translate(6, 4)">
+              <polygon points="24,4 40,14 40,34 24,44 8,34 8,14" stroke="#4FA9D8" stroke-width="2.5" fill="rgba(79, 169, 216, 0.1)"/>
+              <line x1="24" y1="8" x2="24" y2="40" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="16" x2="38" y2="32" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="32" x2="38" y2="16" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <path d="M4 38 Q24 48 44 38 L42 41 Q24 51 6 41 Z" fill="#DDF4FF" stroke="#4FA9D8" stroke-width="0.8"/>
+              <circle cx="24" cy="24" r="3.5" fill="#FF6B5A" />
+            </g>
+            <text x="62" y="32" font-family="'Outfit', sans-serif" font-size="24" font-weight="800" letter-spacing="1.5" class="brand-text-title" fill="currentColor" text-anchor="start" direction="ltr">
+              FROST<tspan fill="#4FA9D8">IVA</tspan>
+            </text>
+            <text x="63" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" letter-spacing="2" fill="#64748B" text-anchor="start" direction="ltr">
+              SKATE • GLIDE • CELEBRATE
+            </text>
+          </svg>
+        </a>
+        <button class="icon-btn mobile-close-btn" aria-label="Close Navigation Menu"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="mobile-nav-links">
+        <div class="mobile-dropdown">
+          <div class="mobile-dropdown-header">
+            <span>Home Variations</span>
+            <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i>
+          </div>
+          <div class="mobile-dropdown-menu">
+            <a href="index.html" class="nav-link">Home 1 — Classic</a>
+            <a href="home2.html" class="nav-link">Home 2 — Arena</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="sessions.html" class="nav-link">Public Sessions</a>
+        <a href="lessons.html" class="nav-link">Lessons &amp; Leagues</a>
+        <a href="pricing.html" class="nav-link">Pricing &amp; Passes</a>
+        <a href="parties.html" class="nav-link active">Birthday Parties</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </div>
+      <div class="mobile-actions">
+        <div class="mobile-toggles">
+          <button class="icon-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+          <button class="btn btn-outline btn-sm rtl-toggle-btn" style="flex: 1;"><span>RTL</span></button>
+        </div>
+        <a href="login.html" class="btn btn-primary" style="width: 100%;"><i class="fas fa-user"></i> Login / Register</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==================== SECTION 1 — INNER HERO ==================== -->
+    <section class="inner-hero" style="background-image: url('assets/images/hero-parties.jpg');">
+      <div class="inner-hero-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size: 0.65rem;"></i> <span>Birthday Parties</span>
+        </div>
+        <h1 class="inner-hero-title">Celebrate on the Ice</h1>
+        <p class="inner-hero-desc">
+          Unforgettable, hassle-free birthday parties complete with ice skating, private party suites, delicious hot food, and dedicated party hosts.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 2 — PARTY PACKAGES ==================== -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fas fa-birthday-cake"></i> All-Inclusive Fun</span>
+          <h2 class="section-title">Party Packages</h2>
+          <p class="section-desc">Choose from three tailored packages designed to give your birthday child and their friends an unforgettable day.</p>
+        </div>
+
+        <div class="party-packages-grid">
+          <!-- Package 1: Silver Glide -->
+          <article class="party-card">
+            <div class="party-card-img">
+              <img src="assets/images/party-silver.jpg" alt="Silver Glide Party Package" loading="lazy">
+            </div>
+            <div class="party-card-body">
+              <span class="badge badge-ice" style="align-self: flex-start; margin-bottom: 8px;">Up to 10 Skaters</span>
+              <h3 class="party-card-title">Silver Glide Party</h3>
+              <div class="party-card-price">$280</div>
+              <ul class="party-feature-list">
+                <li><i class="fas fa-check" style="color: var(--primary-ice);"></i> 10 admission tickets &amp; skate rentals</li>
+                <li><i class="fas fa-check" style="color: var(--primary-ice);"></i> 1 hour in decorated private party room</li>
+                <li><i class="fas fa-check" style="color: var(--primary-ice);"></i> 2 large artisan cheese/pepperoni pizzas</li>
+                <li><i class="fas fa-check" style="color: var(--primary-ice);"></i> Unlimited juice &amp; soft drinks</li>
+                <li><i class="fas fa-check" style="color: var(--primary-ice);"></i> Free skate pass for the birthday star</li>
+              </ul>
+              <a href="#partyInquiry" class="btn btn-outline">Book Silver Package</a>
+            </div>
+          </article>
+
+          <!-- Package 2: Gold Frost (Popular) -->
+          <article class="party-card" style="border-color: var(--primary-ice); box-shadow: 0 16px 40px rgba(79, 169, 216, 0.2);">
+            <div class="party-card-img">
+              <img src="assets/images/party-gold.jpg" alt="Gold Frost Party Package" loading="lazy">
+            </div>
+            <div class="party-card-body">
+              <span class="badge badge-coral" style="align-self: flex-start; margin-bottom: 8px;">Most Popular &bull; 15 Skaters</span>
+              <h3 class="party-card-title">Gold Frost Party</h3>
+              <div class="party-card-price" style="color: var(--primary-ice);">$390</div>
+              <ul class="party-feature-list">
+                <li><i class="fas fa-check" style="color: var(--primary-ice);"></i> 15 admission tickets &amp; skate rentals</li>
+                <li><i class="fas fa-check" style="color: var(--primary-ice);"></i> 1.5 hours in panoramic ice-view suite</li>
+                <li><i class="fas fa-check" style="color: var(--primary-ice);"></i> 3 large pizzas + waffle fries basket</li>
+                <li><i class="fas fa-check" style="color: var(--primary-ice);"></i> Dedicated on-ice party host &amp; games</li>
+                <li><i class="fas fa-check" style="color: var(--primary-ice);"></i> Gourmet hot cocoa bar with toppings</li>
+              </ul>
+              <a href="#partyInquiry" class="btn btn-coral">Book Gold Package</a>
+            </div>
+          </article>
+
+          <!-- Package 3: Arctic VIP Party -->
+          <article class="party-card">
+            <div class="party-card-img">
+              <img src="assets/images/party-vip.jpg" alt="Arctic VIP Party Package" loading="lazy">
+            </div>
+            <div class="party-card-body">
+              <span class="badge badge-ice" style="align-self: flex-start; margin-bottom: 8px;">VIP &bull; Up to 25 Skaters</span>
+              <h3 class="party-card-title">Arctic VIP Party</h3>
+              <div class="party-card-price">$590</div>
+              <ul class="party-feature-list">
+                <li><i class="fas fa-check" style="color: var(--primary-ice);"></i> 25 admission tickets &amp; premium rentals</li>
+                <li><i class="fas fa-check" style="color: var(--primary-ice);"></i> 2 hours in executive mezzanine suite</li>
+                <li><i class="fas fa-check" style="color: var(--primary-ice);"></i> Full custom catering + dessert station</li>
+                <li><i class="fas fa-check" style="color: var(--primary-ice);"></i> 2 dedicated coaches for private ice games</li>
+                <li><i class="fas fa-check" style="color: var(--primary-ice);"></i> Custom snowflake lighting banner &amp; gift bags</li>
+              </ul>
+              <a href="#partyInquiry" class="btn btn-outline">Book VIP Package</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 3 — FOOD & CELEBRATION ADD-ONS ==================== -->
+    <section class="section-pad" style="background: var(--surface-alt);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fas fa-utensils"></i> Delicious Treats</span>
+          <h2 class="section-title">Party Treats &amp; Catering Add-ons</h2>
+          <p class="section-desc">Warm up in our cozy private suites with freshly prepared gourmet refreshments.</p>
+        </div>
+
+        <div class="gear-features-grid">
+          <div class="gear-card">
+            <div class="gear-card-img">
+              <img src="assets/images/party-food.jpg" alt="Gourmet Hot Cocoa Bar" loading="lazy">
+            </div>
+            <div class="gear-card-body">
+              <h3 class="gear-card-title">Alpine Hot Cocoa Station</h3>
+              <p class="gear-card-desc">Belgian hot chocolate with whipped cream, mini marshmallows, crushed peppermint, and chocolate shavings.</p>
+              <span class="badge badge-ice">+$4 / guest</span>
+            </div>
+          </div>
+
+          <div class="gear-card">
+            <div class="gear-card-img">
+              <img src="assets/images/rink-spectator.jpg" alt="Artisan Pizza &amp; Wings" loading="lazy">
+            </div>
+            <div class="gear-card-body">
+              <h3 class="gear-card-title">Stone-Baked Pizza Buffet</h3>
+              <p class="gear-card-desc">Crispy wood-fired sourdough pizzas with artisan mozzarella and optional gluten-free / vegan crusts.</p>
+              <span class="badge badge-coral">+$22 / large pizza</span>
+            </div>
+          </div>
+
+          <div class="gear-card">
+            <div class="gear-card-img">
+              <img src="assets/images/rink-atmosphere.jpg" alt="Cosmic Party Lighting" loading="lazy">
+            </div>
+            <div class="gear-card-body">
+              <h3 class="gear-card-title">Cosmic Glow Upgrade</h3>
+              <p class="gear-card-desc">Add UV blacklight bracelets, LED glowing party necklaces, and personalized scoreboard message.</p>
+              <span class="badge badge-ice">+$50 / party</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 4 — PARTY FLOW & EXPERIENCE ==================== -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fas fa-stream"></i> Stress-Free Planning</span>
+          <h2 class="section-title">How Your Party Unfolds</h2>
+          <p class="section-desc">Our dedicated party coordinators handle setup, skate fitting, and cleanup so parents can relax and enjoy.</p>
+        </div>
+
+        <div class="programs-grid">
+          <div class="slot-card" style="text-align: center;">
+            <div class="dash-stat-icon-wrap" style="margin: 0 auto 12px; background: var(--badge-bg); color: var(--primary-ice);">
+              <i class="fas fa-door-open"></i>
+            </div>
+            <h3 class="session-title">1. VIP Arrival &amp; Fit</h3>
+            <p class="session-text">Arrive 15 minutes before ice time. Your party host greets guests and assists with fast-track skate fitting.</p>
+          </div>
+
+          <div class="slot-card" style="text-align: center;">
+            <div class="dash-stat-icon-wrap" style="margin: 0 auto 12px; background: rgba(255, 107, 90, 0.15); color: var(--accent-coral);">
+              <i class="fas fa-skating"></i>
+            </div>
+            <h3 class="session-title">2. On-Ice Excitement</h3>
+            <p class="session-text">Enjoy 75–90 minutes of supervised ice skating with fun games, music, and balance aids for young skaters.</p>
+          </div>
+
+          <div class="slot-card" style="text-align: center;">
+            <div class="dash-stat-icon-wrap" style="margin: 0 auto 12px; background: var(--badge-bg); color: var(--primary-ice);">
+              <i class="fas fa-pizza-slice"></i>
+            </div>
+            <h3 class="session-title">3. Private Suite Feast</h3>
+            <p class="session-text">Gather in your private, warm decorated party room for hot pizza, drinks, and cake celebration.</p>
+          </div>
+
+          <div class="slot-card" style="text-align: center;">
+            <div class="dash-stat-icon-wrap" style="margin: 0 auto 12px; background: rgba(255, 107, 90, 0.15); color: var(--accent-coral);">
+              <i class="fas fa-gift"></i>
+            </div>
+            <h3 class="session-title">4. Gifts &amp; Souvenirs</h3>
+            <p class="session-text">Celebrate with gifts and send everyone home with commemorative Frostiva skate passes. Zero cleanup for you!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 5 — INSTANT PARTY INQUIRY CTA ==================== -->
+    <section class="section-pad-sm" id="partyInquiry">
+      <div class="container">
+        <div class="cta-banner-winter" style="text-align: left; padding: 50px 40px;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+            <div>
+              <span class="section-eyebrow" style="background: rgba(79, 169, 216, 0.25); color: #DDF4FF; border: 1px solid rgba(79, 169, 216, 0.4);">
+                <i class="fas fa-calendar-check"></i> Reserve Date
+              </span>
+              <h2 class="cta-title" style="font-size: 2.3rem;">Book Your Ice Party Date</h2>
+              <p class="cta-desc" style="margin-bottom: 20px;">
+                Weekend slots fill quickly! Send your preferred date and guest count, and our party coordinator will confirm within 2 hours.
+              </p>
+              <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.92rem; color: var(--frost-blue);">
+                <div><i class="fas fa-check-circle" style="color: var(--primary-ice); margin-right: 8px;"></i> $50 refundable deposit to hold your slot</div>
+                <div><i class="fas fa-check-circle" style="color: var(--primary-ice); margin-right: 8px;"></i> Free rescheduling up to 7 days prior</div>
+              </div>
+            </div>
+
+            <form class="auth-box" style="margin: 0; max-width: 100%;" onsubmit="event.preventDefault(); alert('Party Inquiry Received! A Frostiva coordinator will contact you shortly.');">
+              <div class="form-group">
+                <label class="form-label">Parent / Organizer Name</label>
+                <input type="text" class="form-control" placeholder="e.g. Jessica Miller" required>
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+                <div class="form-group">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" class="form-control" placeholder="jessica@example.com" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control" placeholder="(555) 000-0000" required>
+                </div>
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+                <div class="form-group">
+                  <label class="form-label">Preferred Date</label>
+                  <input type="date" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Package</label>
+                  <select class="form-control">
+                    <option>Gold Frost ($390)</option>
+                    <option>Silver Glide ($280)</option>
+                    <option>Arctic VIP ($590)</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-coral" style="width: 100%; margin-top: 10px;">
+                <i class="fas fa-paper-plane"></i> Request Party Reservation
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <svg class="frostiva-logo-svg" dir="ltr" viewBox="0 0 240 56" fill="none" style="height: 40px; width: auto;">
+            <g transform="translate(6, 4)">
+              <polygon points="24,4 40,14 40,34 24,44 8,34 8,14" stroke="#4FA9D8" stroke-width="2.5" fill="rgba(79, 169, 216, 0.1)"/>
+              <line x1="24" y1="8" x2="24" y2="40" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="16" x2="38" y2="32" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="32" x2="38" y2="16" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <path d="M4 38 Q24 48 44 38 L42 41 Q24 51 6 41 Z" fill="#DDF4FF" stroke="#4FA9D8" stroke-width="0.8"/>
+              <circle cx="24" cy="24" r="3.5" fill="#FF6B5A" />
+            </g>
+            <text x="62" y="32" font-family="'Outfit', sans-serif" font-size="24" font-weight="800" letter-spacing="1.5" class="brand-text-title" fill="currentColor" text-anchor="start" direction="ltr">
+              FROST<tspan fill="#4FA9D8">IVA</tspan>
+            </text>
+            <text x="63" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" letter-spacing="2" fill="#64748B" text-anchor="start" direction="ltr">
+              SKATE • GLIDE • CELEBRATE
+            </text>
+          </svg>
+          <p>Premier Olympic-standard ice skating facility dedicated to athletic excellence, community recreation, and festive celebrations.</p>
+          <div class="footer-social-row">
+            <a href="#" class="icon-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="icon-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="sessions.html">Public Sessions</a></li>
+            <li><a href="lessons.html">Lessons &amp; Leagues</a></li>
+            <li><a href="pricing.html">Pricing &amp; Passes</a></li>
+            <li><a href="parties.html">Birthday Parties</a></li>
+            <li><a href="dashboard.html">Member Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Programs</h4>
+          <ul class="footer-links">
+            <li><a href="lessons.html">Learn to Skate</a></li>
+            <li><a href="lessons.html">Figure Skating Academy</a></li>
+            <li><a href="lessons.html">Adult Hockey League</a></li>
+            <li><a href="lessons.html">Youth Clinics</a></li>
+            <li><a href="parties.html">Private Rink Rental</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Arena Location &amp; Hours</h4>
+          <ul class="footer-contact-info">
+            <li><i class="fas fa-map-marker-alt"></i> 1420 Glacier Avenue, Arctic Ridge</li>
+            <li><i class="fas fa-phone-alt"></i> (555) 376-7848</li>
+            <li><i class="fas fa-clock"></i> Mon–Sun: 6:00 AM – 11:00 PM</li>
+            <li><i class="fas fa-envelope"></i> hello@frostivaice.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 FROSTIVA Ice Skating Rink. All rights reserved.</p>
+        <p>Skate. Glide. Celebrate.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Scroll back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

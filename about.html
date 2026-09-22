@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Frostiva — Ice Skating Rink | Heritage &amp; Arena Vision</title>
+  <meta name="description" content="Discover the story of Frostiva Ice Skating Rink, our Olympic-grade engineering, sub-zero eco ice systems, and certified coaching staff.">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="header-wrapper">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Frostiva Home">
+        <svg class="frostiva-logo-svg" dir="ltr" viewBox="0 0 240 56" fill="none" style="height: 42px; width: auto;">
+          <g transform="translate(6, 4)">
+            <polygon points="24,4 40,14 40,34 24,44 8,34 8,14" stroke="#4FA9D8" stroke-width="2.5" fill="rgba(79, 169, 216, 0.1)"/>
+            <line x1="24" y1="8" x2="24" y2="40" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="16" x2="38" y2="32" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="32" x2="38" y2="16" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+            <path d="M4 38 Q24 48 44 38 L42 41 Q24 51 6 41 Z" fill="#DDF4FF" stroke="#4FA9D8" stroke-width="0.8"/>
+            <circle cx="24" cy="24" r="3.5" fill="#FF6B5A" />
+          </g>
+          <text x="62" y="32" font-family="'Outfit', sans-serif" font-size="24" font-weight="800" letter-spacing="1.5" class="brand-text-title" fill="currentColor" text-anchor="start" direction="ltr">
+            FROST<tspan fill="#4FA9D8">IVA</tspan>
+          </text>
+          <text x="63" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" letter-spacing="2" fill="#64748B" text-anchor="start" direction="ltr">
+            SKATE • GLIDE • CELEBRATE
+          </text>
+        </svg>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <div class="nav-dropdown">
+          <a href="index.html" class="nav-link">
+            Home <i class="fas fa-chevron-down"></i>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="nav-dropdown-item">
+              <span>Home 1</span>
+              <span class="badge badge-ice">Classic</span>
+            </a>
+            <a href="home2.html" class="nav-dropdown-item">
+              <span>Home 2</span>
+              <span class="badge badge-coral">Arena</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link active">About Us</a>
+        <a href="sessions.html" class="nav-link">Public Sessions</a>
+        <a href="lessons.html" class="nav-link">Lessons &amp; Leagues</a>
+        <a href="pricing.html" class="nav-link">Pricing &amp; Passes</a>
+        <a href="parties.html" class="nav-link">Birthday Parties</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+        <button class="icon-btn rtl-toggle-btn" aria-label="Toggle RTL" style="width: auto; padding: 0 12px; font-weight: 700; font-size: 0.8rem;">
+          <span>RTL</span>
+        </button>
+        <a href="login.html" class="btn btn-primary btn-sm"><i class="fas fa-user"></i> Login</a>
+        <button class="hamburger-btn" aria-label="Open Navigation Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu-overlay">
+    <div class="mobile-menu">
+      <div class="mobile-menu-header">
+        <a href="index.html" class="nav-brand" aria-label="Frostiva Home">
+          <svg class="frostiva-logo-svg" dir="ltr" viewBox="0 0 240 56" fill="none" style="height: 38px; width: auto;">
+            <g transform="translate(6, 4)">
+              <polygon points="24,4 40,14 40,34 24,44 8,34 8,14" stroke="#4FA9D8" stroke-width="2.5" fill="rgba(79, 169, 216, 0.1)"/>
+              <line x1="24" y1="8" x2="24" y2="40" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="16" x2="38" y2="32" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="32" x2="38" y2="16" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <path d="M4 38 Q24 48 44 38 L42 41 Q24 51 6 41 Z" fill="#DDF4FF" stroke="#4FA9D8" stroke-width="0.8"/>
+              <circle cx="24" cy="24" r="3.5" fill="#FF6B5A" />
+            </g>
+            <text x="62" y="32" font-family="'Outfit', sans-serif" font-size="24" font-weight="800" letter-spacing="1.5" class="brand-text-title" fill="currentColor" text-anchor="start" direction="ltr">
+              FROST<tspan fill="#4FA9D8">IVA</tspan>
+            </text>
+            <text x="63" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" letter-spacing="2" fill="#64748B" text-anchor="start" direction="ltr">
+              SKATE • GLIDE • CELEBRATE
+            </text>
+          </svg>
+        </a>
+        <button class="icon-btn mobile-close-btn" aria-label="Close Navigation Menu"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="mobile-nav-links">
+        <div class="mobile-dropdown">
+          <div class="mobile-dropdown-header">
+            <span>Home Variations</span>
+            <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i>
+          </div>
+          <div class="mobile-dropdown-menu">
+            <a href="index.html" class="nav-link">Home 1 — Classic</a>
+            <a href="home2.html" class="nav-link">Home 2 — Arena</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link active">About Us</a>
+        <a href="sessions.html" class="nav-link">Public Sessions</a>
+        <a href="lessons.html" class="nav-link">Lessons &amp; Leagues</a>
+        <a href="pricing.html" class="nav-link">Pricing &amp; Passes</a>
+        <a href="parties.html" class="nav-link">Birthday Parties</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </div>
+      <div class="mobile-actions">
+        <div class="mobile-toggles">
+          <button class="icon-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+          <button class="btn btn-outline btn-sm rtl-toggle-btn" style="flex: 1;"><span>RTL</span></button>
+        </div>
+        <a href="login.html" class="btn btn-primary" style="width: 100%;"><i class="fas fa-user"></i> Login / Register</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==================== SECTION 1 — INNER HERO ==================== -->
+    <section class="inner-hero" style="background-image: url('assets/images/rink-surface.jpg');">
+      <div class="inner-hero-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size: 0.65rem;"></i> <span>About Frostiva</span>
+        </div>
+        <h1 class="inner-hero-title">Where Passion Meets the Ice</h1>
+        <p class="inner-hero-desc">
+          Founded on a mission to bring world-class ice skating, Olympic-grade training, and joyful community gatherings under one sparkling roof.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 2 — HERITAGE & STORY ==================== -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="about-heritage-grid">
+          <div class="about-heritage-content">
+            <span class="section-eyebrow"><i class="fas fa-landmark"></i> Our Heritage</span>
+            <h2 class="section-title">Built for Skaters, Powered by Innovation</h2>
+            <p class="section-desc" style="margin-bottom: 20px;">
+              Frostiva was born in 2012 with a bold vision: to transform public ice skating from an ordinary pastime into a captivating, multi-sensory winter experience.
+            </p>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 28px; line-height: 1.7;">
+              What started as a single community rink has expanded into a 45,000 sq.ft state-of-the-art dual ice complex featuring NHL regulation dimensions, Olympic figure skating training pads, and an immersive sound &amp; light dome.
+            </p>
+
+            <div class="heritage-stats-list">
+              <div class="stat-pill-box">
+                <span class="stat-big">14+</span>
+                <span class="stat-sub">Years of Excellence</span>
+              </div>
+              <div class="stat-pill-box">
+                <span class="stat-big">120K+</span>
+                <span class="stat-sub">Annual Skaters</span>
+              </div>
+              <div class="stat-pill-box">
+                <span class="stat-big">24</span>
+                <span class="stat-sub">National Medalists</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-heritage-gallery">
+            <div class="heritage-img-main">
+              <img src="assets/images/rink-atmosphere.jpg" alt="Frostiva Main Arena Rink" loading="lazy">
+            </div>
+            <div class="heritage-badge-floating">
+              <i class="fas fa-award"></i>
+              <div>
+                <strong>ISU Certified Rink</strong>
+                <small>Olympic Regulation Standard</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 3 — ARCTIC ENGINEERING & ECO-ICE ==================== -->
+    <section class="section-pad" style="background: var(--surface-alt);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fas fa-microchip"></i> Arctic Tech</span>
+          <h2 class="section-title">World-Class Rink Engineering</h2>
+          <p class="section-desc">We utilize sub-zero laser thermal monitoring and zero-emission CO2 chillers for the smoothest glide in the country.</p>
+        </div>
+
+        <div class="eco-tech-grid">
+          <div class="eco-tech-card">
+            <div class="eco-tech-icon"><i class="fas fa-snowflake"></i></div>
+            <h3>Laser-Leveled Real Ice</h3>
+            <p>Automated Zamboni fleet equipped with micro-laser depth sensors maintain a flawless 1.25-inch ice sheet every 90 minutes.</p>
+          </div>
+
+          <div class="eco-tech-card">
+            <div class="eco-tech-icon" style="background: rgba(16, 185, 129, 0.12); color: #10B981;"><i class="fas fa-leaf"></i></div>
+            <h3>100% Eco Green Cooling</h3>
+            <p>Our closed-loop CO2 refrigeration captures reclaimed thermal energy to heat our spectator lounges, showers, and café warm zones.</p>
+          </div>
+
+          <div class="eco-tech-card">
+            <div class="eco-tech-icon"><i class="fas fa-bolt"></i></div>
+            <h3>Concert Sound &amp; Laser Dome</h3>
+            <p>Sub-zero acoustic array with custom ceiling baffles deliver crisp 360-degree sound with synchronized atmospheric lighting effects.</p>
+          </div>
+
+          <div class="eco-tech-card">
+            <div class="eco-tech-icon" style="background: rgba(255, 107, 90, 0.12); color: var(--accent-coral);"><i class="fas fa-shield-alt"></i></div>
+            <h3>Medical Grade Air Filtration</h3>
+            <p>HEPA-13 air purifiers exchange arena air 8 times per hour, eliminating fog and maintaining pure, crisp mountain-quality oxygen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 4 — CAMPUS & ARENA ARCHITECTURE (NEW LAYOUT) ==================== -->
+    <section class="section-pad campus-zones-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fas fa-layer-group"></i> Campus Architecture</span>
+          <h2 class="section-title">World-Class Ice Arenas &amp; Facilities</h2>
+          <p class="section-desc">Tour our 45,000 sq.ft dual-rink winter complex designed for Olympic training, leisure gliding, and fireside relaxation.</p>
+        </div>
+
+        <div class="campus-zones-grid">
+          <!-- Zone 1 -->
+          <article class="campus-zone-card">
+            <div class="zone-img-wrap">
+              <img src="assets/images/rink-surface.jpg" alt="Olympic Ice Arena" loading="lazy">
+              <span class="zone-tag-float"><i class="fas fa-snowflake"></i> -5.2°C Ice Sheet</span>
+            </div>
+            <div class="zone-card-body">
+              <span class="zone-num">Zone 01 &bull; Main Rink</span>
+              <h3 class="zone-title">Olympic Dual Rink Pad</h3>
+              <p class="zone-desc">IIHF regulation ice surface with sub-surface glycol pipes, heated dasher boards, and synchronized DMX LED lighting.</p>
+              
+              <div class="zone-specs-box">
+                <div class="zone-spec-row">
+                  <span><i class="fas fa-users"></i> Spectator Seating</span>
+                  <strong>1,400 Seats</strong>
+                </div>
+                <div class="zone-spec-row">
+                  <span><i class="fas fa-ruler-combined"></i> Rink Dimensions</span>
+                  <strong>60m &times; 30m Pad</strong>
+                </div>
+                <div class="zone-spec-row">
+                  <span><i class="fas fa-sync-alt"></i> Resurfacing</span>
+                  <strong>Every 90 Mins</strong>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Zone 2 -->
+          <article class="campus-zone-card">
+            <div class="zone-img-wrap">
+              <img src="assets/images/rink-spectator.jpg" alt="Spectator Lodge & Cafe" loading="lazy">
+              <span class="zone-tag-float" style="background: rgba(255, 107, 90, 0.85); color: #FFFFFF; border-color: rgba(255, 107, 90, 0.4);"><i class="fas fa-mug-hot"></i> 21°C Warm Lounge</span>
+            </div>
+            <div class="zone-card-body">
+              <span class="zone-num">Zone 02 &bull; Hospitality</span>
+              <h3 class="zone-title">Alpine Fireside Lodge &amp; Café</h3>
+              <p class="zone-desc">Heated panoramic viewing mezzanine overlooking both rinks, featuring barista espresso, Swiss hot cocoa, and ultra-fast Wi-Fi.</p>
+              
+              <div class="zone-specs-box">
+                <div class="zone-spec-row">
+                  <span><i class="fas fa-temperature-high"></i> Climate Control</span>
+                  <strong>21°C Constant</strong>
+                </div>
+                <div class="zone-spec-row">
+                  <span><i class="fas fa-binoculars"></i> View Vantage</span>
+                  <strong>360° Panorama</strong>
+                </div>
+                <div class="zone-spec-row">
+                  <span><i class="fas fa-coffee"></i> Specialties</span>
+                  <strong>Artisan Café</strong>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Zone 3 -->
+          <article class="campus-zone-card">
+            <div class="zone-img-wrap">
+              <img src="assets/images/rink-rentals.jpg" alt="Pro Fitting Lab" loading="lazy">
+              <span class="zone-tag-float"><i class="fas fa-tools"></i> Laser Tuned</span>
+            </div>
+            <div class="zone-card-body">
+              <span class="zone-num">Zone 03 &bull; Pro Gear</span>
+              <h3 class="zone-title">Skate Vault &amp; Pro Tech Lab</h3>
+              <p class="zone-desc">Over 1,200 Italian rental boots, laser-guided radius blade sharpening, off-ice spinner harness, and pro figure equipment.</p>
+              
+              <div class="zone-specs-box">
+                <div class="zone-spec-row">
+                  <span><i class="fas fa-shoe-prints"></i> Boot Vault</span>
+                  <strong>1,200+ Pairs</strong>
+                </div>
+                <div class="zone-spec-row">
+                  <span><i class="fas fa-crosshairs"></i> Sharpening</span>
+                  <strong>Laser Precision</strong>
+                </div>
+                <div class="zone-spec-row">
+                  <span><i class="fas fa-shield-alt"></i> Protective Gear</span>
+                  <strong>Free for Kids</strong>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 5 — COMMUNITY PLEDGE ==================== -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="about-heritage-grid" style="align-items: center;">
+          <div class="about-heritage-gallery">
+            <img src="assets/images/session-family.jpg" alt="Frostiva Community Skating Days" style="border-radius: var(--radius-xl); width: 100%; height: 380px; object-fit: cover;" loading="lazy">
+          </div>
+
+          <div class="about-heritage-content">
+            <span class="section-eyebrow"><i class="fas fa-heart"></i> Community First</span>
+            <h2 class="section-title">Making the Ice Accessible to Everyone</h2>
+            <p class="section-desc" style="margin-bottom: 20px;">
+              We believe ice skating empowers physical health, discipline, and joy. Through our *Frostiva Ice for All* initiative, we partner with schools, charities, and adaptive sports organizations.
+            </p>
+            <ul class="pricing-features" style="margin-bottom: 24px;">
+              <li><i class="fas fa-check-circle"></i> Over 5,000 free school field trip admissions every year</li>
+              <li><i class="fas fa-check-circle"></i> Sled Hockey equipment and dedicated adaptive ice slots</li>
+              <li><i class="fas fa-check-circle"></i> Need-based scholarships for aspiring young figure skaters</li>
+              <li><i class="fas fa-check-circle"></i> Senior morning social skate clubs with complimentary coffee</li>
+            </ul>
+            <a href="sessions.html" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Explore Public Sessions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 5 — VISIT CTA ==================== -->
+    <section class="section-pad-sm">
+      <div class="container">
+        <div class="cta-banner-winter">
+          <div class="cta-banner-content">
+            <span class="section-eyebrow" style="background: rgba(79, 169, 216, 0.25); color: #DDF4FF; border: 1px solid rgba(79, 169, 216, 0.4);">
+              <i class="fas fa-map-marker-alt"></i> Experience Frostiva
+            </span>
+            <h2 class="cta-title">Ready to Step onto the Ice?</h2>
+            <p class="cta-desc">
+              Whether you are looking for open public sessions, master coaching, or unforgettable birthday celebrations — we are open 7 days a week.
+            </p>
+            <div class="cta-btns">
+              <a href="sessions.html" class="btn btn-primary btn-lg"><i class="fas fa-ticket-alt"></i> Book A Session</a>
+              <a href="lessons.html" class="btn btn-outline-white btn-lg"><i class="fas fa-graduation-cap"></i> Join Skating Academy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand">
+            <svg class="frostiva-logo-svg" dir="ltr" viewBox="0 0 240 56" fill="none" style="height: 40px; width: auto;">
+              <g transform="translate(6, 4)">
+                <polygon points="24,4 40,14 40,34 24,44 8,34 8,14" stroke="#4FA9D8" stroke-width="2.5" fill="rgba(79, 169, 216, 0.1)"/>
+                <line x1="24" y1="8" x2="24" y2="40" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+                <line x1="10" y1="16" x2="38" y2="32" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+                <line x1="10" y1="32" x2="38" y2="16" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+                <path d="M4 38 Q24 48 44 38 L42 41 Q24 51 6 41 Z" fill="#DDF4FF" stroke="#4FA9D8" stroke-width="0.8"/>
+                <circle cx="24" cy="24" r="3.5" fill="#FF6B5A" />
+              </g>
+              <text x="62" y="32" font-family="'Outfit', sans-serif" font-size="24" font-weight="800" letter-spacing="1.5" class="brand-text-title" fill="currentColor" text-anchor="start" direction="ltr">
+                FROST<tspan fill="#4FA9D8">IVA</tspan>
+              </text>
+              <text x="63" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" letter-spacing="2" fill="#64748B" text-anchor="start" direction="ltr">
+                SKATE • GLIDE • CELEBRATE
+              </text>
+            </svg>
+          </a>
+          <p>Premier Olympic-standard ice skating facility dedicated to athletic excellence, community recreation, and festive celebrations.</p>
+          <div class="footer-social-row">
+            <a href="#" class="icon-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="icon-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="sessions.html">Public Sessions</a></li>
+            <li><a href="lessons.html">Lessons &amp; Leagues</a></li>
+            <li><a href="pricing.html">Pricing &amp; Passes</a></li>
+            <li><a href="parties.html">Birthday Parties</a></li>
+            <li><a href="dashboard.html">Member Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Programs</h4>
+          <ul class="footer-links">
+            <li><a href="lessons.html">Learn to Skate</a></li>
+            <li><a href="lessons.html">Figure Skating Academy</a></li>
+            <li><a href="lessons.html">Adult Hockey League</a></li>
+            <li><a href="lessons.html">Youth Clinics</a></li>
+            <li><a href="parties.html">Private Rink Rental</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Arena Location &amp; Hours</h4>
+          <ul class="footer-contact-info">
+            <li><i class="fas fa-map-marker-alt"></i> 1420 Glacier Avenue, Arctic Ridge</li>
+            <li><i class="fas fa-phone-alt"></i> (555) 376-7848</li>
+            <li><i class="fas fa-clock"></i> Mon–Sun: 6:00 AM – 11:00 PM</li>
+            <li><i class="fas fa-envelope"></i> hello@frostivaice.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 FROSTIVA Ice Skating Rink. All rights reserved.</p>
+        <p>Skate. Glide. Celebrate.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

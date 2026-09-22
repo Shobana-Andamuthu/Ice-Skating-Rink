@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skater Dashboard — Frostiva</title>
+  <meta name="description" content="Manage your ice skating bookings, passes, lesson progress, and league schedules in your Frostiva Skater Dashboard.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="dashboard-body">
+
+  <!-- ==================== NAVBAR ==================== -->
+  <!-- ==================== DASHBOARD TOP NAVBAR & SUBNAV STRIP (ZERO GAP MATCHING REFERENCE) ==================== -->
+  <header class="header-wrapper dash-custom-header">
+    <div class="container nav-container" style="max-width: 100%; padding: 0 16px;">
+      <a href="index.html" class="nav-brand" aria-label="Frostiva Home">
+        <svg class="frostiva-logo-svg" dir="ltr" viewBox="0 0 240 56" fill="none" style="height: 38px; width: auto;">
+          <g transform="translate(6, 4)">
+            <polygon points="24,4 40,14 40,34 24,44 8,34 8,14" stroke="#4FA9D8" stroke-width="2.5" fill="rgba(79, 169, 216, 0.1)"/>
+            <line x1="24" y1="8" x2="24" y2="40" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="16" x2="38" y2="32" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="32" x2="38" y2="16" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+            <path d="M4 38 Q24 48 44 38 L42 41 Q24 51 6 41 Z" fill="#DDF4FF" stroke="#4FA9D8" stroke-width="0.8"/>
+            <circle cx="24" cy="24" r="3.5" fill="#FF6B5A" />
+          </g>
+          <text x="62" y="32" font-family="'Outfit', sans-serif" font-size="24" font-weight="800" letter-spacing="1.5" class="brand-text-title" fill="currentColor" text-anchor="start" direction="ltr">
+            FROST<tspan fill="#4FA9D8">IVA</tspan>
+          </text>
+          <text x="63" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" letter-spacing="2" fill="#64748B" text-anchor="start" direction="ltr">
+            SKATE CLUB
+          </text>
+        </svg>
+      </a>
+
+      <div class="dash-top-actions">
+        <button class="icon-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+        <button class="icon-btn rtl-toggle-btn" aria-label="Toggle RTL">
+          <span>RTL</span>
+        </button>
+        <a href="index.html" class="dash-back-btn" title="Back to Site" aria-label="Back to Site"><i class="fas fa-arrow-left"></i> <span class="desktop-only-txt">Back</span></a>
+      </div>
+    </div>
+
+    <!-- ZERO GAP HORIZONTAL SCROLLABLE TAB BAR -->
+    <div class="dash-subnav-strip">
+      <nav class="dash-menu">
+        <button class="dash-nav-item active" data-view="view-overview" data-title="Skater Overview">
+          <i class="fas fa-chart-pie"></i> Overview
+        </button>
+        <button class="dash-nav-item" data-view="view-book-session" data-title="Book a Session">
+          <i class="fas fa-calendar-plus"></i> Book a Session
+        </button>
+        <button class="dash-nav-item" data-view="view-history" data-title="Check-In History">
+          <i class="fas fa-history"></i> Check-In History
+        </button>
+        <button class="dash-nav-item" data-view="view-my-passes" data-title="Membership &amp; Passes">
+          <i class="fas fa-id-card"></i> Membership
+        </button>
+        <button class="dash-nav-item" data-view="view-gear-locker" data-title="Blade Care &amp; Locker">
+          <i class="fas fa-tools"></i> Blade &amp; Locker
+        </button>
+        <button class="dash-nav-item" data-view="view-skills-badges" data-title="Skills &amp; Badges">
+          <i class="fas fa-medal"></i> Skills &amp; Badges
+        </button>
+        <button class="dash-nav-item" data-view="view-guest-rewards" data-title="Guest Passes &amp; Rewards">
+          <i class="fas fa-gift"></i> Guest &amp; Rewards
+        </button>
+        <button class="dash-nav-item" data-view="view-hockey" data-title="Hockey Leagues">
+          <i class="fas fa-hockey-puck"></i> Hockey Leagues
+        </button>
+        <button class="dash-nav-item" data-view="view-payments" data-title="Change Plan &amp; Billing">
+          <i class="fas fa-sync-alt"></i> Change Plan
+        </button>
+        <button class="dash-nav-item" data-view="view-profile" data-title="Profile Settings">
+          <i class="fas fa-user-cog"></i> Profile Settings
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="dashboard-layout">
+      <!-- MAIN CONTENT AREA -->
+      <section class="dash-main-content">
+        <!-- User Greeting Header (Matching Screenshot) -->
+        <div class="dash-welcome-banner">
+          <div class="dash-user-initials-badge">AR</div>
+          <div class="dash-welcome-text">
+            <span class="welcome-sub">Welcome back,</span>
+            <h1 class="welcome-name">Alex Rivera</h1>
+          </div>
+        </div>
+
+        <!-- 1. VIEW: OVERVIEW -->
+        <div class="dash-view-content" id="view-overview">
+          <!-- 4 Reference Stats Cards -->
+          <div class="dash-stats-grid-ref">
+            <!-- Stat 1: Current Streak -->
+            <div class="dash-ref-stat-card">
+              <span class="ref-stat-label">CURRENT STREAK</span>
+              <div class="ref-streak-body">
+                <div class="ref-circle-streak">
+                  <svg viewBox="0 0 36 36" class="circular-chart-sm">
+                    <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle-fill" stroke-dasharray="75, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  </svg>
+                  <span class="streak-num">6</span>
+                </div>
+                <div class="streak-meta-text">
+                  <strong>Day streak</strong>
+                  <small>Best: 14 days</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stat 2: Membership -->
+            <div class="dash-ref-stat-card">
+              <span class="ref-stat-label">MEMBERSHIP</span>
+              <h3 class="ref-membership-name">Arctic Unlimited VIP</h3>
+              <span class="ref-renewal-text">18 days until renewal</span>
+              <div class="ref-progress-track">
+                <div class="ref-progress-bar" style="width: 65%;"></div>
+              </div>
+            </div>
+
+            <!-- Stat 3: This Month -->
+            <div class="dash-ref-stat-card">
+              <span class="ref-stat-label">THIS MONTH</span>
+              <div class="ref-streak-body">
+                <div class="ref-circle-logged">
+                  <span class="logged-num">12</span>
+                </div>
+                <div class="streak-meta-text">
+                  <strong>Visits logged</strong>
+                  <small>Goal: 15 / month</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stat 4: Today Action -->
+            <div class="dash-ref-stat-card today-action-card">
+              <span class="ref-stat-label">TODAY</span>
+              <button class="btn btn-coral ref-checkin-btn" onclick="alert('Successfully checked in for today\'s Public Session! Welcome Alex.');">
+                <i class="fas fa-check-circle"></i> Check In Today
+              </button>
+            </div>
+          </div>
+
+          <!-- Check-Ins Chart (Last 6 Weeks) -->
+          <div class="dash-chart-card">
+            <div class="dash-chart-header">
+              <div class="chart-title-wrap">
+                <i class="fas fa-fire" style="color: var(--accent-coral);"></i>
+                <h3>Check-Ins &mdash; Last 6 Weeks</h3>
+              </div>
+              <span class="chart-sub-stat">12 check-ins this month &bull; best streak 14 days</span>
+            </div>
+            
+            <!-- Visual Bar Chart -->
+            <div class="ref-bar-chart">
+              <div class="chart-col">
+                <span class="bar-val">3</span>
+                <div class="bar-stick" style="height: 38%;"></div>
+                <span class="bar-lbl">Wk 1</span>
+              </div>
+              <div class="chart-col">
+                <span class="bar-val">4</span>
+                <div class="bar-stick" style="height: 50%;"></div>
+                <span class="bar-lbl">Wk 2</span>
+              </div>
+              <div class="chart-col">
+                <span class="bar-val">5</span>
+                <div class="bar-stick" style="height: 63%;"></div>
+                <span class="bar-lbl">Wk 3</span>
+              </div>
+              <div class="chart-col">
+                <span class="bar-val">4</span>
+                <div class="bar-stick" style="height: 50%;"></div>
+                <span class="bar-lbl">Wk 4</span>
+              </div>
+              <div class="chart-col">
+                <span class="bar-val">6</span>
+                <div class="bar-stick" style="height: 75%;"></div>
+                <span class="bar-lbl">Wk 5</span>
+              </div>
+              <div class="chart-col active-col">
+                <span class="bar-val">8</span>
+                <div class="bar-stick active-bar" style="height: 100%;"></div>
+                <span class="bar-lbl">Wk 6</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Two Column Layout: Next Session & Pass Status -->
+          <div class="dash-grid-two-col">
+            <!-- Left: Next Booked Session -->
+            <div class="dash-panel">
+              <div class="dash-panel-header">
+                <h3 class="dash-panel-title"><i class="fas fa-calendar-check" style="color: var(--primary-ice); margin-right: 8px;"></i> Next Booked Session</h3>
+                <span class="badge badge-coral">Confirmed</span>
+              </div>
+              <div class="next-session-hero">
+                <img src="assets/images/dashboard-session.jpg" alt="Next Ice Session">
+                <div class="next-session-overlay">
+                  <div>
+                    <h4 style="font-size: 1.25rem; font-weight: 800; color: #fff; margin-bottom: 4px;">Cosmic Glow Friday Night</h4>
+                    <p style="font-size: 0.88rem; color: var(--frost-blue); margin: 0;"><i class="fas fa-map-marker-alt"></i> Main Arena (Rink A) &bull; Locker #42</p>
+                  </div>
+                </div>
+              </div>
+              <div class="session-meta-triplet">
+                <div class="meta-box">
+                  <span>Date</span>
+                  <strong>Friday, Sept 25</strong>
+                </div>
+                <div class="meta-box">
+                  <span>Time</span>
+                  <strong>7:00 – 10:30 PM</strong>
+                </div>
+                <div class="meta-box">
+                  <span>Rental Status</span>
+                  <strong style="color: #10B981;">Included (Size 9)</strong>
+                </div>
+              </div>
+              <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <button class="btn btn-outline btn-sm" onclick="alert('Digital Turnstile QR Code Generated: #FRST-99824');"><i class="fas fa-qrcode"></i> View Entry QR</button>
+                <button class="btn btn-outline btn-sm" style="color: var(--accent-coral);" onclick="confirm('Reschedule this session?')"><i class="fas fa-exchange-alt"></i> Reschedule</button>
+              </div>
+            </div>
+
+            <!-- Right: Membership & Pass Usage -->
+            <div class="dash-panel">
+              <div class="dash-panel-header">
+                <h3 class="dash-panel-title">Pass Status</h3>
+                <span class="badge badge-ice">Auto-renews Oct 1</span>
+              </div>
+              <div style="margin-bottom: 20px;">
+                <div style="display: flex; justify-content: space-between; font-size: 0.88rem; margin-bottom: 6px;">
+                  <span>Monthly Free Sessions Used</span>
+                  <strong>12 Skates</strong>
+                </div>
+                <div style="width: 100%; height: 8px; background: var(--surface-alt); border-radius: 4px; overflow: hidden;">
+                  <div style="width: 65%; height: 100%; background: var(--primary-ice);"></div>
+                </div>
+              </div>
+
+              <div style="margin-bottom: 24px;">
+                <div style="display: flex; justify-content: space-between; font-size: 0.88rem; margin-bottom: 6px;">
+                  <span>Guest Passes Available</span>
+                  <strong>1 of 1 Remaining</strong>
+                </div>
+                <div style="width: 100%; height: 8px; background: var(--surface-alt); border-radius: 4px; overflow: hidden;">
+                  <div style="width: 100%; height: 100%; background: var(--accent-coral);"></div>
+                </div>
+              </div>
+
+              <h4 style="font-size: 0.95rem; margin-bottom: 10px;">Upcoming Lesson</h4>
+              <div style="background: var(--surface-alt); padding: 12px; border-radius: var(--radius-sm); margin-bottom: 16px;">
+                <div style="font-weight: 700; font-size: 0.9rem;">Level 4 Edge Work &bull; Coach Sarah</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);"><i class="fas fa-clock"></i> Saturday &bull; 9:15 AM (Studio Rink B)</div>
+              </div>
+
+              <a href="pricing.html" class="btn btn-outline btn-sm" style="width: 100%;"><i class="fas fa-arrow-up"></i> Manage Membership</a>
+            </div>
+          </div>
+
+          <!-- Recent Bookings Table -->
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h3 class="dash-panel-title">Recent Ice Bookings</h3>
+              <a href="sessions.html" class="btn btn-outline btn-sm">Book New</a>
+            </div>
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Session Title</th>
+                    <th>Date &amp; Time</th>
+                    <th>Type</th>
+                    <th>Pass Used</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Cosmic Glow Friday Night</strong></td>
+                    <td>Sept 25, 2026 &bull; 7:00 PM</td>
+                    <td>Cosmic Skate</td>
+                    <td>Arctic Unlimited</td>
+                    <td><span class="badge badge-coral">Upcoming</span></td>
+                    <td><button class="btn btn-outline btn-sm" style="padding: 4px 10px; font-size: 0.75rem;" onclick="alert('Booking Code: #FRST-99824');">QR Pass</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Sunday Afternoon Public Skate</strong></td>
+                    <td>Sept 20, 2026 &bull; 3:00 PM</td>
+                    <td>Open Public</td>
+                    <td>Arctic Unlimited</td>
+                    <td><span class="badge badge-ice">Completed</span></td>
+                    <td><button class="btn btn-outline btn-sm" style="padding: 4px 10px; font-size: 0.75rem;">Receipt</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Intermediate Figure Group Lesson</strong></td>
+                    <td>Sept 19, 2026 &bull; 9:00 AM</td>
+                    <td>Academy Lesson</td>
+                    <td>Lesson 6-Pack</td>
+                    <td><span class="badge badge-ice">Completed</span></td>
+                    <td><button class="btn btn-outline btn-sm" style="padding: 4px 10px; font-size: 0.75rem;">Notes</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. VIEW: BOOK A SESSION -->
+        <div class="dash-view-content" id="view-book-session" style="display: none;">
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h3 class="dash-panel-title">Select Ice Session to Reserve</h3>
+            </div>
+            <div class="schedule-timeline-grid">
+              <div class="slot-card">
+                <div class="slot-time">Today &bull; 1:30 PM</div>
+                <div class="session-title" style="font-size: 1.1rem;">Afternoon Open Skate</div>
+                <span class="badge badge-ice">Free with your pass</span>
+                <button class="btn btn-primary btn-sm" onclick="alert('Reserved for Today 1:30 PM!');">Confirm Booking</button>
+              </div>
+              <div class="slot-card">
+                <div class="slot-time">Tomorrow &bull; 7:00 PM</div>
+                <div class="session-title" style="font-size: 1.1rem;">Friday Cosmic Glow</div>
+                <span class="badge badge-coral">Booked</span>
+                <button class="btn btn-outline btn-sm" disabled>Already Booked</button>
+              </div>
+              <div class="slot-card">
+                <div class="slot-time">Saturday &bull; 11:00 AM</div>
+                <div class="session-title" style="font-size: 1.1rem;">Weekend Family Skate</div>
+                <span class="badge badge-ice">Free with your pass</span>
+                <button class="btn btn-primary btn-sm" onclick="alert('Reserved for Saturday 11:00 AM!');">Confirm Booking</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. VIEW: MY PASSES -->
+        <div class="dash-view-content" id="view-my-passes" style="display: none;">
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h3 class="dash-panel-title">Active Passes &amp; Punch Cards</h3>
+            </div>
+            <div class="programs-grid">
+              <div class="slot-card">
+                <span class="badge badge-coral">Primary Membership</span>
+                <h3 class="session-title">Arctic Unlimited Pass</h3>
+                <p class="session-text">Valid through October 31, 2026. Unlimited access to all sessions and skate rental.</p>
+                <div class="program-price">$89 / mo</div>
+              </div>
+              <div class="slot-card">
+                <span class="badge badge-ice">Punch Card</span>
+                <h3 class="session-title">Guest Pass (1 Remaining)</h3>
+                <p class="session-text">Bring a friend to any regular open skate session for free.</p>
+                <button class="btn btn-outline btn-sm" onclick="alert('Guest Pass Voucher code: #GUEST-882');">Claim Voucher</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. VIEW: MY LESSONS -->
+        <div class="dash-view-content" id="view-my-lessons" style="display: none;">
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h3 class="dash-panel-title">Enrolled Lesson Progress</h3>
+            </div>
+            <div style="background: var(--surface-alt); padding: 18px; border-radius: var(--radius-md); margin-bottom: 20px;">
+              <h4>Level 4 Figure Skating Curriculum</h4>
+              <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px;">Coach: Sarah Jenkins &bull; 4 of 6 Weeks Completed</p>
+              <div style="width: 100%; height: 10px; background: var(--surface-border); border-radius: 5px; overflow: hidden;">
+                <div style="width: 66%; height: 100%; background: var(--primary-ice);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NEW VIEW 1: BLADE CARE & GEAR LOCKER -->
+        <div class="dash-view-content" id="view-gear-locker" style="display: none;">
+          <div class="dash-panel" style="margin-bottom: 24px;">
+            <div class="dash-panel-header">
+              <h3 class="dash-panel-title"><i class="fas fa-tools" style="color: var(--primary-ice); margin-right: 8px;"></i> Blade Maintenance &amp; Day Locker</h3>
+              <span class="badge badge-ice">Smart Locker #142</span>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+              <!-- Sub-card 1: Blade Telemetry -->
+              <div style="background: var(--surface-alt); border: 1px solid var(--surface-border); border-radius: var(--radius-md); padding: 20px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                  <h4 style="font-size: 1.05rem; margin: 0;"><i class="fas fa-crosshairs"></i> Laser Blade Edge Status</h4>
+                  <span class="badge badge-ice" style="background: #10B981; color: #fff;">Optimal Edge</span>
+                </div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 14px;">Radius: <strong>1/2" Hollow</strong> &bull; Sharpened 4 days ago by Pro Tech Elena.</p>
+                <div style="margin-bottom: 14px;">
+                  <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 4px;">
+                    <span>Remaining Edge Life (8 sessions left)</span>
+                    <strong>75%</strong>
+                  </div>
+                  <div style="width: 100%; height: 8px; background: var(--surface-border); border-radius: 4px; overflow: hidden;">
+                    <div style="width: 75%; height: 100%; background: #10B981;"></div>
+                  </div>
+                </div>
+                <button class="btn btn-primary btn-sm" style="width: 100%;" onclick="alert('Priority Blade Sharpening booked for your next session!');"><i class="fas fa-magic"></i> Book 10-Min Sharpening ($12)</button>
+              </div>
+
+              <!-- Sub-card 2: Assigned Smart Locker -->
+              <div style="background: var(--surface-alt); border: 1px solid var(--surface-border); border-radius: var(--radius-md); padding: 20px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                  <h4 style="font-size: 1.05rem; margin: 0;"><i class="fas fa-lock"></i> RFID Locker #142</h4>
+                  <span class="badge badge-coral">Bay A &bull; Upper</span>
+                </div>
+                <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: var(--radius-sm); padding: 12px; margin-bottom: 14px; text-align: center;">
+                  <span style="font-size: 0.75rem; color: var(--text-muted); display: block; text-transform: uppercase; letter-spacing: 1px;">Digital PIN Passcode</span>
+                  <strong style="font-family: var(--font-heading); font-size: 1.6rem; letter-spacing: 4px; color: var(--primary-ice);">8492</strong>
+                </div>
+                <button class="btn btn-outline btn-sm" style="width: 100%;" onclick="alert('NFC Mobile Key Activated: Tap your phone at Locker #142 scanner.');"><i class="fas fa-mobile-alt"></i> Tap NFC to Unlock</button>
+              </div>
+
+              <!-- Sub-card 3: Boot Specs -->
+              <div style="background: var(--surface-alt); border: 1px solid var(--surface-border); border-radius: var(--radius-md); padding: 20px;">
+                <h4 style="font-size: 1.05rem; margin-bottom: 12px;"><i class="fas fa-shoe-prints"></i> Personal Skater Profile</h4>
+                <ul style="font-size: 0.85rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px;">
+                  <li><strong>Boot Model:</strong> Jackson Freestyle Elite Fusion</li>
+                  <li><strong>Size &amp; Width:</strong> Men's 9.5 Regular</li>
+                  <li><strong>Blade:</strong> Ultima Matrix Legacy 9.75"</li>
+                  <li><strong>Lacing Profile:</strong> High Ankle Lock Support</li>
+                </ul>
+                <button class="btn btn-outline btn-sm" style="width: 100%;" onclick="alert('Profile updated with Pro Shop registry.');"><i class="fas fa-edit"></i> Edit Gear Profile</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NEW VIEW 2: SKILLS & BADGES -->
+        <div class="dash-view-content" id="view-skills-badges" style="display: none;">
+          <div class="dash-panel" style="margin-bottom: 24px;">
+            <div class="dash-panel-header">
+              <h3 class="dash-panel-title"><i class="fas fa-medal" style="color: var(--primary-ice); margin-right: 8px;"></i> Skater Skill Pathway &amp; Unlocks</h3>
+              <span class="badge badge-coral">Tier 2 Certified</span>
+            </div>
+
+            <!-- Current Certification Summary -->
+            <div style="background: linear-gradient(135deg, rgba(79, 169, 216, 0.12) 0%, rgba(16, 42, 67, 0.08) 100%); border: 1px solid rgba(79, 169, 216, 0.3); border-radius: var(--radius-md); padding: 20px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; gap: 14px;">
+              <div>
+                <span style="font-size: 0.78rem; text-transform: uppercase; font-weight: 800; color: var(--primary-ice); letter-spacing: 1px;">Current Milestone</span>
+                <h4 style="font-size: 1.25rem; font-weight: 800; margin: 4px 0;">USFS Basic Skills Level 4</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Verified by Coach Sarah Jenkins &bull; Ready for Tier 3 Edge Master</p>
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="alert('Digital Certificate downloaded: USFS-LVL4-AlexRivera.pdf');"><i class="fas fa-download"></i> Download Certificate</button>
+            </div>
+
+            <!-- 4 Milestone Drill Progress Bars -->
+            <h4 style="font-size: 1.05rem; margin-bottom: 14px;">Tier 3 Assessment Readiness</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 28px;">
+              <div style="background: var(--surface-alt); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--surface-border);">
+                <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 6px;">
+                  <span>Forward Inside Edges</span>
+                  <strong style="color: #10B981;">100% (Passed)</strong>
+                </div>
+                <div style="width: 100%; height: 6px; background: var(--surface-border); border-radius: 3px; overflow: hidden;">
+                  <div style="width: 100%; height: 100%; background: #10B981;"></div>
+                </div>
+              </div>
+
+              <div style="background: var(--surface-alt); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--surface-border);">
+                <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 6px;">
+                  <span>Continuous Crossovers</span>
+                  <strong style="color: var(--primary-ice);">85%</strong>
+                </div>
+                <div style="width: 100%; height: 6px; background: var(--surface-border); border-radius: 3px; overflow: hidden;">
+                  <div style="width: 85%; height: 100%; background: var(--primary-ice);"></div>
+                </div>
+              </div>
+
+              <div style="background: var(--surface-alt); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--surface-border);">
+                <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 6px;">
+                  <span>Waltz Jump Rotation</span>
+                  <strong style="color: var(--accent-coral);">65%</strong>
+                </div>
+                <div style="width: 100%; height: 6px; background: var(--surface-border); border-radius: 3px; overflow: hidden;">
+                  <div style="width: 65%; height: 100%; background: var(--accent-coral);"></div>
+                </div>
+              </div>
+
+              <div style="background: var(--surface-alt); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--surface-border);">
+                <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 6px;">
+                  <span>One-Foot Scratch Spin</span>
+                  <strong style="color: var(--text-muted);">45%</strong>
+                </div>
+                <div style="width: 100%; height: 6px; background: var(--surface-border); border-radius: 3px; overflow: hidden;">
+                  <div style="width: 45%; height: 100%; background: #64748B;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Digital Badges Grid -->
+            <h4 style="font-size: 1.05rem; margin-bottom: 14px;">Achievement Badge Cabinet</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px;">
+              <div style="background: var(--surface-alt); border: 1px solid var(--surface-border); border-radius: var(--radius-md); padding: 16px; text-align: center;">
+                <div style="font-size: 2rem; margin-bottom: 6px;">🥇</div>
+                <strong style="font-size: 0.9rem; display: block;">100 Laps Milestone</strong>
+                <small style="color: #10B981; font-weight: 700;">Unlocked</small>
+              </div>
+              <div style="background: var(--surface-alt); border: 1px solid var(--surface-border); border-radius: var(--radius-md); padding: 16px; text-align: center;">
+                <div style="font-size: 2rem; margin-bottom: 6px;">⚡</div>
+                <strong style="font-size: 0.9rem; display: block;">Cosmic Speedster</strong>
+                <small style="color: #10B981; font-weight: 700;">Unlocked</small>
+              </div>
+              <div style="background: var(--surface-alt); border: 1px solid var(--surface-border); border-radius: var(--radius-md); padding: 16px; text-align: center;">
+                <div style="font-size: 2rem; margin-bottom: 6px;">❄️</div>
+                <strong style="font-size: 0.9rem; display: block;">14-Day Streak</strong>
+                <small style="color: #10B981; font-weight: 700;">Unlocked</small>
+              </div>
+              <div style="background: var(--surface-alt); border: 1px solid var(--surface-border); border-radius: var(--radius-md); padding: 16px; text-align: center; opacity: 0.65;">
+                <div style="font-size: 2rem; margin-bottom: 6px;">⛸️</div>
+                <strong style="font-size: 0.9rem; display: block;">Axel Apprentice</strong>
+                <small style="color: var(--text-muted); font-weight: 600;">60% In Progress</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NEW VIEW 3: GUEST PASSES & REWARDS -->
+        <div class="dash-view-content" id="view-guest-rewards" style="display: none;">
+          <div class="dash-panel" style="margin-bottom: 24px;">
+            <div class="dash-panel-header">
+              <h3 class="dash-panel-title"><i class="fas fa-gift" style="color: var(--primary-ice); margin-right: 8px;"></i> Guest Passes &amp; Frost Rewards</h3>
+              <span class="badge badge-ice">1,450 Frost Points</span>
+            </div>
+
+            <!-- Top Rewards Status -->
+            <div style="background: linear-gradient(135deg, #102A43 0%, #081827 100%); color: #fff; border-radius: var(--radius-md); padding: 22px; margin-bottom: 24px;">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+                <div>
+                  <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1px; color: var(--frost-blue);">Reward Tier Status</span>
+                  <h3 style="font-size: 1.4rem; color: #fff; margin: 4px 0;">Gold Glide Member</h3>
+                </div>
+                <span class="badge" style="background: #F59E0B; color: #000; font-weight: 800;">1.5x Points Multiplier</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.82rem; color: var(--frost-blue); margin-bottom: 6px;">
+                <span>Progress to Platinum Tier (2,000 Pts)</span>
+                <strong>1,450 / 2,000 Pts</strong>
+              </div>
+              <div style="width: 100%; height: 8px; background: rgba(255, 255, 255, 0.15); border-radius: 4px; overflow: hidden;">
+                <div style="width: 72.5%; height: 100%; background: #F59E0B;"></div>
+              </div>
+            </div>
+
+            <!-- Send Guest Invite Pass -->
+            <div style="background: var(--surface-alt); border: 1px solid var(--surface-border); border-radius: var(--radius-md); padding: 20px; margin-bottom: 24px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <h4 style="font-size: 1.05rem; margin: 0;"><i class="fas fa-ticket-alt"></i> 2 Free Guest Passes Remaining</h4>
+                <span class="badge badge-coral">Free for Friends</span>
+              </div>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 14px;">Invite a friend or family member for a complimentary 3-hour public skating session including skate rental.</p>
+              <div class="guest-pass-form">
+                <input type="text" placeholder="Friend's Name / Email" class="form-control">
+                <button class="btn btn-coral btn-sm" onclick="alert('Guest Pass Invite generated! Shareable Link: https://frostivaice.com/guest?ref=ALEX992');"><i class="fas fa-paper-plane"></i> Send Guest Pass</button>
+              </div>
+            </div>
+
+            <!-- Rewards Catalog -->
+            <h4 style="font-size: 1.05rem; margin-bottom: 14px;">Redeem Your Frost Points</h4>
+            <div class="rewards-catalog-grid">
+              <div class="reward-card">
+                <div class="reward-img-wrap">
+                  <img src="assets/images/party-food.jpg" alt="Swiss Hot Cocoa &amp; Treat" class="reward-img">
+                </div>
+                <strong>Swiss Hot Cocoa &amp; Treat</strong>
+                <span class="reward-pts">250 Pts</span>
+                <button class="btn btn-outline btn-sm" style="width: 100%; margin-top: auto;" onclick="alert('Redeemed! Voucher code #COCOA-142 sent to your profile.');">Redeem</button>
+              </div>
+
+              <div class="reward-card">
+                <div class="reward-img-wrap">
+                  <img src="assets/images/gear-sharpening.jpg" alt="Precision Blade Sharpening" class="reward-img">
+                </div>
+                <strong>Precision Blade Sharpening</strong>
+                <span class="reward-pts">600 Pts</span>
+                <button class="btn btn-outline btn-sm" style="width: 100%; margin-top: auto;" onclick="alert('Redeemed! Free Pro Sharpening voucher active.');">Redeem</button>
+              </div>
+
+              <div class="reward-card">
+                <div class="reward-img-wrap">
+                  <img src="assets/images/session-evening.jpg" alt="VIP Cosmic Glow Entry" class="reward-img">
+                </div>
+                <strong>VIP Cosmic Glow Entry</strong>
+                <span class="reward-pts">850 Pts</span>
+                <button class="btn btn-outline btn-sm" style="width: 100%; margin-top: auto;" onclick="alert('Redeemed! Cosmic VIP pass added to Upcoming Sessions.');">Redeem</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. VIEW: HOCKEY LEAGUES -->
+        <div class="dash-view-content" id="view-hockey" style="display: none;">
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h3 class="dash-panel-title">Division B Adult League Standings</h3>
+            </div>
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Team</th>
+                    <th>GP</th>
+                    <th>W</th>
+                    <th>L</th>
+                    <th>PTS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Frostiva Polar Bears</strong></td>
+                    <td>8</td>
+                    <td>6</td>
+                    <td>2</td>
+                    <td>12</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Glacier Wolves</strong></td>
+                    <td>8</td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Arctic Blades</strong></td>
+                    <td>8</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>8</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Ice Hawks</strong></td>
+                    <td>8</td>
+                    <td>2</td>
+                    <td>6</td>
+                    <td>4</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. VIEW: UPCOMING SESSIONS -->
+        <div class="dash-view-content" id="view-upcoming" style="display: none;">
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h3 class="dash-panel-title">Upcoming Schedule</h3>
+            </div>
+            <p style="color: var(--text-muted); margin-bottom: 14px;">Your next scheduled attendance is for Friday Night Cosmic Glow.</p>
+            <button class="btn btn-coral" onclick="alert('Pass active: scan at Rink A turnstile.');"><i class="fas fa-qrcode"></i> Scan Turnstile Pass</button>
+          </div>
+        </div>
+
+        <!-- 7. VIEW: HISTORY -->
+        <div class="dash-view-content" id="view-history" style="display: none;">
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h3 class="dash-panel-title">All-Time Skater History</h3>
+            </div>
+            <p style="color: var(--text-muted);">You have completed 34 total ice visits at Frostiva this year!</p>
+          </div>
+        </div>
+
+        <!-- 8. VIEW: PAYMENTS -->
+        <div class="dash-view-content" id="view-payments" style="display: none;">
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h3 class="dash-panel-title">Payment Methods &amp; Invoices</h3>
+            </div>
+            <div style="background: var(--surface-alt); padding: 16px; border-radius: var(--radius-md); margin-bottom: 16px;">
+              <p><strong>Visa ending in •••• 4821</strong> (Default)</p>
+              <span class="badge badge-ice">Next billing: Oct 1, 2026 ($89.00)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. VIEW: PROFILE -->
+        <div class="dash-view-content" id="view-profile" style="display: none;">
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h3 class="dash-panel-title">Skater Profile Settings</h3>
+            </div>
+            <form style="max-width: 500px;" onsubmit="event.preventDefault(); alert('Profile Saved!');">
+              <div class="form-group">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" value="Alex Morgan">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Rental Skate Size</label>
+                <input type="text" class="form-control" value="Size 9 (Figure / Standard)">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Emergency Contact Phone</label>
+                <input type="tel" class="form-control" value="(555) 392-1084">
+              </div>
+              <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save Changes</button>
+            </form>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

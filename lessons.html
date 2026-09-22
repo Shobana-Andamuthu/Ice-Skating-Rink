@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lessons &amp; Hockey Leagues — Frostiva</title>
+  <meta name="description" content="Learn to skate programs, private coaching, and competitive ice hockey leagues for youth and adults at Frostiva.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="header-wrapper">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Frostiva Home">
+        <svg class="frostiva-logo-svg" dir="ltr" viewBox="0 0 240 56" fill="none" style="height: 42px; width: auto;">
+          <g transform="translate(6, 4)">
+            <polygon points="24,4 40,14 40,34 24,44 8,34 8,14" stroke="#4FA9D8" stroke-width="2.5" fill="rgba(79, 169, 216, 0.1)"/>
+            <line x1="24" y1="8" x2="24" y2="40" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="16" x2="38" y2="32" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="32" x2="38" y2="16" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+            <path d="M4 38 Q24 48 44 38 L42 41 Q24 51 6 41 Z" fill="#DDF4FF" stroke="#4FA9D8" stroke-width="0.8"/>
+            <circle cx="24" cy="24" r="3.5" fill="#FF6B5A" />
+          </g>
+          <text x="62" y="32" font-family="'Outfit', sans-serif" font-size="24" font-weight="800" letter-spacing="1.5" class="brand-text-title" fill="currentColor" text-anchor="start" direction="ltr">
+            FROST<tspan fill="#4FA9D8">IVA</tspan>
+          </text>
+          <text x="63" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" letter-spacing="2" fill="#64748B" text-anchor="start" direction="ltr">
+            SKATE • GLIDE • CELEBRATE
+          </text>
+        </svg>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <div class="nav-dropdown">
+          <a href="index.html" class="nav-link">
+            Home <i class="fas fa-chevron-down"></i>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="nav-dropdown-item">
+              <span>Home 1</span>
+              <span class="badge badge-ice">Classic</span>
+            </a>
+            <a href="home2.html" class="nav-dropdown-item">
+              <span>Home 2</span>
+              <span class="badge badge-coral">Arena</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="sessions.html" class="nav-link">Public Sessions</a>
+        <a href="lessons.html" class="nav-link active">Lessons &amp; Leagues</a>
+        <a href="pricing.html" class="nav-link">Pricing &amp; Passes</a>
+        <a href="parties.html" class="nav-link">Birthday Parties</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+        <button class="icon-btn rtl-toggle-btn" aria-label="Toggle RTL" style="width: auto; padding: 0 12px; font-weight: 700; font-size: 0.8rem;">
+          <span>RTL</span>
+        </button>
+        <a href="login.html" class="btn btn-primary btn-sm"><i class="fas fa-user"></i> Login</a>
+        <button class="hamburger-btn" aria-label="Open Navigation Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu-overlay">
+    <div class="mobile-menu">
+      <div class="mobile-menu-header">
+        <a href="index.html" class="nav-brand" aria-label="Frostiva Home">
+          <svg class="frostiva-logo-svg" dir="ltr" viewBox="0 0 240 56" fill="none" style="height: 38px; width: auto;">
+            <g transform="translate(6, 4)">
+              <polygon points="24,4 40,14 40,34 24,44 8,34 8,14" stroke="#4FA9D8" stroke-width="2.5" fill="rgba(79, 169, 216, 0.1)"/>
+              <line x1="24" y1="8" x2="24" y2="40" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="16" x2="38" y2="32" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="32" x2="38" y2="16" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <path d="M4 38 Q24 48 44 38 L42 41 Q24 51 6 41 Z" fill="#DDF4FF" stroke="#4FA9D8" stroke-width="0.8"/>
+              <circle cx="24" cy="24" r="3.5" fill="#FF6B5A" />
+            </g>
+            <text x="62" y="32" font-family="'Outfit', sans-serif" font-size="24" font-weight="800" letter-spacing="1.5" class="brand-text-title" fill="currentColor" text-anchor="start" direction="ltr">
+              FROST<tspan fill="#4FA9D8">IVA</tspan>
+            </text>
+            <text x="63" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" letter-spacing="2" fill="#64748B" text-anchor="start" direction="ltr">
+              SKATE • GLIDE • CELEBRATE
+            </text>
+          </svg>
+        </a>
+        <button class="icon-btn mobile-close-btn" aria-label="Close Navigation Menu"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="mobile-nav-links">
+        <div class="mobile-dropdown">
+          <div class="mobile-dropdown-header">
+            <span>Home Variations</span>
+            <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i>
+          </div>
+          <div class="mobile-dropdown-menu">
+            <a href="index.html" class="nav-link">Home 1 — Classic</a>
+            <a href="home2.html" class="nav-link">Home 2 — Arena</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="sessions.html" class="nav-link">Public Sessions</a>
+        <a href="lessons.html" class="nav-link active">Lessons &amp; Leagues</a>
+        <a href="pricing.html" class="nav-link">Pricing &amp; Passes</a>
+        <a href="parties.html" class="nav-link">Birthday Parties</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </div>
+      <div class="mobile-actions">
+        <div class="mobile-toggles">
+          <button class="icon-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+          <button class="btn btn-outline btn-sm rtl-toggle-btn" style="flex: 1;"><span>RTL</span></button>
+        </div>
+        <a href="login.html" class="btn btn-primary" style="width: 100%;"><i class="fas fa-user"></i> Login / Register</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==================== SECTION 1 — INNER HERO ==================== -->
+    <section class="inner-hero" style="background-image: url('assets/images/hero-lessons.jpg');">
+      <div class="inner-hero-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size: 0.65rem;"></i> <span>Lessons &amp; Leagues</span>
+        </div>
+        <h1 class="inner-hero-title">Skating Academy &amp; Leagues</h1>
+        <p class="inner-hero-desc">
+          Master the fundamentals of ice skating, advance your figure skating artistry, or compete in our adult and youth hockey leagues.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 2 — LEARN TO SKATE PROGRAMS ==================== -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fas fa-graduation-cap"></i> Structured Curriculum</span>
+          <h2 class="section-title">Learn to Skate Programs</h2>
+          <p class="section-desc">Progressive levels certified by US Figure Skating and Skate Canada.</p>
+        </div>
+
+        <div class="programs-grid">
+          <!-- Tier 1: Snowplow Tots -->
+          <article class="program-card">
+            <div class="program-img">
+              <img src="assets/images/lesson-learn.jpg" alt="Snowplow Tots Beginner Class" loading="lazy">
+            </div>
+            <div class="program-content">
+              <div class="program-level">
+                <span class="badge badge-ice">Ages 3–5</span>
+                <span class="program-price">$125 <small style="font-size: 0.75rem; color: var(--text-muted);">/ 6 wks</small></span>
+              </div>
+              <h3 class="program-title">Snowplow Tots</h3>
+              <p class="program-desc">Playful balance drills, marching, and falling safely with certified tot coaches.</p>
+              <div class="session-meta">
+                <span><i class="fas fa-clock"></i> 30 min / week</span>
+                <span><i class="fas fa-user-check"></i> Coach Sarah</span>
+              </div>
+              <a href="dashboard.html" class="btn btn-primary btn-sm">Enroll Child</a>
+            </div>
+          </article>
+
+          <!-- Tier 2: Youth Basic Skills -->
+          <article class="program-card">
+            <div class="program-img">
+              <img src="assets/images/session-family.jpg" alt="Youth Basic Skills Level" loading="lazy">
+            </div>
+            <div class="program-content">
+              <div class="program-level">
+                <span class="badge badge-coral">Ages 6–12</span>
+                <span class="program-price">$140 <small style="font-size: 0.75rem; color: var(--text-muted);">/ 6 wks</small></span>
+              </div>
+              <h3 class="program-title">Youth Basic Skills</h3>
+              <p class="program-desc">Crossovers, two-foot glides, forward/backward stroking, and stopping techniques.</p>
+              <div class="session-meta">
+                <span><i class="fas fa-clock"></i> 45 min / week</span>
+                <span><i class="fas fa-user-check"></i> Coach Elena</span>
+              </div>
+              <a href="dashboard.html" class="btn btn-coral btn-sm">Enroll Youth</a>
+            </div>
+          </article>
+
+          <!-- Tier 3: Adult Foundations -->
+          <article class="program-card">
+            <div class="program-img">
+              <img src="assets/images/pass-monthly.jpg" alt="Adult Ice Skating Foundations" loading="lazy">
+            </div>
+            <div class="program-content">
+              <div class="program-level">
+                <span class="badge badge-ice">Ages 16+</span>
+                <span class="program-price">$150 <small style="font-size: 0.75rem; color: var(--text-muted);">/ 6 wks</small></span>
+              </div>
+              <h3 class="program-title">Adult Foundations</h3>
+              <p class="program-desc">Confidence building, edge work, speed control, and recreational gliding for adults.</p>
+              <div class="session-meta">
+                <span><i class="fas fa-clock"></i> 45 min / week</span>
+                <span><i class="fas fa-user-check"></i> Coach Marcus</span>
+              </div>
+              <a href="dashboard.html" class="btn btn-primary btn-sm">Enroll Adult</a>
+            </div>
+          </article>
+
+          <!-- Tier 4: Figure Masterclass -->
+          <article class="program-card">
+            <div class="program-img">
+              <img src="assets/images/lesson-private.jpg" alt="Private Figure Coaching" loading="lazy">
+            </div>
+            <div class="program-content">
+              <div class="program-level">
+                <span class="badge badge-coral">1-on-1 Elite</span>
+                <span class="program-price">$65 <small style="font-size: 0.75rem; color: var(--text-muted);">/ lesson</small></span>
+              </div>
+              <h3 class="program-title">Figure Masterclass</h3>
+              <p class="program-desc">Personalized spins, jumps, axels, program choreography, and testing preparation.</p>
+              <div class="session-meta">
+                <span><i class="fas fa-clock"></i> 45 min / week</span>
+                <span><i class="fas fa-user-check"></i> Coach Elena</span>
+              </div>
+              <a href="dashboard.html" class="btn btn-coral btn-sm">Book Private</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 3 — HOCKEY LEAGUES ==================== -->
+    <section class="section-pad" style="background: var(--surface-alt);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fas fa-hockey-puck"></i> Fast &amp; Competitive</span>
+          <h2 class="section-title">Ice Hockey Leagues &amp; Clinics</h2>
+          <p class="section-desc">Join seasonal leagues featuring live referees, stats tracking, and championship playoffs.</p>
+        </div>
+
+        <div class="programs-grid">
+          <article class="program-card">
+            <div class="program-img">
+              <img src="assets/images/lesson-hockey.jpg" alt="Adult Co-Ed Hockey League" loading="lazy">
+            </div>
+            <div class="program-content">
+              <div class="program-level">
+                <span class="badge badge-ice">Adult Division</span>
+                <span class="program-price">$260 <small style="font-size: 0.75rem; color: var(--text-muted);">/ 12 games</small></span>
+              </div>
+              <h3 class="program-title">Adult Co-Ed Hockey</h3>
+              <p class="program-desc">Division A, B, and C recreational leagues. Full referees, game jerseys, and digital stats.</p>
+              <a href="dashboard.html" class="btn btn-primary btn-sm">Register Team / Free Agent</a>
+            </div>
+          </article>
+
+          <article class="program-card">
+            <div class="program-img">
+              <img src="assets/images/rink-surface.jpg" alt="Youth Hockey Development" loading="lazy">
+            </div>
+            <div class="program-content">
+              <div class="program-level">
+                <span class="badge badge-coral">Ages 8–15</span>
+                <span class="program-price">$210 <small style="font-size: 0.75rem; color: var(--text-muted);">/ 10 games</small></span>
+              </div>
+              <h3 class="program-title">Junior Frost League</h3>
+              <p class="program-desc">Youth developmental league focusing on teamwork, speed drills, and positioning.</p>
+              <a href="dashboard.html" class="btn btn-coral btn-sm">Register Player</a>
+            </div>
+          </article>
+
+          <article class="program-card">
+            <div class="program-img">
+              <img src="assets/images/rink-atmosphere.jpg" alt="Power Skating Clinic" loading="lazy">
+            </div>
+            <div class="program-content">
+              <div class="program-level">
+                <span class="badge badge-ice">Speed &amp; Edge</span>
+                <span class="program-price">$180 <small style="font-size: 0.75rem; color: var(--text-muted);">/ 4 wks</small></span>
+              </div>
+              <h3 class="program-title">Power Skating Clinic</h3>
+              <p class="program-desc">High-intensity stride biomechanics, rapid transitions, acceleration, and endurance.</p>
+              <a href="dashboard.html" class="btn btn-primary btn-sm">Join Clinic</a>
+            </div>
+          </article>
+
+          <article class="program-card">
+            <div class="program-img">
+              <img src="assets/images/session-weekend.jpg" alt="Goalie Training Clinic" loading="lazy">
+            </div>
+            <div class="program-content">
+              <div class="program-level">
+                <span class="badge badge-coral">Specialized</span>
+                <span class="program-price">$195 <small style="font-size: 0.75rem; color: var(--text-muted);">/ 4 wks</small></span>
+              </div>
+              <h3 class="program-title">Goalie Academy</h3>
+              <p class="program-desc">Butterfly technique, rebound control, angle positioning, and rapid recovery drills.</p>
+              <a href="dashboard.html" class="btn btn-coral btn-sm">Join Goalie Clinic</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== NEW SECTION: SKILL PATHWAY & PROGRESSION MATRIX ==================== -->
+    <section class="section-pad skill-matrix-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fas fa-route"></i> Progression Roadmap</span>
+          <h2 class="section-title">Skating Pathway &amp; Skill Matrix</h2>
+          <p class="section-desc">From your first glide to competitive spins — track the official certification tiers, milestone drills, and badge unlocks.</p>
+        </div>
+
+        <!-- Level Selector Tabs -->
+        <div class="pathway-tier-tabs">
+          <button class="pathway-tab-btn active" data-level="1">
+            <span class="tab-badge">Tier 1</span>
+            <strong>Glacier Cadet</strong>
+            <small>Beginner Foundations</small>
+          </button>
+          <button class="pathway-tab-btn" data-level="2">
+            <span class="tab-badge">Tier 2</span>
+            <strong>Frost Stride</strong>
+            <small>Edge &amp; Crossovers</small>
+          </button>
+          <button class="pathway-tab-btn" data-level="3">
+            <span class="tab-badge">Tier 3</span>
+            <strong>Edge Master</strong>
+            <small>Spins &amp; Single Jumps</small>
+          </button>
+          <button class="pathway-tab-btn" data-level="4">
+            <span class="tab-badge">Tier 4</span>
+            <strong>Olympic Track</strong>
+            <small>Multi-Rotations &amp; ISU</small>
+          </button>
+        </div>
+
+        <!-- Dynamic Pathway Content Box -->
+        <div class="pathway-matrix-grid">
+          <!-- Left HUD Tier Summary -->
+          <div class="pathway-hud-card" id="pathwayHud">
+            <div class="pathway-hud-header">
+              <span class="badge badge-ice" id="hudBadge">Tier 1 • Beginner</span>
+              <span class="pathway-time-tag"><i class="fas fa-calendar-alt"></i> <span id="hudDuration">6 – 8 Weeks</span></span>
+            </div>
+            <h3 class="pathway-hud-title" id="hudTitle">Glacier Cadet Level</h3>
+            <p class="pathway-hud-desc" id="hudDesc">
+              Mastering confidence on the ice, posture alignment, forward stroking, snowplow stops, and recovery fundamentals.
+            </p>
+
+            <div class="pathway-stats-meters">
+              <div class="pathway-meter-row">
+                <div class="meter-label"><span>Balance &amp; Posture</span><strong id="m1Val">90%</strong></div>
+                <div class="meter-bar"><div class="meter-fill" id="m1Fill" style="width: 90%;"></div></div>
+              </div>
+              <div class="pathway-meter-row">
+                <div class="meter-label"><span>Edge Control</span><strong id="m2Val">65%</strong></div>
+                <div class="meter-bar"><div class="meter-fill" id="m2Fill" style="width: 65%;"></div></div>
+              </div>
+              <div class="pathway-meter-row">
+                <div class="meter-label"><span>Glide Speed</span><strong id="m3Val">50%</strong></div>
+                <div class="meter-bar"><div class="meter-fill" id="m3Fill" style="width: 50%;"></div></div>
+              </div>
+            </div>
+
+            <div class="pathway-hud-footer">
+              <div class="hud-coach-info">
+                <i class="fas fa-certificate" style="color: var(--primary-ice); font-size: 1.3rem;"></i>
+                <div>
+                  <small style="color: var(--text-muted); display: block; font-size: 0.75rem;">CERTIFICATION</small>
+                  <strong id="hudCert" style="font-size: 0.88rem;">USFS Basic 1–3 Badge</strong>
+                </div>
+              </div>
+              <a href="dashboard.html" class="btn btn-primary btn-sm">Enroll In Tier</a>
+            </div>
+          </div>
+
+          <!-- Right 4-Drill Matrix -->
+          <div class="pathway-drills-list" id="drillsList">
+            <div class="drill-card">
+              <div class="drill-num">01</div>
+              <div class="drill-body">
+                <h4>March &amp; Two-Foot Glide</h4>
+                <p>Forward marching steps across rink width transitioning into an extended balanced glide.</p>
+                <span class="drill-tag"><i class="fas fa-check-circle"></i> Essential Prerequisite</span>
+              </div>
+            </div>
+            <div class="drill-card">
+              <div class="drill-num">02</div>
+              <div class="drill-body">
+                <h4>Dip &amp; Safe Fall Recovery</h4>
+                <p>Deep knee bend squat on moving ice and proper hand-tuck fall recovery technique.</p>
+                <span class="drill-tag"><i class="fas fa-check-circle"></i> Safety Standard</span>
+              </div>
+            </div>
+            <div class="drill-card">
+              <div class="drill-num">03</div>
+              <div class="drill-body">
+                <h4>Forward Swizzles (Fishies)</h4>
+                <p>Inward and outward blade pushes maintaining rhythm, continuous knee flex, and edge push.</p>
+                <span class="drill-tag"><i class="fas fa-check-circle"></i> Core Motion</span>
+              </div>
+            </div>
+            <div class="drill-card">
+              <div class="drill-num">04</div>
+              <div class="drill-body">
+                <h4>Snowplow Stop &amp; T-Stop</h4>
+                <p>Controlled deceleration applying blade friction with heels pushed out and shoulders squared.</p>
+                <span class="drill-tag"><i class="fas fa-check-circle"></i> Level Test Goal</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 4 — CERTIFIED COACHES ==================== -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fas fa-medal"></i> Master Staff</span>
+          <h2 class="section-title">Meet Our Master Coaches</h2>
+          <p class="section-desc">Learn from former national champions, ISU technical specialists, and professional hockey veterans.</p>
+        </div>
+
+        <div class="coaches-grid">
+          <!-- Coach 1 -->
+          <div class="coach-card">
+            <div class="coach-img-wrap">
+              <img src="assets/images/coach-sarah.jpg" alt="Coach Sarah Jenkins" loading="lazy">
+            </div>
+            <div class="coach-body">
+              <div class="coach-role">Head of Figure Skating</div>
+              <h3 class="coach-name">Sarah Jenkins</h3>
+              <p class="coach-desc">12 years coaching national medalists with specialization in edge flow and triple jumps.</p>
+              <div class="coach-badge-list">
+                <span class="badge badge-ice">USFS Gold</span>
+                <span class="badge badge-ice">PSA Master</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coach 2 -->
+          <div class="coach-card">
+            <div class="coach-img-wrap">
+              <img src="assets/images/coach-marcus.jpg" alt="Coach Marcus Vance" loading="lazy">
+            </div>
+            <div class="coach-body">
+              <div class="coach-role">Director of Hockey</div>
+              <h3 class="coach-name">Marcus Vance</h3>
+              <p class="coach-desc">Former AHL forward with 15+ years developing elite youth and adult hockey players.</p>
+              <div class="coach-badge-list">
+                <span class="badge badge-coral">USA Hockey L5</span>
+                <span class="badge badge-coral">Power Stride</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coach 3 -->
+          <div class="coach-card">
+            <div class="coach-img-wrap">
+              <img src="assets/images/coach-elena.jpg" alt="Coach Elena Rostova" loading="lazy">
+            </div>
+            <div class="coach-body">
+              <div class="coach-role">Artistic Choreographer</div>
+              <h3 class="coach-name">Elena Rostova</h3>
+              <p class="coach-desc">International ice dance competitor known for expressive artistry and musicality on ice.</p>
+              <div class="coach-badge-list">
+                <span class="badge badge-ice">ISU Certified</span>
+                <span class="badge badge-ice">Choreography</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 5 — REGISTRATION CTA ==================== -->
+    <section class="section-pad-sm">
+      <div class="container">
+        <div class="cta-banner-winter">
+          <div class="cta-banner-content">
+            <span class="section-eyebrow" style="background: rgba(79, 169, 216, 0.25); color: #DDF4FF; border: 1px solid rgba(79, 169, 216, 0.4);">
+              <i class="fas fa-trophy"></i> Start Your Journey
+            </span>
+            <h2 class="cta-title">Try Your First Lesson Free</h2>
+            <p class="cta-desc">Sign up today for a 20-minute introductory ice assessment and meet your coach.</p>
+            <div class="cta-btns">
+              <a href="dashboard.html" class="btn btn-primary btn-lg"><i class="fas fa-clipboard-check"></i> Book Free Trial</a>
+              <a href="pricing.html" class="btn btn-coral btn-lg"><i class="fas fa-tag"></i> View Lesson Packages</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <svg class="frostiva-logo-svg" dir="ltr" viewBox="0 0 240 56" fill="none" style="height: 40px; width: auto;">
+            <g transform="translate(6, 4)">
+              <polygon points="24,4 40,14 40,34 24,44 8,34 8,14" stroke="#4FA9D8" stroke-width="2.5" fill="rgba(79, 169, 216, 0.1)"/>
+              <line x1="24" y1="8" x2="24" y2="40" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="16" x2="38" y2="32" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="32" x2="38" y2="16" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <path d="M4 38 Q24 48 44 38 L42 41 Q24 51 6 41 Z" fill="#DDF4FF" stroke="#4FA9D8" stroke-width="0.8"/>
+              <circle cx="24" cy="24" r="3.5" fill="#FF6B5A" />
+            </g>
+            <text x="62" y="32" font-family="'Outfit', sans-serif" font-size="24" font-weight="800" letter-spacing="1.5" class="brand-text-title" fill="currentColor" text-anchor="start" direction="ltr">
+              FROST<tspan fill="#4FA9D8">IVA</tspan>
+            </text>
+            <text x="63" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" letter-spacing="2" fill="#64748B" text-anchor="start" direction="ltr">
+              SKATE • GLIDE • CELEBRATE
+            </text>
+          </svg>
+          <p>Premier Olympic-standard ice skating facility dedicated to athletic excellence, community recreation, and festive celebrations.</p>
+          <div class="footer-social-row">
+            <a href="#" class="icon-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="icon-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="sessions.html">Public Sessions</a></li>
+            <li><a href="lessons.html">Lessons &amp; Leagues</a></li>
+            <li><a href="pricing.html">Pricing &amp; Passes</a></li>
+            <li><a href="parties.html">Birthday Parties</a></li>
+            <li><a href="dashboard.html">Member Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Programs</h4>
+          <ul class="footer-links">
+            <li><a href="lessons.html">Learn to Skate</a></li>
+            <li><a href="lessons.html">Figure Skating Academy</a></li>
+            <li><a href="lessons.html">Adult Hockey League</a></li>
+            <li><a href="lessons.html">Youth Clinics</a></li>
+            <li><a href="parties.html">Private Rink Rental</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Arena Location &amp; Hours</h4>
+          <ul class="footer-contact-info">
+            <li><i class="fas fa-map-marker-alt"></i> 1420 Glacier Avenue, Arctic Ridge</li>
+            <li><i class="fas fa-phone-alt"></i> (555) 376-7848</li>
+            <li><i class="fas fa-clock"></i> Mon–Sun: 6:00 AM – 11:00 PM</li>
+            <li><i class="fas fa-envelope"></i> hello@frostivaice.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 FROSTIVA Ice Skating Rink. All rights reserved.</p>
+        <p>Skate. Glide. Celebrate.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Scroll back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

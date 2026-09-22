@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frostiva — Ice Skating Rink | Skate. Glide. Celebrate.</title>
+  <meta name="description" content="Experience world-class indoor ice skating at Frostiva. Daily public sessions, private coaching, hockey leagues, birthday parties, and modern ice sports.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="header-wrapper">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Frostiva Home">
+        <svg class="frostiva-logo-svg" dir="ltr" viewBox="0 0 240 56" fill="none" style="height: 42px; width: auto;">
+          <g transform="translate(6, 4)">
+            <polygon points="24,4 40,14 40,34 24,44 8,34 8,14" stroke="#4FA9D8" stroke-width="2.5" fill="rgba(79, 169, 216, 0.1)"/>
+            <line x1="24" y1="8" x2="24" y2="40" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="16" x2="38" y2="32" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="32" x2="38" y2="16" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+            <path d="M4 38 Q24 48 44 38 L42 41 Q24 51 6 41 Z" fill="#DDF4FF" stroke="#4FA9D8" stroke-width="0.8"/>
+            <circle cx="24" cy="24" r="3.5" fill="#FF6B5A" />
+          </g>
+          <text x="62" y="32" font-family="'Outfit', sans-serif" font-size="24" font-weight="800" letter-spacing="1.5" class="brand-text-title" fill="currentColor" text-anchor="start" direction="ltr">
+            FROST<tspan fill="#4FA9D8">IVA</tspan>
+          </text>
+          <text x="63" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" letter-spacing="2" fill="#64748B" text-anchor="start" direction="ltr">
+            SKATE • GLIDE • CELEBRATE
+          </text>
+        </svg>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <div class="nav-dropdown">
+          <a href="index.html" class="nav-link active">
+            Home <i class="fas fa-chevron-down"></i>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="nav-dropdown-item active">
+              <span>Home 1</span>
+              <span class="badge badge-ice">Classic</span>
+            </a>
+            <a href="home2.html" class="nav-dropdown-item">
+              <span>Home 2</span>
+              <span class="badge badge-coral">Arena</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="sessions.html" class="nav-link">Public Sessions</a>
+        <a href="lessons.html" class="nav-link">Lessons &amp; Leagues</a>
+        <a href="pricing.html" class="nav-link">Pricing &amp; Passes</a>
+        <a href="parties.html" class="nav-link">Birthday Parties</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button class="icon-btn theme-toggle-btn" aria-label="Toggle Light/Dark Theme" title="Toggle Theme">
+          <i class="fas fa-moon"></i>
+        </button>
+
+        <!-- LTR/RTL Toggle -->
+        <button class="icon-btn rtl-toggle-btn" aria-label="Toggle Direction LTR/RTL" title="Toggle Direction" style="width: auto; padding: 0 12px; font-weight: 700; font-size: 0.8rem;">
+          <span>RTL</span>
+        </button>
+
+        <!-- Login CTA -->
+        <a href="login.html" class="btn btn-primary btn-sm">
+          <i class="fas fa-user"></i> Login
+        </a>
+
+        <!-- Hamburger for mobile/tablet -->
+        <button class="hamburger-btn" aria-label="Open Navigation Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu-overlay">
+    <div class="mobile-menu">
+      <div class="mobile-menu-header">
+        <a href="index.html" class="nav-brand" aria-label="Frostiva Home">
+          <svg class="frostiva-logo-svg" dir="ltr" viewBox="0 0 240 56" fill="none" style="height: 38px; width: auto;">
+            <g transform="translate(6, 4)">
+              <polygon points="24,4 40,14 40,34 24,44 8,34 8,14" stroke="#4FA9D8" stroke-width="2.5" fill="rgba(79, 169, 216, 0.1)"/>
+              <line x1="24" y1="8" x2="24" y2="40" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="16" x2="38" y2="32" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="32" x2="38" y2="16" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <path d="M4 38 Q24 48 44 38 L42 41 Q24 51 6 41 Z" fill="#DDF4FF" stroke="#4FA9D8" stroke-width="0.8"/>
+              <circle cx="24" cy="24" r="3.5" fill="#FF6B5A" />
+            </g>
+            <text x="62" y="32" font-family="'Outfit', sans-serif" font-size="24" font-weight="800" letter-spacing="1.5" class="brand-text-title" fill="currentColor" text-anchor="start" direction="ltr">
+              FROST<tspan fill="#4FA9D8">IVA</tspan>
+            </text>
+            <text x="63" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" letter-spacing="2" fill="#64748B" text-anchor="start" direction="ltr">
+              SKATE • GLIDE • CELEBRATE
+            </text>
+          </svg>
+        </a>
+        <button class="icon-btn mobile-close-btn" aria-label="Close Navigation Menu"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="mobile-nav-links">
+        <div class="mobile-dropdown">
+          <div class="mobile-dropdown-header active">
+            <span>Home Variations</span>
+            <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i>
+          </div>
+          <div class="mobile-dropdown-menu">
+            <a href="index.html" class="nav-link active">Home 1 — Classic</a>
+            <a href="home2.html" class="nav-link">Home 2 — Arena</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="sessions.html" class="nav-link">Public Sessions</a>
+        <a href="lessons.html" class="nav-link">Lessons &amp; Leagues</a>
+        <a href="pricing.html" class="nav-link">Pricing &amp; Passes</a>
+        <a href="parties.html" class="nav-link">Birthday Parties</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </div>
+      <div class="mobile-actions">
+        <div class="mobile-toggles">
+          <button class="icon-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+          <button class="btn btn-outline btn-sm rtl-toggle-btn" style="flex: 1;"><span>RTL</span></button>
+        </div>
+        <a href="login.html" class="btn btn-primary" style="width: 100%;">
+          <i class="fas fa-user"></i> Login / Register
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==================== SECTION 1 — HERO ==================== -->
+    <section class="home-hero" style="background-image: url('assets/images/hero-home.jpg');">
+      <div class="container">
+        <div class="home-hero-content">
+          <span class="section-eyebrow" style="background: rgba(79, 169, 216, 0.25); color: #DDF4FF; border: 1px solid rgba(79, 169, 216, 0.4);">
+            <i class="fas fa-snowflake"></i> Premier Arctic Experience
+          </span>
+          <h1 class="home-hero-title">
+            Find Your Flow <span>On Ice</span>
+          </h1>
+          <p class="home-hero-desc">
+            Step onto pristine Olympic-grade ice with smooth glides, luminous arena vibes, and unforgettable skating sessions for all ages and skill levels.
+          </p>
+          <div class="hero-btn-group">
+            <a href="sessions.html" class="btn btn-primary btn-lg">
+              <i class="fas fa-ticket-alt"></i> View Sessions
+            </a>
+            <a href="lessons.html" class="btn btn-outline-white btn-lg">
+              <i class="fas fa-graduation-cap"></i> Explore Lessons
+            </a>
+          </div>
+
+          <div class="hero-stats-row">
+            <div class="hero-stat-item">
+              <div class="hero-stat-icon"><i class="fas fa-clock"></i></div>
+              <div class="hero-stat-text">
+                <strong>Daily Sessions</strong>
+                <span>Public &amp; Family Hours</span>
+              </div>
+            </div>
+            <div class="hero-stat-item">
+              <div class="hero-stat-icon"><i class="fas fa-award"></i></div>
+              <div class="hero-stat-text">
+                <strong>Certified Coaches</strong>
+                <span>ISU &amp; USA Hockey</span>
+              </div>
+            </div>
+            <div class="hero-stat-item">
+              <div class="hero-stat-icon"><i class="fas fa-users"></i></div>
+              <div class="hero-stat-text">
+                <strong>Family Friendly</strong>
+                <span>Skate Aids &amp; Rentals</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 2 — PUBLIC SESSION HIGHLIGHTS ==================== -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fas fa-calendar-alt"></i> Ice Time</span>
+          <h2 class="section-title">Public Session Highlights</h2>
+          <p class="section-desc">Choose from curated ice sessions designed for casual gliders, families, and evening skaters.</p>
+        </div>
+
+        <div class="sessions-grid-4">
+          <!-- Card 1: Open Skate -->
+          <article class="session-card">
+            <div class="session-img-wrap">
+              <img src="assets/images/session-open.jpg" alt="Open Skate Public Session" loading="lazy">
+              <span class="badge badge-ice session-badge-float">All Skill Levels</span>
+            </div>
+            <div class="session-body">
+              <h3 class="session-title">Open Skate</h3>
+              <p class="session-text">Relaxed recreational glide across full-arena ice with lively background music.</p>
+              <div class="session-meta">
+                <div class="session-meta-time">
+                  <i class="fas fa-clock"></i> 10:00 AM – 1:00 PM
+                </div>
+                <div class="session-meta-price">
+                  <span class="price-val">$16</span>
+                  <span class="price-tag">per skater</span>
+                </div>
+              </div>
+              <a href="sessions.html" class="btn btn-outline btn-sm">Book Session</a>
+            </div>
+          </article>
+
+          <!-- Card 2: Family Skate -->
+          <article class="session-card">
+            <div class="session-img-wrap">
+              <img src="assets/images/session-family.jpg" alt="Family Skate Session" loading="lazy">
+              <span class="badge badge-coral session-badge-float">Kids &amp; Parents</span>
+            </div>
+            <div class="session-body">
+              <h3 class="session-title">Family Skate</h3>
+              <p class="session-text">Gentle pace ice time equipped with seal &amp; penguin balance aids for young beginners.</p>
+              <div class="session-meta">
+                <div class="session-meta-time">
+                  <i class="fas fa-clock"></i> 1:30 PM – 4:00 PM
+                </div>
+                <div class="session-meta-price">
+                  <span class="price-val">$48</span>
+                  <span class="price-tag">Family 4-Pack</span>
+                </div>
+              </div>
+              <a href="sessions.html" class="btn btn-outline btn-sm">Book Session</a>
+            </div>
+          </article>
+
+          <!-- Card 3: Evening Skate -->
+          <article class="session-card">
+            <div class="session-img-wrap">
+              <img src="assets/images/session-evening.jpg" alt="Cosmic Evening Skate Session" loading="lazy">
+              <span class="badge badge-ice session-badge-float">Cosmic Glow</span>
+            </div>
+            <div class="session-body">
+              <h3 class="session-title">Evening Skate</h3>
+              <p class="session-text">Themed lighting, synchronized arena spotlights, and top hit playlists on ice.</p>
+              <div class="session-meta">
+                <div class="session-meta-time">
+                  <i class="fas fa-clock"></i> 7:00 PM – 10:00 PM
+                </div>
+                <div class="session-meta-price">
+                  <span class="price-val">$20</span>
+                  <span class="price-tag">per skater</span>
+                </div>
+              </div>
+              <a href="sessions.html" class="btn btn-outline btn-sm">Book Session</a>
+            </div>
+          </article>
+
+          <!-- Card 4: Weekend Skate -->
+          <article class="session-card">
+            <div class="session-img-wrap">
+              <img src="assets/images/session-weekend.jpg" alt="Weekend Skate Fiesta" loading="lazy">
+              <span class="badge badge-coral session-badge-float">High Energy</span>
+            </div>
+            <div class="session-body">
+              <h3 class="session-title">Weekend Skate</h3>
+              <p class="session-text">The ultimate community gathering with cafe treats, games, and open ice freestyle.</p>
+              <div class="session-meta">
+                <div class="session-meta-time">
+                  <i class="fas fa-clock"></i> 11:00 AM – 5:00 PM
+                </div>
+                <div class="session-meta-price">
+                  <span class="price-val">$18</span>
+                  <span class="price-tag">Sat &amp; Sun Pass</span>
+                </div>
+              </div>
+              <a href="sessions.html" class="btn btn-outline btn-sm">Book Session</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 3 — RINK EXPERIENCE (Asymmetric Editorial) ==================== -->
+    <section class="section-pad" style="background: var(--surface-alt);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fas fa-gem"></i> The Facility</span>
+          <h2 class="section-title">The Frostiva Experience</h2>
+          <p class="section-desc">Designed to deliver championship-level refrigeration, crisp ice quality, and comfort for skaters and spectators alike.</p>
+        </div>
+
+        <div class="rink-bento-grid">
+          <!-- Bento 1: Olympic Ice Surface (Col 8, Row 2) -->
+          <div class="bento-item bento-col-8">
+            <img src="assets/images/rink-surface.jpg" alt="Olympic Grade Ice Surface" loading="lazy">
+            <div class="bento-overlay">
+              <span class="bento-tag">Pristine Ice Surface</span>
+              <h3 class="bento-title">Laser-Leveled Olympic Spec Ice</h3>
+              <p class="bento-desc">Maintained at optimal skating hardness with precision climate control and fresh Zamboni cuts every 90 minutes.</p>
+            </div>
+          </div>
+
+          <!-- Bento 2: Skate Rental Pro Shop (Col 4, Row 1) -->
+          <div class="bento-item bento-col-4">
+            <img src="assets/images/rink-rentals.jpg" alt="Skate Rental Pro Shop" loading="lazy">
+            <div class="bento-overlay">
+              <span class="bento-tag">Pro Gear Locker</span>
+              <h3 class="bento-title">1,200+ Premium Skates</h3>
+              <p class="bento-desc">Sanitized figure and hockey skates from toddler size 7 to adult 15.</p>
+            </div>
+          </div>
+
+          <!-- Bento 3: Spectator Lounge (Col 4, Row 1) -->
+          <div class="bento-item bento-col-4">
+            <img src="assets/images/rink-spectator.jpg" alt="Spectator Viewing Lounge" loading="lazy">
+            <div class="bento-overlay">
+              <span class="bento-tag">Warmth &amp; Comfort</span>
+              <h3 class="bento-title">Heated Panorama Lounge</h3>
+              <p class="bento-desc">Glass-front spectator lounge with artisan coffee, hot cocoa, and high-speed Wi-Fi.</p>
+            </div>
+          </div>
+
+          <!-- Bento 4: Rink Atmosphere (Col 12/6) -->
+          <div class="bento-item bento-col-6">
+            <img src="assets/images/rink-atmosphere.jpg" alt="Atmospheric Arena Lighting" loading="lazy">
+            <div class="bento-overlay">
+              <span class="bento-tag">Dynamic Ambience</span>
+              <h3 class="bento-title">Theatrical LED &amp; Acoustic Sound</h3>
+              <p class="bento-desc">Immersive light shows synchronized for cosmic sessions and special performances.</p>
+            </div>
+          </div>
+
+          <!-- Bento 5: Training Studio (Col 6) -->
+          <div class="bento-item bento-col-6">
+            <img src="assets/images/hero-sessions.jpg" alt="Frostiva Arena Grand View" loading="lazy">
+            <div class="bento-overlay">
+              <span class="bento-tag">Spacious Arena</span>
+              <h3 class="bento-title">Two Full-Size Rinks</h3>
+              <p class="bento-desc">Dedicated surfaces for public free skate and competitive figure/hockey training.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 4 — LESSONS & PASSES ==================== -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fas fa-skating"></i> Academy &amp; Membership</span>
+          <h2 class="section-title">Lessons &amp; Unlimited Passes</h2>
+          <p class="section-desc">Develop your edge work with master coaches or enjoy unlimited monthly skating access.</p>
+        </div>
+
+        <div class="programs-grid">
+          <!-- Program 1: Learn to Skate -->
+          <article class="program-card">
+            <div class="program-img">
+              <img src="assets/images/lesson-learn.jpg" alt="Learn to skate program" loading="lazy">
+            </div>
+            <div class="program-content">
+              <div class="program-level">
+                <span class="badge badge-ice">Beginner</span>
+                <span class="program-price">$140 <small>/ 6 wks</small></span>
+              </div>
+              <h3 class="program-title">Learn to Skate</h3>
+              <p class="program-desc">Structured 6-week curriculum covering forward glides, snowplow stops, and crossovers.</p>
+              <a href="lessons.html" class="btn btn-primary btn-sm">View Curriculum</a>
+            </div>
+          </article>
+
+          <!-- Program 2: Private Coaching -->
+          <article class="program-card">
+            <div class="program-img">
+              <img src="assets/images/lesson-private.jpg" alt="Private figure skating coaching" loading="lazy">
+            </div>
+            <div class="program-content">
+              <div class="program-level">
+                <span class="badge badge-coral">1-on-1</span>
+                <span class="program-price">$65 <small>/ 45 min</small></span>
+              </div>
+              <h3 class="program-title">Private Coaching</h3>
+              <p class="program-desc">Targeted technical instruction for competitive jumps, spins, choreography, and test prep.</p>
+              <a href="lessons.html" class="btn btn-coral btn-sm">Book a Coach</a>
+            </div>
+          </article>
+
+          <!-- Program 3: Hockey Training -->
+          <article class="program-card">
+            <div class="program-img">
+              <img src="assets/images/lesson-hockey.jpg" alt="Hockey skills training" loading="lazy">
+            </div>
+            <div class="program-content">
+              <div class="program-level">
+                <span class="badge badge-ice">Hockey League</span>
+                <span class="program-price">$220 <small>/ Season</small></span>
+              </div>
+              <h3 class="program-title">Hockey Academy</h3>
+              <p class="program-desc">Puck control, power skating, tactical positioning, and weekend competitive league play.</p>
+              <a href="lessons.html" class="btn btn-primary btn-sm">Join League</a>
+            </div>
+          </article>
+
+          <!-- Program 4: Monthly Pass -->
+          <article class="program-card">
+            <div class="program-img">
+              <img src="assets/images/pass-monthly.jpg" alt="Monthly unlimited skate pass" loading="lazy">
+            </div>
+            <div class="program-content">
+              <div class="program-level">
+                <span class="badge badge-coral">Unlimited Pass</span>
+                <span class="program-price">$89 <small>/ mo</small></span>
+              </div>
+              <h3 class="program-title">Arctic Monthly Pass</h3>
+              <p class="program-desc">Unlimited entry to all public sessions, free skate rental, and 15% discount on pro-shop gear.</p>
+              <a href="pricing.html" class="btn btn-coral btn-sm">Get Pass</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== NEW SECTION A — INTERACTIVE ICE SOUNDSCAPE STUDIO CONSOLE ==================== -->
+    <section class="section-pad soundscape-studio-section" style="background: var(--surface-alt);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fas fa-headphones-alt"></i> Acoustic Atmosphere</span>
+          <h2 class="section-title">Arena Soundscape &amp; Vibe Console</h2>
+          <p class="section-desc">Tune in to the curated multi-channel audio feeds powering each session with spatial 3D surround sound.</p>
+        </div>
+
+        <div class="soundscape-console-wrapper">
+          <!-- Left: Master Sound Deck & Visualizer Player -->
+          <div class="sound-deck-master">
+            <div class="deck-top-bar">
+              <div class="deck-live-pill">
+                <span class="live-dot-pulse"></span>
+                <span>ARENA BROADCAST FEED</span>
+              </div>
+              <div class="deck-audio-spec">
+                <i class="fas fa-broadcast-tower"></i> 96kHz / 24-Bit Spatial Audio
+              </div>
+            </div>
+
+            <!-- Central Visualizer & Vinyl Spectrum -->
+            <div class="deck-visualizer-box">
+              <div class="vinyl-disc-glow" id="vinylGlow">
+                <div class="vinyl-grooves">
+                  <div class="vinyl-center-pin">
+                    <i class="fas fa-bolt" id="deckCenterIcon"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Animated Frequency Equalizer Spectrum Bars -->
+              <div class="spectrum-bars-deck" id="deckSpectrum">
+                <span style="--h: 40%; --d: 0.1s;"></span>
+                <span style="--h: 75%; --d: 0.3s;"></span>
+                <span style="--h: 55%; --d: 0.2s;"></span>
+                <span style="--h: 90%; --d: 0.4s;"></span>
+                <span style="--h: 65%; --d: 0.15s;"></span>
+                <span style="--h: 85%; --d: 0.35s;"></span>
+                <span style="--h: 45%; --d: 0.25s;"></span>
+                <span style="--h: 100%; --d: 0.5s;"></span>
+                <span style="--h: 70%; --d: 0.18s;"></span>
+                <span style="--h: 95%; --d: 0.42s;"></span>
+                <span style="--h: 60%; --d: 0.22s;"></span>
+                <span style="--h: 80%; --d: 0.38s;"></span>
+                <span style="--h: 50%; --d: 0.12s;"></span>
+                <span style="--h: 70%; --d: 0.28s;"></span>
+              </div>
+            </div>
+
+            <!-- Deck Track Information -->
+            <div class="deck-track-info">
+              <div class="deck-meta-tags">
+                <span class="deck-genre-tag" id="deckGenreTag">EDM • SYNTHWAVE • CHART HITS</span>
+                <span class="deck-bpm-tag" id="deckBpmTag"><i class="fas fa-heartbeat"></i> 128 BPM</span>
+                <span class="deck-lighting-tag" id="deckLightingTag"><i class="fas fa-bolt"></i> Laser Synced</span>
+              </div>
+
+              <h3 class="deck-title" id="deckTitle">Cosmic Neon Beats</h3>
+              <p class="deck-description" id="deckDesc">Pulsing electronic beats, bass-boosted tracks, and synchronized RGB arena laser lights during Friday &amp; Saturday night public skates.</p>
+              
+              <div class="deck-schedule-banner">
+                <i class="fas fa-calendar-alt"></i>
+                <span id="deckSchedule">Active Schedule: Friday &amp; Saturday Nights (7:00 PM – 10:30 PM)</span>
+              </div>
+            </div>
+
+            <!-- Interactive Timeline & Scrubber -->
+            <div class="deck-playback-row">
+              <span class="time-stamp-current" id="timeCurrent">01:48</span>
+              <div class="deck-progress-bar" id="deckProgressBar">
+                <div class="deck-progress-fill" id="deckProgressFill" style="width: 48%;"></div>
+              </div>
+              <span class="time-stamp-total" id="timeTotal">03:45</span>
+            </div>
+
+            <!-- Control Buttons -->
+            <div class="deck-controls-row">
+              <button class="deck-ctrl-btn" id="prevTrackBtn" aria-label="Previous Channel"><i class="fas fa-step-backward"></i></button>
+              <button class="deck-play-master-btn" id="masterPlayBtn" aria-label="Play or Pause Soundscape">
+                <i class="fas fa-play" id="masterPlayIcon"></i>
+              </button>
+              <button class="deck-ctrl-btn" id="nextTrackBtn" aria-label="Next Channel"><i class="fas fa-step-forward"></i></button>
+              <div class="deck-volume-wrapper">
+                <i class="fas fa-volume-up"></i>
+                <input type="range" class="deck-volume-slider" min="0" max="100" value="85" aria-label="Master Volume">
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Channel Selection Playlist -->
+          <div class="sound-channels-deck">
+            <div class="channels-deck-header">
+              <h4><i class="fas fa-sliders-h"></i> Arena Sound Channels</h4>
+              <span class="channel-count-badge">4 Channels Live</span>
+            </div>
+
+            <div class="channels-list">
+              <!-- Channel 1 -->
+              <div class="sound-channel-item active" data-channel="0" 
+                   data-title="Cosmic Neon Beats" 
+                   data-genre="EDM • SYNTHWAVE • CHART HITS" 
+                   data-bpm="128 BPM" 
+                   data-lighting="Laser Synced"
+                   data-schedule="Active Schedule: Friday &amp; Saturday Nights (7:00 PM – 10:30 PM)"
+                   data-desc="Pulsing electronic beats, bass-boosted tracks, and synchronized RGB arena laser lights during Friday &amp; Saturday night public skates."
+                   data-icon="fas fa-bolt"
+                   data-accent="#00D2FF">
+                <div class="channel-icon-box" style="background: rgba(0, 210, 255, 0.15); color: #00D2FF;">
+                  <i class="fas fa-bolt"></i>
+                </div>
+                <div class="channel-info">
+                  <div class="channel-title-row">
+                    <h5>Cosmic Neon Beats</h5>
+                    <span class="channel-bpm">128 BPM</span>
+                  </div>
+                  <div class="channel-sub">EDM &bull; Synthwave &bull; Chart Hits</div>
+                  <div class="channel-timing"><i class="far fa-clock"></i> Fri &amp; Sat 7:00 PM</div>
+                </div>
+                <div class="channel-equalizer-mini">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+
+              <!-- Channel 2 -->
+              <div class="sound-channel-item" data-channel="1"
+                   data-title="Morning Acoustic Glide" 
+                   data-genre="INDIE FOLK • AMBIENT ACOUSTIC" 
+                   data-bpm="88 BPM" 
+                   data-lighting="Natural Warm Glow"
+                   data-schedule="Active Schedule: Daily Morning Sessions (10:00 AM – 1:00 PM)"
+                   data-desc="Warm, tranquil coffeehouse acoustic melodies for relaxed morning glides, coffee catchups, and peaceful solo laps."
+                   data-icon="fas fa-coffee"
+                   data-accent="#FF6B5A">
+                <div class="channel-icon-box" style="background: rgba(255, 107, 90, 0.15); color: #FF6B5A;">
+                  <i class="fas fa-coffee"></i>
+                </div>
+                <div class="channel-info">
+                  <div class="channel-title-row">
+                    <h5>Morning Acoustic Glide</h5>
+                    <span class="channel-bpm">88 BPM</span>
+                  </div>
+                  <div class="channel-sub">Indie Folk &bull; Ambient Acoustic</div>
+                  <div class="channel-timing"><i class="far fa-clock"></i> Daily 10:00 AM</div>
+                </div>
+                <div class="channel-equalizer-mini">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+
+              <!-- Channel 3 -->
+              <div class="sound-channel-item" data-channel="2"
+                   data-title="Family Fun Carnival" 
+                   data-genre="DISNEY CLASSICS • POP HITS" 
+                   data-bpm="112 BPM" 
+                   data-lighting="Multi-Color Party Lights"
+                   data-schedule="Active Schedule: Weekend Matinee (1:00 PM – 4:30 PM)"
+                   data-desc="Cheerful sing-along favorites, upbeat animated soundtrack classics, and interactive game themes for kids and parents."
+                   data-icon="fas fa-magic"
+                   data-accent="#F59E0B">
+                <div class="channel-icon-box" style="background: rgba(245, 158, 11, 0.15); color: #F59E0B;">
+                  <i class="fas fa-magic"></i>
+                </div>
+                <div class="channel-info">
+                  <div class="channel-title-row">
+                    <h5>Family Fun Carnival</h5>
+                    <span class="channel-bpm">112 BPM</span>
+                  </div>
+                  <div class="channel-sub">Disney Hits &bull; Pop Favorites</div>
+                  <div class="channel-timing"><i class="far fa-clock"></i> Weekend 1:00 PM</div>
+                </div>
+                <div class="channel-equalizer-mini">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+
+              <!-- Channel 4 -->
+              <div class="sound-channel-item" data-channel="3"
+                   data-title="Figure Classical Flow" 
+                   data-genre="CINEMATIC ORCHESTRAL • PIANO" 
+                   data-bpm="96 BPM" 
+                   data-lighting="Clean Focus Spotlights"
+                   data-schedule="Active Schedule: Freestyle Hours (Tuesday &amp; Thursday 6:00 AM)"
+                   data-desc="Dramatic instrumental scores and classical cadence designed for precision edge work, spins, and choreography practice."
+                   data-icon="fas fa-music"
+                   data-accent="#A855F7">
+                <div class="channel-icon-box" style="background: rgba(168, 85, 247, 0.15); color: #A855F7;">
+                  <i class="fas fa-music"></i>
+                </div>
+                <div class="channel-info">
+                  <div class="channel-title-row">
+                    <h5>Figure Classical Flow</h5>
+                    <span class="channel-bpm">96 BPM</span>
+                  </div>
+                  <div class="channel-sub">Cinematic Orchestral &bull; Piano</div>
+                  <div class="channel-timing"><i class="far fa-clock"></i> Freestyle Hours</div>
+                </div>
+                <div class="channel-equalizer-mini">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== NEW SECTION B — SKATER JOURNEY & MILESTONES ROADMAP ==================== -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fas fa-route"></i> Your Progression</span>
+          <h2 class="section-title">The Skater's Journey</h2>
+          <p class="section-desc">From your very first hesitant step on ice to soaring across the arena with complete confidence.</p>
+        </div>
+
+        <div class="roadmap-flow">
+          <!-- Step 1 -->
+          <div class="roadmap-step-card">
+            <div class="roadmap-node"><i class="fas fa-shoe-prints"></i></div>
+            <div class="roadmap-num">Milestone 01</div>
+            <h3 class="roadmap-title">First Fitting &amp; Glide</h3>
+            <p class="roadmap-desc">Get expertly sized into comfortable sanitized boots and step onto the smooth ice with balance aids.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="roadmap-step-card">
+            <div class="roadmap-node"><i class="fas fa-balance-scale"></i></div>
+            <div class="roadmap-num">Milestone 02</div>
+            <h3 class="roadmap-title">Edge &amp; Stop Control</h3>
+            <p class="roadmap-desc">Master the snowplow stop, two-foot glide, and forward crossovers with encouraging coach pointers.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="roadmap-step-card">
+            <div class="roadmap-node"><i class="fas fa-wind"></i></div>
+            <div class="roadmap-num">Milestone 03</div>
+            <h3 class="roadmap-title">Freestyle Flow</h3>
+            <p class="roadmap-desc">Unlock backward skating, edge transitions, spirals, and speed control across the full open arena.</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="roadmap-step-card">
+            <div class="roadmap-node"><i class="fas fa-trophy"></i></div>
+            <div class="roadmap-num">Milestone 04</div>
+            <h3 class="roadmap-title">Leagues &amp; Celebration</h3>
+            <p class="roadmap-desc">Join competitive hockey leagues, perform in ice exhibitions, and celebrate birthdays with friends under cosmic lights.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 5 — FINAL BOOKING CTA ==================== -->
+    <section class="section-pad-sm">
+      <div class="container">
+        <div class="cta-banner-winter">
+          <div class="cta-banner-content">
+            <span class="section-eyebrow" style="background: rgba(79, 169, 216, 0.25); color: #DDF4FF; border: 1px solid rgba(79, 169, 216, 0.4);">
+              <i class="fas fa-snowflake"></i> Instant Ice Reservation
+            </span>
+            <h2 class="cta-title">Your Next Skate Starts Here</h2>
+            <p class="cta-desc">
+              Grab your tickets online to secure your preferred time slot and skip the ticket lines at the door.
+            </p>
+            <div class="cta-btns">
+              <a href="sessions.html" class="btn btn-primary btn-lg">
+                <i class="fas fa-calendar-check"></i> Book a Session
+              </a>
+              <a href="pricing.html" class="btn btn-coral btn-lg">
+                <i class="fas fa-ticket-alt"></i> Get a Pass
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <svg class="frostiva-logo-svg" dir="ltr" viewBox="0 0 240 56" fill="none" style="height: 40px; width: auto;">
+            <g transform="translate(6, 4)">
+              <polygon points="24,4 40,14 40,34 24,44 8,34 8,14" stroke="#4FA9D8" stroke-width="2.5" fill="rgba(79, 169, 216, 0.1)"/>
+              <line x1="24" y1="8" x2="24" y2="40" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="16" x2="38" y2="32" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="32" x2="38" y2="16" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <path d="M4 38 Q24 48 44 38 L42 41 Q24 51 6 41 Z" fill="#DDF4FF" stroke="#4FA9D8" stroke-width="0.8"/>
+              <circle cx="24" cy="24" r="3.5" fill="#FF6B5A" />
+            </g>
+            <text x="62" y="32" font-family="'Outfit', sans-serif" font-size="24" font-weight="800" letter-spacing="1.5" class="brand-text-title" fill="currentColor" text-anchor="start" direction="ltr">
+              FROST<tspan fill="#4FA9D8">IVA</tspan>
+            </text>
+            <text x="63" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" letter-spacing="2" fill="#64748B" text-anchor="start" direction="ltr">
+              SKATE • GLIDE • CELEBRATE
+            </text>
+          </svg>
+          <p>Premier Olympic-standard ice skating facility dedicated to athletic excellence, community recreation, and festive celebrations.</p>
+          <div class="footer-social-row">
+            <a href="#" class="icon-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="icon-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="sessions.html">Public Sessions</a></li>
+            <li><a href="lessons.html">Lessons &amp; Leagues</a></li>
+            <li><a href="pricing.html">Pricing &amp; Passes</a></li>
+            <li><a href="parties.html">Birthday Parties</a></li>
+            <li><a href="dashboard.html">Member Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Programs</h4>
+          <ul class="footer-links">
+            <li><a href="lessons.html">Learn to Skate</a></li>
+            <li><a href="lessons.html">Figure Skating Academy</a></li>
+            <li><a href="lessons.html">Adult Hockey League</a></li>
+            <li><a href="lessons.html">Youth Clinics</a></li>
+            <li><a href="parties.html">Private Rink Rental</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Arena Location &amp; Hours</h4>
+          <ul class="footer-contact-info">
+            <li><i class="fas fa-map-marker-alt"></i> 1420 Glacier Avenue, Arctic Ridge</li>
+            <li><i class="fas fa-phone-alt"></i> (555) 376-7848</li>
+            <li><i class="fas fa-clock"></i> Mon–Sun: 6:00 AM – 11:00 PM</li>
+            <li><i class="fas fa-envelope"></i> hello@frostivaice.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 FROSTIVA Ice Skating Rink. All rights reserved.</p>
+        <p>Skate. Glide. Celebrate.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Scroll back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

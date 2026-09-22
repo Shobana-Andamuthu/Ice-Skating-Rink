@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing &amp; Passes — Frostiva</title>
+  <meta name="description" content="Affordable public skating admission, multi-visit punch cards, monthly unlimited memberships, and family ice passes at Frostiva.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="header-wrapper">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Frostiva Home">
+        <svg class="frostiva-logo-svg" dir="ltr" viewBox="0 0 240 56" fill="none" style="height: 42px; width: auto;">
+          <g transform="translate(6, 4)">
+            <polygon points="24,4 40,14 40,34 24,44 8,34 8,14" stroke="#4FA9D8" stroke-width="2.5" fill="rgba(79, 169, 216, 0.1)"/>
+            <line x1="24" y1="8" x2="24" y2="40" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="16" x2="38" y2="32" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="32" x2="38" y2="16" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+            <path d="M4 38 Q24 48 44 38 L42 41 Q24 51 6 41 Z" fill="#DDF4FF" stroke="#4FA9D8" stroke-width="0.8"/>
+            <circle cx="24" cy="24" r="3.5" fill="#FF6B5A" />
+          </g>
+          <text x="62" y="32" font-family="'Outfit', sans-serif" font-size="24" font-weight="800" letter-spacing="1.5" class="brand-text-title" fill="currentColor" text-anchor="start" direction="ltr">
+            FROST<tspan fill="#4FA9D8">IVA</tspan>
+          </text>
+          <text x="63" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" letter-spacing="2" fill="#64748B" text-anchor="start" direction="ltr">
+            SKATE • GLIDE • CELEBRATE
+          </text>
+        </svg>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <div class="nav-dropdown">
+          <a href="index.html" class="nav-link">
+            Home <i class="fas fa-chevron-down"></i>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="nav-dropdown-item">
+              <span>Home 1</span>
+              <span class="badge badge-ice">Classic</span>
+            </a>
+            <a href="home2.html" class="nav-dropdown-item">
+              <span>Home 2</span>
+              <span class="badge badge-coral">Arena</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="sessions.html" class="nav-link">Public Sessions</a>
+        <a href="lessons.html" class="nav-link">Lessons &amp; Leagues</a>
+        <a href="pricing.html" class="nav-link active">Pricing &amp; Passes</a>
+        <a href="parties.html" class="nav-link">Birthday Parties</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+        <button class="icon-btn rtl-toggle-btn" aria-label="Toggle RTL" style="width: auto; padding: 0 12px; font-weight: 700; font-size: 0.8rem;">
+          <span>RTL</span>
+        </button>
+        <a href="login.html" class="btn btn-primary btn-sm"><i class="fas fa-user"></i> Login</a>
+        <button class="hamburger-btn" aria-label="Open Navigation Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu-overlay">
+    <div class="mobile-menu">
+      <div class="mobile-menu-header">
+        <a href="index.html" class="nav-brand" aria-label="Frostiva Home">
+          <svg class="frostiva-logo-svg" dir="ltr" viewBox="0 0 240 56" fill="none" style="height: 38px; width: auto;">
+            <g transform="translate(6, 4)">
+              <polygon points="24,4 40,14 40,34 24,44 8,34 8,14" stroke="#4FA9D8" stroke-width="2.5" fill="rgba(79, 169, 216, 0.1)"/>
+              <line x1="24" y1="8" x2="24" y2="40" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="16" x2="38" y2="32" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="32" x2="38" y2="16" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <path d="M4 38 Q24 48 44 38 L42 41 Q24 51 6 41 Z" fill="#DDF4FF" stroke="#4FA9D8" stroke-width="0.8"/>
+              <circle cx="24" cy="24" r="3.5" fill="#FF6B5A" />
+            </g>
+            <text x="62" y="32" font-family="'Outfit', sans-serif" font-size="24" font-weight="800" letter-spacing="1.5" class="brand-text-title" fill="currentColor" text-anchor="start" direction="ltr">
+              FROST<tspan fill="#4FA9D8">IVA</tspan>
+            </text>
+            <text x="63" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" letter-spacing="2" fill="#64748B" text-anchor="start" direction="ltr">
+              SKATE • GLIDE • CELEBRATE
+            </text>
+          </svg>
+        </a>
+        <button class="icon-btn mobile-close-btn" aria-label="Close Navigation Menu"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="mobile-nav-links">
+        <div class="mobile-dropdown">
+          <div class="mobile-dropdown-header">
+            <span>Home Variations</span>
+            <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i>
+          </div>
+          <div class="mobile-dropdown-menu">
+            <a href="index.html" class="nav-link">Home 1 — Classic</a>
+            <a href="home2.html" class="nav-link">Home 2 — Arena</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="sessions.html" class="nav-link">Public Sessions</a>
+        <a href="lessons.html" class="nav-link">Lessons &amp; Leagues</a>
+        <a href="pricing.html" class="nav-link active">Pricing &amp; Passes</a>
+        <a href="parties.html" class="nav-link">Birthday Parties</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </div>
+      <div class="mobile-actions">
+        <div class="mobile-toggles">
+          <button class="icon-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+          <button class="btn btn-outline btn-sm rtl-toggle-btn" style="flex: 1;"><span>RTL</span></button>
+        </div>
+        <a href="login.html" class="btn btn-primary" style="width: 100%;"><i class="fas fa-user"></i> Login / Register</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==================== SECTION 1 — INNER HERO ==================== -->
+    <section class="inner-hero" style="background-image: url('assets/images/hero-pricing.jpg');">
+      <div class="inner-hero-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size: 0.65rem;"></i> <span>Pricing &amp; Passes</span>
+        </div>
+        <h1 class="inner-hero-title">Skating Passes &amp; Memberships</h1>
+        <p class="inner-hero-desc">
+          Transparent pricing with flexible options for single visits, punch cards, and unlimited monthly memberships.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 2 — PRICING CARDS ==================== -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fas fa-tags"></i> Value Plans</span>
+          <h2 class="section-title">Choose Your Skating Pass</h2>
+          <p class="section-desc">Save more when you skate regularly with our monthly memberships and 10-visit punch passes.</p>
+        </div>
+
+        <div class="pricing-grid-5">
+          <!-- Card 1: Single Session -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="pricing-plan-name">Single Skate Pass</h3>
+              <div class="pricing-cost">$16</div>
+              <div class="pricing-period">per skater / single entry</div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check-circle"></i> Valid for any 1 public session</li>
+              <li><i class="fas fa-check-circle"></i> Up to 3.5 hours ice time</li>
+              <li><i class="fas fa-check-circle"></i> Free helmet for under 12</li>
+              <li><i class="fas fa-times-circle" style="color: var(--text-light);"></i> Skate rental ($5 extra)</li>
+              <li><i class="fas fa-times-circle" style="color: var(--text-light);"></i> Pro shop discounts</li>
+            </ul>
+            <a href="dashboard.html" class="btn btn-outline" style="width: 100%;">Buy Single Pass</a>
+          </div>
+
+          <!-- Card 2: 10-Visit Pass -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="pricing-plan-name">10-Visit Punch Card</h3>
+              <div class="pricing-cost">$135</div>
+              <div class="pricing-period">valid for 12 months (Save $25)</div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check-circle"></i> 10 public session admissions</li>
+              <li><i class="fas fa-check-circle"></i> Shareable with friends &amp; family</li>
+              <li><i class="fas fa-check-circle"></i> Priority express check-in</li>
+              <li><i class="fas fa-check-circle"></i> 1 free blade sharpening</li>
+              <li><i class="fas fa-times-circle" style="color: var(--text-light);"></i> Skate rental ($5 extra)</li>
+            </ul>
+            <a href="dashboard.html" class="btn btn-outline" style="width: 100%;">Buy 10-Pack</a>
+          </div>
+
+          <!-- Card 3: Monthly Unlimited (FEATURED) -->
+          <div class="pricing-card featured">
+            <div class="pricing-header">
+              <h3 class="pricing-plan-name">Arctic Unlimited</h3>
+              <div class="pricing-cost">$89</div>
+              <div class="pricing-period">per month / cancel anytime</div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check-circle"></i> <strong>Unlimited</strong> public sessions</li>
+              <li><i class="fas fa-check-circle"></i> <strong>FREE</strong> skate rental included</li>
+              <li><i class="fas fa-check-circle"></i> 15% discount on pro-shop gear</li>
+              <li><i class="fas fa-check-circle"></i> Free guest pass each month</li>
+              <li><i class="fas fa-check-circle"></i> Member lounge &amp; locker access</li>
+            </ul>
+            <a href="dashboard.html" class="btn btn-coral" style="width: 100%;">Get Unlimited Membership</a>
+          </div>
+
+          <!-- Card 4: VIP Duo Pass (NEW) -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="pricing-plan-name">VIP Duo Pass</h3>
+              <div class="pricing-cost">$149</div>
+              <div class="pricing-period">per month for 2 designated skaters</div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check-circle"></i> <strong>Unlimited</strong> sessions for 2 skaters</li>
+              <li><i class="fas fa-check-circle"></i> Free skate rentals &amp; lockers</li>
+              <li><i class="fas fa-check-circle"></i> 2 free café beverage passes / mo</li>
+              <li><i class="fas fa-check-circle"></i> 15% off pro shop gear</li>
+              <li><i class="fas fa-check-circle"></i> VIP sound deck session access</li>
+            </ul>
+            <a href="dashboard.html" class="btn btn-primary" style="width: 100%;">Get Duo Pass</a>
+          </div>
+
+          <!-- Card 5: Family Season Pass -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="pricing-plan-name">Family Season Pass</h3>
+              <div class="pricing-cost">$199</div>
+              <div class="pricing-period">per month for up to 4 members</div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check-circle"></i> Unlimited family admission (4 pax)</li>
+              <li><i class="fas fa-check-circle"></i> Free skate rentals for whole family</li>
+              <li><i class="fas fa-check-circle"></i> Free balance aids for toddlers</li>
+              <li><i class="fas fa-check-circle"></i> 20% off birthday party bookings</li>
+              <li><i class="fas fa-check-circle"></i> 2 free guest passes / month</li>
+            </ul>
+            <a href="dashboard.html" class="btn btn-outline" style="width: 100%;">Buy Family Pass</a>
+          </div>
+
+          <!-- Card 6: Lesson 6-Pack -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="pricing-plan-name">Academy Lesson 6-Pack</h3>
+              <div class="pricing-cost">$140</div>
+              <div class="pricing-period">6-week semester package</div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check-circle"></i> 6 x 45-min group coaching classes</li>
+              <li><i class="fas fa-check-circle"></i> Free practice time after class</li>
+              <li><i class="fas fa-check-circle"></i> Official USFS progress booklet</li>
+              <li><i class="fas fa-check-circle"></i> Free skate rental during lesson</li>
+              <li><i class="fas fa-check-circle"></i> Graduation badge &amp; certificate</li>
+            </ul>
+            <a href="dashboard.html" class="btn btn-outline" style="width: 100%;">Enroll in Academy</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== NEW SECTION: INTERACTIVE PASS SAVINGS CALCULATOR ==================== -->
+    <section class="section-pad pricing-calc-section" style="background: var(--surface-alt);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fas fa-calculator"></i> Smart Savings Engine</span>
+          <h2 class="section-title">Pass Cost &amp; Savings Calculator</h2>
+          <p class="section-desc">Estimate your monthly skating habits to find the exact plan that saves you the most money.</p>
+        </div>
+
+        <div class="pricing-calc-wrapper">
+          <!-- Calculator Controls -->
+          <div class="calc-card-controls">
+            <div class="calc-control-group">
+              <div class="calc-label-row">
+                <label for="visitsSlider"><i class="fas fa-skating"></i> Monthly Skating Visits:</label>
+                <span class="calc-val-pill" id="visitsDisplay">6 visits / mo</span>
+              </div>
+              <input type="range" id="visitsSlider" min="1" max="16" value="6" class="calc-slider">
+              <div class="slider-marks">
+                <span>1 visit</span>
+                <span>4 visits</span>
+                <span>8 visits</span>
+                <span>12 visits</span>
+                <span>16+ visits</span>
+              </div>
+            </div>
+
+            <div class="calc-options-grid">
+              <label class="calc-checkbox-card">
+                <input type="checkbox" id="calcSkateRental" checked>
+                <div class="checkbox-custom"></div>
+                <div class="checkbox-text">
+                  <strong>Need Skate Rental</strong>
+                  <small>+$5 per single visit</small>
+                </div>
+              </label>
+
+              <label class="calc-checkbox-card">
+                <input type="checkbox" id="calcSharpening">
+                <div class="checkbox-custom"></div>
+                <div class="checkbox-text">
+                  <strong>Blade Sharpening</strong>
+                  <small>1x pro tune-up / mo (+$12)</small>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Live Calculator Results HUD -->
+          <div class="calc-results-hud">
+            <div class="hud-savings-badge"><i class="fas fa-piggy-bank"></i> Optimal Recommendation</div>
+            <div class="calc-hud-header">
+              <span class="hud-sub">Pay-As-You-Go Cost</span>
+              <div class="paygo-price-strike" id="paygoCost">$126 / mo</div>
+            </div>
+
+            <div class="rec-plan-box">
+              <span class="rec-tag" id="recPlanTag">Best Value Choice</span>
+              <h3 class="rec-plan-name" id="recPlanName">Arctic Unlimited Pass</h3>
+              <div class="rec-plan-price" id="recPlanPrice">$89 <small>/ month</small></div>
+              <p class="rec-plan-desc" id="recPlanDesc">Includes unlimited admissions and 100% free skate rentals every visit.</p>
+            </div>
+
+            <div class="calc-savings-banner">
+              <div class="savings-amount">
+                <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--frost-blue); display: block;">You Save</span>
+                <strong id="monthlySavingsVal">$37 / month</strong>
+              </div>
+              <div class="annual-savings" id="annualSavingsVal">That's $444 saved per year!</div>
+            </div>
+
+            <a href="dashboard.html" class="btn btn-coral" style="width: 100%;"><i class="fas fa-bolt"></i> Lock In This Pass</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 3 — WHAT'S INCLUDED MATRIX ==================== -->
+    <section class="section-pad" style="background: var(--surface-alt);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fas fa-th-list"></i> Feature Comparison</span>
+          <h2 class="section-title">What's Included in Each Tier</h2>
+          <p class="section-desc">Compare pass features side-by-side to choose the best option for your skating schedule.</p>
+        </div>
+
+        <div class="comparison-table-wrap">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature / Benefit</th>
+                <th>Single Pass</th>
+                <th>10-Visit Pass</th>
+                <th>Arctic Unlimited</th>
+                <th>Family Pass</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Public Session Access</strong></td>
+                <td>1 Session</td>
+                <td>10 Sessions</td>
+                <td>Unlimited</td>
+                <td>Unlimited (4 Pax)</td>
+              </tr>
+              <tr>
+                <td><strong>Skate Rental Included</strong></td>
+                <td>+$5.00</td>
+                <td>+$5.00</td>
+                <td><i class="fas fa-check" style="color: var(--primary-ice);"></i> Included</td>
+                <td><i class="fas fa-check" style="color: var(--primary-ice);"></i> Included</td>
+              </tr>
+              <tr>
+                <td><strong>Toddler Balance Aids</strong></td>
+                <td>+$3.00</td>
+                <td>+$3.00</td>
+                <td><i class="fas fa-check" style="color: var(--primary-ice);"></i> Free</td>
+                <td><i class="fas fa-check" style="color: var(--primary-ice);"></i> Free</td>
+              </tr>
+              <tr>
+                <td><strong>Pro-Shop Gear Discount</strong></td>
+                <td>—</td>
+                <td>—</td>
+                <td>15% Off</td>
+                <td>20% Off</td>
+              </tr>
+              <tr>
+                <td><strong>Monthly Free Guest Pass</strong></td>
+                <td>—</td>
+                <td>—</td>
+                <td>1 Guest Pass</td>
+                <td>2 Guest Passes</td>
+              </tr>
+              <tr>
+                <td><strong>Priority Fast-Track Entry</strong></td>
+                <td>—</td>
+                <td><i class="fas fa-check" style="color: var(--primary-ice);"></i> Yes</td>
+                <td><i class="fas fa-check" style="color: var(--primary-ice);"></i> Yes</td>
+                <td><i class="fas fa-check" style="color: var(--primary-ice);"></i> Yes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 4 — GEAR RENTAL & ADD-ON RATES ==================== -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fas fa-cube"></i> Pro Services</span>
+          <h2 class="section-title">Rental &amp; Equipment Rates</h2>
+          <p class="section-desc">On-site equipment, storage, and skate maintenance services.</p>
+        </div>
+
+        <div class="gear-features-grid">
+          <div class="gear-card">
+            <div class="gear-card-img">
+              <img src="assets/images/gear-skates.jpg" alt="Skate Rental Rates" loading="lazy">
+            </div>
+            <div class="gear-card-body">
+              <h3 class="gear-card-title">Skate Rental (Fig/Hockey)</h3>
+              <p class="gear-card-desc">Comfortable, sanitized performance skates available in full and half sizes.</p>
+              <div class="program-price" style="font-size: 1.5rem; margin-top: 10px;">$5.00 / session</div>
+            </div>
+          </div>
+
+          <div class="gear-card">
+            <div class="gear-card-img">
+              <img src="assets/images/gear-sharpening.jpg" alt="Blade Sharpening Service" loading="lazy">
+            </div>
+            <div class="gear-card-body">
+              <h3 class="gear-card-title">Precision Blade Sharpening</h3>
+              <p class="gear-card-desc">Laser-calibrated radius sharpening with quick 10-minute turnaround time.</p>
+              <div class="program-price" style="font-size: 1.5rem; margin-top: 10px;">$12.00 / pair</div>
+            </div>
+          </div>
+
+          <div class="gear-card">
+            <div class="gear-card-img">
+              <img src="assets/images/rink-rentals.jpg" alt="Private Day Locker" loading="lazy">
+            </div>
+            <div class="gear-card-body">
+              <h3 class="gear-card-title">Day &amp; Monthly Lockers</h3>
+              <p class="gear-card-desc">Secure electronic lockers to store bags, coats, and personal skate bags.</p>
+              <div class="program-price" style="font-size: 1.5rem; margin-top: 10px;">$3.00 / day &bull; $25 / mo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 5 — MEMBER GUARANTEE CTA ==================== -->
+    <section class="section-pad-sm">
+      <div class="container">
+        <div class="cta-banner-winter">
+          <div class="cta-banner-content">
+            <span class="section-eyebrow" style="background: rgba(79, 169, 216, 0.25); color: #DDF4FF; border: 1px solid rgba(79, 169, 216, 0.4);">
+              <i class="fas fa-shield-alt"></i> 100% Satisfaction Guarantee
+            </span>
+            <h2 class="cta-title">Upgrade Your Ice Experience</h2>
+            <p class="cta-desc">Join hundreds of regular skaters who enjoy frictionless check-in and unlimited ice time every week.</p>
+            <div class="cta-btns">
+              <a href="dashboard.html" class="btn btn-primary btn-lg"><i class="fas fa-bolt"></i> Join Arctic Unlimited</a>
+              <a href="sessions.html" class="btn btn-outline-white btn-lg"><i class="fas fa-calendar"></i> Check Schedule</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <svg class="frostiva-logo-svg" dir="ltr" viewBox="0 0 240 56" fill="none" style="height: 40px; width: auto;">
+            <g transform="translate(6, 4)">
+              <polygon points="24,4 40,14 40,34 24,44 8,34 8,14" stroke="#4FA9D8" stroke-width="2.5" fill="rgba(79, 169, 216, 0.1)"/>
+              <line x1="24" y1="8" x2="24" y2="40" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="16" x2="38" y2="32" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="32" x2="38" y2="16" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <path d="M4 38 Q24 48 44 38 L42 41 Q24 51 6 41 Z" fill="#DDF4FF" stroke="#4FA9D8" stroke-width="0.8"/>
+              <circle cx="24" cy="24" r="3.5" fill="#FF6B5A" />
+            </g>
+            <text x="62" y="32" font-family="'Outfit', sans-serif" font-size="24" font-weight="800" letter-spacing="1.5" class="brand-text-title" fill="currentColor" text-anchor="start" direction="ltr">
+              FROST<tspan fill="#4FA9D8">IVA</tspan>
+            </text>
+            <text x="63" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" letter-spacing="2" fill="#64748B" text-anchor="start" direction="ltr">
+              SKATE • GLIDE • CELEBRATE
+            </text>
+          </svg>
+          <p>Premier Olympic-standard ice skating facility dedicated to athletic excellence, community recreation, and festive celebrations.</p>
+          <div class="footer-social-row">
+            <a href="#" class="icon-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="icon-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="sessions.html">Public Sessions</a></li>
+            <li><a href="lessons.html">Lessons &amp; Leagues</a></li>
+            <li><a href="pricing.html">Pricing &amp; Passes</a></li>
+            <li><a href="parties.html">Birthday Parties</a></li>
+            <li><a href="dashboard.html">Member Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Programs</h4>
+          <ul class="footer-links">
+            <li><a href="lessons.html">Learn to Skate</a></li>
+            <li><a href="lessons.html">Figure Skating Academy</a></li>
+            <li><a href="lessons.html">Adult Hockey League</a></li>
+            <li><a href="lessons.html">Youth Clinics</a></li>
+            <li><a href="parties.html">Private Rink Rental</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Arena Location &amp; Hours</h4>
+          <ul class="footer-contact-info">
+            <li><i class="fas fa-map-marker-alt"></i> 1420 Glacier Avenue, Arctic Ridge</li>
+            <li><i class="fas fa-phone-alt"></i> (555) 376-7848</li>
+            <li><i class="fas fa-clock"></i> Mon–Sun: 6:00 AM – 11:00 PM</li>
+            <li><i class="fas fa-envelope"></i> hello@frostivaice.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 FROSTIVA Ice Skating Rink. All rights reserved.</p>
+        <p>Skate. Glide. Celebrate.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Scroll back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

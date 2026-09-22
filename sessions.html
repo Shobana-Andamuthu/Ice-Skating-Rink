@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Public Skating Sessions — Frostiva</title>
+  <meta name="description" content="View daily public ice skating session schedules, skate rental details, and reserve your ice time at Frostiva.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="header-wrapper">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Frostiva Home">
+        <svg class="frostiva-logo-svg" dir="ltr" viewBox="0 0 240 56" fill="none" style="height: 42px; width: auto;">
+          <g transform="translate(6, 4)">
+            <polygon points="24,4 40,14 40,34 24,44 8,34 8,14" stroke="#4FA9D8" stroke-width="2.5" fill="rgba(79, 169, 216, 0.1)"/>
+            <line x1="24" y1="8" x2="24" y2="40" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="16" x2="38" y2="32" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="32" x2="38" y2="16" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+            <path d="M4 38 Q24 48 44 38 L42 41 Q24 51 6 41 Z" fill="#DDF4FF" stroke="#4FA9D8" stroke-width="0.8"/>
+            <circle cx="24" cy="24" r="3.5" fill="#FF6B5A" />
+          </g>
+          <text x="62" y="32" font-family="'Outfit', sans-serif" font-size="24" font-weight="800" letter-spacing="1.5" class="brand-text-title" fill="currentColor" text-anchor="start" direction="ltr">
+            FROST<tspan fill="#4FA9D8">IVA</tspan>
+          </text>
+          <text x="63" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" letter-spacing="2" fill="#64748B" text-anchor="start" direction="ltr">
+            SKATE • GLIDE • CELEBRATE
+          </text>
+        </svg>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <div class="nav-dropdown">
+          <a href="index.html" class="nav-link">
+            Home <i class="fas fa-chevron-down"></i>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="nav-dropdown-item">
+              <span>Home 1</span>
+              <span class="badge badge-ice">Classic</span>
+            </a>
+            <a href="home2.html" class="nav-dropdown-item">
+              <span>Home 2</span>
+              <span class="badge badge-coral">Arena</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="sessions.html" class="nav-link active">Public Sessions</a>
+        <a href="lessons.html" class="nav-link">Lessons &amp; Leagues</a>
+        <a href="pricing.html" class="nav-link">Pricing &amp; Passes</a>
+        <a href="parties.html" class="nav-link">Birthday Parties</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+        <button class="icon-btn rtl-toggle-btn" aria-label="Toggle RTL" style="width: auto; padding: 0 12px; font-weight: 700; font-size: 0.8rem;">
+          <span>RTL</span>
+        </button>
+        <a href="login.html" class="btn btn-primary btn-sm"><i class="fas fa-user"></i> Login</a>
+        <button class="hamburger-btn" aria-label="Open Navigation Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu-overlay">
+    <div class="mobile-menu">
+      <div class="mobile-menu-header">
+        <a href="index.html" class="nav-brand" aria-label="Frostiva Home">
+          <svg class="frostiva-logo-svg" dir="ltr" viewBox="0 0 240 56" fill="none" style="height: 38px; width: auto;">
+            <g transform="translate(6, 4)">
+              <polygon points="24,4 40,14 40,34 24,44 8,34 8,14" stroke="#4FA9D8" stroke-width="2.5" fill="rgba(79, 169, 216, 0.1)"/>
+              <line x1="24" y1="8" x2="24" y2="40" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="16" x2="38" y2="32" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="32" x2="38" y2="16" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <path d="M4 38 Q24 48 44 38 L42 41 Q24 51 6 41 Z" fill="#DDF4FF" stroke="#4FA9D8" stroke-width="0.8"/>
+              <circle cx="24" cy="24" r="3.5" fill="#FF6B5A" />
+            </g>
+            <text x="62" y="32" font-family="'Outfit', sans-serif" font-size="24" font-weight="800" letter-spacing="1.5" class="brand-text-title" fill="currentColor" text-anchor="start" direction="ltr">
+              FROST<tspan fill="#4FA9D8">IVA</tspan>
+            </text>
+            <text x="63" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" letter-spacing="2" fill="#64748B" text-anchor="start" direction="ltr">
+              SKATE • GLIDE • CELEBRATE
+            </text>
+          </svg>
+        </a>
+        <button class="icon-btn mobile-close-btn" aria-label="Close Navigation Menu"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="mobile-nav-links">
+        <div class="mobile-dropdown">
+          <div class="mobile-dropdown-header">
+            <span>Home Variations</span>
+            <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i>
+          </div>
+          <div class="mobile-dropdown-menu">
+            <a href="index.html" class="nav-link">Home 1 — Classic</a>
+            <a href="home2.html" class="nav-link">Home 2 — Arena</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="sessions.html" class="nav-link active">Public Sessions</a>
+        <a href="lessons.html" class="nav-link">Lessons &amp; Leagues</a>
+        <a href="pricing.html" class="nav-link">Pricing &amp; Passes</a>
+        <a href="parties.html" class="nav-link">Birthday Parties</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </div>
+      <div class="mobile-actions">
+        <div class="mobile-toggles">
+          <button class="icon-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+          <button class="btn btn-outline btn-sm rtl-toggle-btn" style="flex: 1;"><span>RTL</span></button>
+        </div>
+        <a href="login.html" class="btn btn-primary" style="width: 100%;"><i class="fas fa-user"></i> Login / Register</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==================== SECTION 1 — INNER HERO ==================== -->
+    <section class="inner-hero" style="background-image: url('assets/images/hero-sessions.jpg');">
+      <div class="inner-hero-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size: 0.65rem;"></i> <span>Public Sessions</span>
+        </div>
+        <h1 class="inner-hero-title">Public Skating Sessions</h1>
+        <p class="inner-hero-desc">
+          Enjoy daily open ice access, pristine Olympic arena ice, and exhilarating cosmic glow night sessions.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 2 — SESSION SCHEDULE ==================== -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fas fa-calendar-check"></i> Daily Ice Slots</span>
+          <h2 class="section-title">This Week's Schedule</h2>
+          <p class="section-desc">Filter by session timing and reserve your guaranteed ice slot online.</p>
+        </div>
+
+        <div class="schedule-filter-bar">
+          <button class="filter-pill active" data-day="all">All Sessions</button>
+          <button class="filter-pill" data-day="weekday">Weekdays (Mon–Thu)</button>
+          <button class="filter-pill" data-day="friday">Friday Glow</button>
+          <button class="filter-pill" data-day="weekend">Weekend (Sat–Sun)</button>
+        </div>
+
+        <div class="schedule-timeline-grid">
+          <!-- Weekday Slot 1 -->
+          <div class="slot-card" data-day="weekday">
+            <div class="slot-time-badge">
+              <span class="badge badge-ice">Morning Glide</span>
+              <span class="badge badge-coral">Available</span>
+            </div>
+            <div class="slot-time">10:00 AM – 12:30 PM</div>
+            <p class="session-text">Gentle morning session, low arena crowd, perfect for beginners and practice laps.</p>
+            <div class="session-meta">
+              <span><i class="fas fa-user-friends"></i> 35 / 150 Cap</span>
+              <span><i class="fas fa-tag"></i> $14 / skater</span>
+            </div>
+            <a href="dashboard.html" class="btn btn-primary btn-sm">Reserve Slot</a>
+          </div>
+
+          <!-- Weekday Slot 2 -->
+          <div class="slot-card" data-day="weekday">
+            <div class="slot-time-badge">
+              <span class="badge badge-ice">Afternoon Open</span>
+              <span class="badge badge-coral">Available</span>
+            </div>
+            <div class="slot-time">1:30 PM – 4:30 PM</div>
+            <p class="session-text">Energetic afternoon recreational session with open ice freestyle lanes.</p>
+            <div class="session-meta">
+              <span><i class="fas fa-user-friends"></i> 60 / 150 Cap</span>
+              <span><i class="fas fa-tag"></i> $16 / skater</span>
+            </div>
+            <a href="dashboard.html" class="btn btn-primary btn-sm">Reserve Slot</a>
+          </div>
+
+          <!-- Weekday Slot 3 -->
+          <div class="slot-card" data-day="weekday">
+            <div class="slot-time-badge">
+              <span class="badge badge-ice">Sunset Skate</span>
+              <span class="badge badge-coral">Available</span>
+            </div>
+            <div class="slot-time">5:30 PM – 8:00 PM</div>
+            <p class="session-text">Relaxed post-work evening laps with café lounge specials, mellow acoustic hits, and warm cider.</p>
+            <div class="session-meta">
+              <span><i class="fas fa-user-friends"></i> 48 / 150 Cap</span>
+              <span><i class="fas fa-tag"></i> $16 / skater</span>
+            </div>
+            <a href="dashboard.html" class="btn btn-primary btn-sm">Reserve Slot</a>
+          </div>
+
+          <!-- Friday Slot 1 -->
+          <div class="slot-card" data-day="friday">
+            <div class="slot-time-badge">
+              <span class="badge badge-ice">Lunch Express</span>
+              <span class="badge badge-coral">Available</span>
+            </div>
+            <div class="slot-time">12:00 PM – 2:00 PM</div>
+            <p class="session-text">Quick midday energy boost on freshly resurfaced ice with complimentary hot beverage.</p>
+            <div class="session-meta">
+              <span><i class="fas fa-user-friends"></i> 40 / 150 Cap</span>
+              <span><i class="fas fa-tag"></i> $12 / skater</span>
+            </div>
+            <a href="dashboard.html" class="btn btn-primary btn-sm">Reserve Slot</a>
+          </div>
+
+          <!-- Friday Slot 2 -->
+          <div class="slot-card" data-day="friday">
+            <div class="slot-time-badge">
+              <span class="badge badge-coral">Twilight Vibes</span>
+              <span class="badge badge-coral">Fast Selling</span>
+            </div>
+            <div class="slot-time">4:30 PM – 6:45 PM</div>
+            <p class="session-text">Pre-party ambient neon glow session with top-40 pop hits and family-friendly ice games.</p>
+            <div class="session-meta">
+              <span><i class="fas fa-user-friends"></i> 90 / 150 Cap</span>
+              <span><i class="fas fa-tag"></i> $18 / skater</span>
+            </div>
+            <a href="dashboard.html" class="btn btn-primary btn-sm">Reserve Slot</a>
+          </div>
+
+          <!-- Friday Slot 3 -->
+          <div class="slot-card" data-day="friday">
+            <div class="slot-time-badge">
+              <span class="badge badge-coral">Cosmic Night</span>
+              <span class="badge badge-coral">Popular</span>
+            </div>
+            <div class="slot-time">7:00 PM – 10:30 PM</div>
+            <p class="session-text">UV blacklights, moving laser beams, live DJ sound system, and glow sticks provided.</p>
+            <div class="session-meta">
+              <span><i class="fas fa-user-friends"></i> 135 / 150 Cap</span>
+              <span><i class="fas fa-tag"></i> $20 / skater</span>
+            </div>
+            <a href="dashboard.html" class="btn btn-primary btn-sm">Reserve Slot</a>
+          </div>
+
+          <!-- Weekend Slot 1 -->
+          <div class="slot-card" data-day="weekend">
+            <div class="slot-time-badge">
+              <span class="badge badge-ice">Weekend Family</span>
+              <span class="badge badge-coral">Fast Selling</span>
+            </div>
+            <div class="slot-time">11:00 AM – 2:00 PM</div>
+            <p class="session-text">Family friendly atmosphere with dedicated kids zone, mascot visits, and free penguin skate aids.</p>
+            <div class="session-meta">
+              <span><i class="fas fa-user-friends"></i> 85 / 150 Cap</span>
+              <span><i class="fas fa-tag"></i> $18 / skater</span>
+            </div>
+            <a href="dashboard.html" class="btn btn-primary btn-sm">Reserve Slot</a>
+          </div>
+
+          <!-- Weekend Slot 2 -->
+          <div class="slot-card" data-day="weekend">
+            <div class="slot-time-badge">
+              <span class="badge badge-ice">Weekend Twilight</span>
+              <span class="badge badge-coral">Available</span>
+            </div>
+            <div class="slot-time">3:00 PM – 6:30 PM</div>
+            <p class="session-text">Afternoon community skate with café treats, live music requests, and rink-side photo moments.</p>
+            <div class="session-meta">
+              <span><i class="fas fa-user-friends"></i> 70 / 150 Cap</span>
+              <span><i class="fas fa-tag"></i> $18 / skater</span>
+            </div>
+            <a href="dashboard.html" class="btn btn-primary btn-sm">Reserve Slot</a>
+          </div>
+
+          <!-- Weekend Slot 3 -->
+          <div class="slot-card" data-day="weekend">
+            <div class="slot-time-badge">
+              <span class="badge badge-coral">Party Ice Bash</span>
+              <span class="badge badge-coral">Popular</span>
+            </div>
+            <div class="slot-time">7:30 PM – 11:00 PM</div>
+            <p class="session-text">High-energy weekend bash under dynamic arena lighting, bass-boosted sound, and open freestyle ice.</p>
+            <div class="session-meta">
+              <span><i class="fas fa-user-friends"></i> 120 / 150 Cap</span>
+              <span><i class="fas fa-tag"></i> $20 / skater</span>
+            </div>
+            <a href="dashboard.html" class="btn btn-primary btn-sm">Reserve Slot</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 3 — SESSION TYPES ==================== -->
+    <section class="section-pad" style="background: var(--surface-alt);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fas fa-shapes"></i> Choose Your Vibe</span>
+          <h2 class="section-title">Session Formats &amp; Types</h2>
+          <p class="section-desc">Every session format is tailored for specific speeds, ages, and musical vibes.</p>
+        </div>
+
+        <div class="sessions-grid-4">
+          <article class="session-card">
+            <div class="session-img-wrap">
+              <img src="assets/images/session-open.jpg" alt="Recreational Free Skate" loading="lazy">
+              <span class="badge badge-ice session-badge-float">Recreational</span>
+            </div>
+            <div class="session-body">
+              <h3 class="session-title">Open Recreational</h3>
+              <p class="session-text">Ideal for casual leisure skaters who want to enjoy smooth gliding with friends.</p>
+              <div class="session-meta">
+                <div class="session-meta-row">
+                  <span><i class="fas fa-stopwatch"></i> Duration</span>
+                  <strong>3.0 Hours</strong>
+                </div>
+                <div class="session-meta-row">
+                  <span><i class="fas fa-music"></i> Music</span>
+                  <strong>Top 40 Hits</strong>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="session-card">
+            <div class="session-img-wrap">
+              <img src="assets/images/session-family.jpg" alt="Family &amp; Beginner Session" loading="lazy">
+              <span class="badge badge-coral session-badge-float">Family &amp; Tot</span>
+            </div>
+            <div class="session-body">
+              <h3 class="session-title">Family &amp; Tot Skate</h3>
+              <p class="session-text">Protected slow-lane zone and free use of seal balance aids for young children.</p>
+              <div class="session-meta">
+                <div class="session-meta-row">
+                  <span><i class="fas fa-stopwatch"></i> Duration</span>
+                  <strong>2.5 Hours</strong>
+                </div>
+                <div class="session-meta-row">
+                  <span><i class="fas fa-heart"></i> Atmosphere</span>
+                  <strong>Safe Pace</strong>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="session-card">
+            <div class="session-img-wrap">
+              <img src="assets/images/session-evening.jpg" alt="Cosmic Glow Skate" loading="lazy">
+              <span class="badge badge-ice session-badge-float">Laser &amp; Lights</span>
+            </div>
+            <div class="session-body">
+              <h3 class="session-title">Cosmic Glow Session</h3>
+              <p class="session-text">Transformative party vibes with laser light shows, UV glow gear, and upbeat tunes.</p>
+              <div class="session-meta">
+                <div class="session-meta-row">
+                  <span><i class="fas fa-stopwatch"></i> Duration</span>
+                  <strong>3.5 Hours</strong>
+                </div>
+                <div class="session-meta-row price-row">
+                  <span><i class="fas fa-bolt"></i> Ambience</span>
+                  <strong>Club Vibe</strong>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="session-card">
+            <div class="session-img-wrap">
+              <img src="assets/images/rink-atmosphere.jpg" alt="Freestyle Practice" loading="lazy">
+              <span class="badge badge-coral session-badge-float">Skill Practice</span>
+            </div>
+            <div class="session-body">
+              <h3 class="session-title">Freestyle &amp; Edge Work</h3>
+              <p class="session-text">Dedicated time for figure skaters and hockey players to practice spins and jumps.</p>
+              <div class="session-meta">
+                <div class="session-meta-row">
+                  <span><i class="fas fa-stopwatch"></i> Duration</span>
+                  <strong>2.0 Hours</strong>
+                </div>
+                <div class="session-meta-row">
+                  <span><i class="fas fa-medal"></i> Level</span>
+                  <strong>Advanced</strong>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 4 — SKATE RENTAL & GEAR LOCKER ==================== -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fas fa-tshirt"></i> Pro Shop &amp; Rental</span>
+          <h2 class="section-title">Skate Rental &amp; Gear Services</h2>
+          <p class="section-desc">Equip yourself with premium, sanitarily prepped skates and safety gear.</p>
+        </div>
+
+        <div class="gear-features-grid">
+          <div class="gear-card">
+            <div class="gear-card-img">
+              <img src="assets/images/gear-skates.jpg" alt="Rental Skates" loading="lazy">
+            </div>
+            <div class="gear-card-body">
+              <h3 class="gear-card-title">Figure &amp; Hockey Skates</h3>
+              <p class="gear-card-desc">Over 1,200 pairs of sanitized skates from toddler size 7 to adult size 15. Standard rental only $5 per session.</p>
+              <span class="badge badge-ice">$5 / session</span>
+            </div>
+          </div>
+
+          <div class="gear-card">
+            <div class="gear-card-img">
+              <img src="assets/images/gear-helmets.jpg" alt="Helmets and Protective Gear" loading="lazy">
+            </div>
+            <div class="gear-card-body">
+              <h3 class="gear-card-title">Helmets &amp; Protective Gear</h3>
+              <p class="gear-card-desc">Complimentary certified safety helmets available for all skaters under 12, plus knee/wrist guard rentals.</p>
+              <span class="badge badge-coral">Free for Kids</span>
+            </div>
+          </div>
+
+          <div class="gear-card">
+            <div class="gear-card-img">
+              <img src="assets/images/gear-sharpening.jpg" alt="Blade Sharpening Pro Shop" loading="lazy">
+            </div>
+            <div class="gear-card-body">
+              <h3 class="gear-card-title">Precision Blade Sharpening</h3>
+              <p class="gear-card-desc">Professional automated radius sharpening for figure and hockey blades while you wait.</p>
+              <span class="badge badge-ice">$12 / pair</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 5 — SEAMLESS ARRIVAL & SKATER EXPERIENCE GUIDE ==================== -->
+    <section class="section-pad arrival-guide-section" style="background: var(--surface-alt);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fas fa-route"></i> Skater Journey</span>
+          <h2 class="section-title">Seamless Arrival &amp; Ice Experience</h2>
+          <p class="section-desc">From digital check-in to your first glide on Olympic ice — here is how your visit flows.</p>
+        </div>
+
+        <div class="arrival-guide-wrapper">
+          <!-- Left: Step By Step Checkpoints -->
+          <div class="arrival-steps-column">
+            <!-- Step 1 -->
+            <div class="arrival-step-card active">
+              <div class="step-num-bubble">01</div>
+              <div class="step-card-text">
+                <h4>Digital QR Turnstile Check-In</h4>
+                <p>Scan your digital mobile pass directly at the automated gates. Zero paper tickets, zero queueing.</p>
+                <div class="step-mini-tags">
+                  <span><i class="fas fa-bolt"></i> Instant Entry</span>
+                  <span><i class="fas fa-clock"></i> ~15 Seconds</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="arrival-step-card">
+              <div class="step-num-bubble">02</div>
+              <div class="step-card-text">
+                <h4>Precision Boot Fitting Station</h4>
+                <p>Our fit technicians match your foot shape with freshly sanitized and sharpened Italian boots.</p>
+                <div class="step-mini-tags">
+                  <span><i class="fas fa-check-circle"></i> Sized 7T to 15A</span>
+                  <span><i class="fas fa-shield-alt"></i> UV Sanitized</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="arrival-step-card">
+              <div class="step-num-bubble">03</div>
+              <div class="step-card-text">
+                <h4>RFID Keyless Locker &amp; Warming Zone</h4>
+                <p>Secure shoes and valuables with tap-to-lock smart lockers, then grab warm cider in the heated lounge.</p>
+                <div class="step-mini-tags">
+                  <span><i class="fas fa-lock"></i> RFID Wristband</span>
+                  <span><i class="fas fa-coffee"></i> 21°C Café Lounge</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="arrival-step-card">
+              <div class="step-num-bubble">04</div>
+              <div class="step-card-text">
+                <h4>Glide Onto Freshly Cut Olympic Ice</h4>
+                <p>Step through rubberized entry ramps onto laser-leveled, pristine ice resurfaced every 90 minutes.</p>
+                <div class="step-mini-tags">
+                  <span><i class="fas fa-snowflake"></i> Glass-Smooth Surface</span>
+                  <span><i class="fas fa-life-ring"></i> Safety Marshals</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Rinkside Showcase Card -->
+          <div class="arrival-showcase-card">
+            <div class="arrival-showcase-img-wrap">
+              <img src="assets/images/rink-atmosphere.jpg" alt="Frostiva Arena Experience" loading="lazy">
+              <div class="arrival-showcase-overlay">
+                <div class="overlay-badge-top">
+                  <span class="live-dot-pulse"></span> ARENA READY &bull; RINK A LIVE
+                </div>
+                <div class="overlay-info-bottom">
+                  <h3>Olympic Rink Dimension (60m × 30m)</h3>
+                  <p>Equipped with sub-surface glycol chillers and 360° surround acoustic soundscape.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="arrival-checklist-box">
+              <h4 class="checklist-title"><i class="fas fa-clipboard-check"></i> Pro Tips for First-Time Visitors</h4>
+              <ul class="checklist-items">
+                <li><i class="fas fa-check"></i> <strong>Socks:</strong> Bring mid-calf or knee-high athletic socks for maximum ankle support.</li>
+                <li><i class="fas fa-check"></i> <strong>Layers:</strong> Wear breathable, flexible layers with light gloves and a warm jacket.</li>
+                <li><i class="fas fa-check"></i> <strong>Kids Safety:</strong> Certified helmets and seal balance aids are 100% complimentary for under-12s.</li>
+                <li><i class="fas fa-check"></i> <strong>Session Pacing:</strong> Fast outer lanes for fitness laps, safe interior slow zone for beginners.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom 3 Pillars -->
+        <div class="arrival-pillars-grid">
+          <div class="arrival-pillar">
+            <div class="pillar-icon"><i class="fas fa-stopwatch"></i></div>
+            <div class="pillar-text">
+              <h5>&lt; 3 Minutes</h5>
+              <p>Average turnstile-to-ice entry time with online reservation.</p>
+            </div>
+          </div>
+          <div class="arrival-pillar">
+            <div class="pillar-icon" style="color: var(--accent-coral); background: rgba(255, 107, 90, 0.15);"><i class="fas fa-shoe-prints"></i></div>
+            <div class="pillar-text">
+              <h5>1,200+ Boots</h5>
+              <p>Sanitized figure and hockey boots ready in all adult and toddler sizes.</p>
+            </div>
+          </div>
+          <div class="arrival-pillar">
+            <div class="pillar-icon"><i class="fas fa-award"></i></div>
+            <div class="pillar-text">
+              <h5>100% Certified</h5>
+              <p>CPR-trained rink safety marshals on the ice for every public session.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 6 — BOOKING CTA ==================== -->
+    <section class="section-pad-sm">
+      <div class="container">
+        <div class="cta-banner-winter">
+          <div class="cta-banner-content">
+            <span class="section-eyebrow" style="background: rgba(79, 169, 216, 0.25); color: #DDF4FF; border: 1px solid rgba(79, 169, 216, 0.4);">
+              <i class="fas fa-ticket-alt"></i> Fast Pass
+            </span>
+            <h2 class="cta-title">Ready for the Ice?</h2>
+            <p class="cta-desc">Book your public skating session in advance to secure admission and skip the rental line.</p>
+            <div class="cta-btns">
+              <a href="dashboard.html" class="btn btn-primary btn-lg"><i class="fas fa-calendar-check"></i> Book Now Online</a>
+              <a href="pricing.html" class="btn btn-coral btn-lg"><i class="fas fa-credit-card"></i> View Pass Options</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <svg class="frostiva-logo-svg" dir="ltr" viewBox="0 0 240 56" fill="none" style="height: 40px; width: auto;">
+            <g transform="translate(6, 4)">
+              <polygon points="24,4 40,14 40,34 24,44 8,34 8,14" stroke="#4FA9D8" stroke-width="2.5" fill="rgba(79, 169, 216, 0.1)"/>
+              <line x1="24" y1="8" x2="24" y2="40" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="16" x2="38" y2="32" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="32" x2="38" y2="16" stroke="#4FA9D8" stroke-width="2" stroke-linecap="round"/>
+              <path d="M4 38 Q24 48 44 38 L42 41 Q24 51 6 41 Z" fill="#DDF4FF" stroke="#4FA9D8" stroke-width="0.8"/>
+              <circle cx="24" cy="24" r="3.5" fill="#FF6B5A" />
+            </g>
+            <text x="62" y="32" font-family="'Outfit', sans-serif" font-size="24" font-weight="800" letter-spacing="1.5" class="brand-text-title" fill="currentColor" text-anchor="start" direction="ltr">
+              FROST<tspan fill="#4FA9D8">IVA</tspan>
+            </text>
+            <text x="63" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" letter-spacing="2" fill="#64748B" text-anchor="start" direction="ltr">
+              SKATE • GLIDE • CELEBRATE
+            </text>
+          </svg>
+          <p>Premier Olympic-standard ice skating facility dedicated to athletic excellence, community recreation, and festive celebrations.</p>
+          <div class="footer-social-row">
+            <a href="#" class="icon-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="icon-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="sessions.html">Public Sessions</a></li>
+            <li><a href="lessons.html">Lessons &amp; Leagues</a></li>
+            <li><a href="pricing.html">Pricing &amp; Passes</a></li>
+            <li><a href="parties.html">Birthday Parties</a></li>
+            <li><a href="dashboard.html">Member Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Programs</h4>
+          <ul class="footer-links">
+            <li><a href="lessons.html">Learn to Skate</a></li>
+            <li><a href="lessons.html">Figure Skating Academy</a></li>
+            <li><a href="lessons.html">Adult Hockey League</a></li>
+            <li><a href="lessons.html">Youth Clinics</a></li>
+            <li><a href="parties.html">Private Rink Rental</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Arena Location &amp; Hours</h4>
+          <ul class="footer-contact-info">
+            <li><i class="fas fa-map-marker-alt"></i> 1420 Glacier Avenue, Arctic Ridge</li>
+            <li><i class="fas fa-phone-alt"></i> (555) 376-7848</li>
+            <li><i class="fas fa-clock"></i> Mon–Sun: 6:00 AM – 11:00 PM</li>
+            <li><i class="fas fa-envelope"></i> hello@frostivaice.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 FROSTIVA Ice Skating Rink. All rights reserved.</p>
+        <p>Skate. Glide. Celebrate.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Scroll back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

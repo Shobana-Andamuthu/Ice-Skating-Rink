@@ -1,0 +1,537 @@
+/* ==========================================================================
+   FROSTIVA — RESPONSIVE STYLESHEET
+   Supports 320px, 375px, 480px, 768px, 1024px, 1200px, 1440px+
+   ========================================================================== */
+
+/* --- LARGE SCREENS & DESKTOP (1200px+) --- */
+@media (min-width: 1200px) {
+  .nav-menu {
+    display: flex;
+  }
+  .hamburger-btn {
+    display: none;
+  }
+}
+
+/* --- LAPTOPS & TABLETS LANDSCAPE (992px - 1199px) --- */
+@media (max-width: 1199px) {
+  .sessions-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .programs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bento-col-8 {
+    grid-column: span 12;
+    grid-row: span 2;
+  }
+  .bento-col-4 {
+    grid-column: span 6;
+  }
+  .dash-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- TABLETS PORTRAIT (768px - 991px) --- */
+@media (max-width: 991px) {
+  .nav-menu {
+    display: none; /* Switch to hamburger menu */
+  }
+  .nav-actions .btn,
+  .nav-actions .theme-toggle-btn,
+  .nav-actions .rtl-toggle-btn {
+    display: none; /* Hide Login, Dark mode toggle, and RTL from top navbar on mobile — all available inside mobile drawer */
+  }
+  .hamburger-btn {
+    display: flex;
+  }
+  .schedule-timeline-grid,
+  .gear-features-grid,
+  .coaches-grid,
+  .pricing-grid-5,
+  .party-packages-grid,
+  .hud-sensors-grid,
+  .roadmap-flow,
+  .pathway-tier-tabs,
+  .eco-tech-grid,
+  .dash-stats-grid-ref {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .roadmap-flow::before {
+    display: none;
+  }
+  .vip-skybox-grid,
+  .arrival-guide-wrapper,
+  .arrival-pillars-grid,
+  .pathway-matrix-grid,
+  .pricing-calc-wrapper,
+  .about-heritage-grid,
+  .campus-zones-grid {
+    grid-template-columns: 1fr;
+  }
+  .pricing-card.featured {
+    transform: none;
+  }
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .auth-split-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .auth-visual-side {
+    min-height: 280px;
+    padding: 30px;
+  }
+  .dashboard-body {
+    padding-top: 108px !important;
+  }
+  .dashboard-body .dash-custom-header .nav-container {
+    height: 56px;
+    padding: 0 14px !important;
+  }
+  .dash-subnav-strip {
+    padding: 6px 12px;
+  }
+  .dash-subnav-strip .dash-nav-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    font-size: 0.82rem;
+    font-weight: 700;
+  }
+  .dash-custom-header .dash-top-actions {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+  }
+  .dash-custom-header .dash-top-actions .theme-toggle-btn,
+  .dash-custom-header .dash-top-actions .rtl-toggle-btn {
+    display: inline-flex !important;
+  }
+  .dash-back-btn {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border-radius: 50%;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+  .desktop-only-txt {
+    display: none;
+  }
+  .dash-grid-two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- MOBILE PHONES (Up to 767px) --- */
+@media (max-width: 767px) {
+  .section-pad {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .nav-actions .rtl-toggle-btn {
+    display: none; /* Keep top navbar clean: Logo + Theme + Hamburger. RTL is in drawer */
+  }
+
+  .nav-actions {
+    gap: 8px;
+  }
+
+  .nav-brand svg {
+    height: 38px;
+  }
+  
+  .sessions-grid-4,
+  .programs-grid,
+  .soundscape-console-wrapper,
+  .schedule-timeline-grid,
+  .gear-features-grid,
+  .coaches-grid,
+  .pricing-grid-5,
+  .party-packages-grid,
+  .dash-stats-grid,
+  .hud-sensors-grid,
+  .roadmap-flow,
+  .pathway-tier-tabs,
+  .calc-options-grid,
+  .eco-tech-grid,
+  .dash-stats-grid-ref,
+  .campus-zones-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .roadmap-flow::before {
+    display: none;
+  }
+
+  .dash-header-ref {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .ref-header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .dash-user-banner-ref {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .ref-user-meta {
+    justify-content: center;
+  }
+
+  .ref-bar-chart {
+    gap: 6px;
+  }
+
+  .ref-col-bar {
+    width: 24px;
+  }
+
+  .hud-telemetry-panel {
+    padding: 24px 16px;
+  }
+
+  .hud-top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .vip-skybox-gallery {
+    min-height: 240px;
+  }
+
+  .vip-img-main {
+    width: 100%;
+    height: 220px;
+  }
+
+  .vip-img-floating {
+    display: none;
+  }
+
+  .coach-card,
+  .program-card,
+  .slot-card,
+  .pricing-card,
+  .party-card,
+  .roadmap-step-card {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .coach-img-wrap {
+    height: 240px;
+  }
+
+  .coach-body {
+    padding: 20px 16px;
+  }
+
+  .coach-desc {
+    font-size: 0.86rem;
+    margin-bottom: 14px;
+  }
+
+  .coach-badge-list {
+    gap: 6px;
+  }
+
+  .sound-deck-master {
+    padding: 20px 14px;
+    border-radius: var(--radius-lg);
+  }
+
+  .deck-top-bar {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .deck-visualizer-box {
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 14px;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+
+  .vinyl-disc-glow {
+    width: 52px;
+    height: 52px;
+  }
+
+  .vinyl-grooves {
+    width: 36px;
+    height: 36px;
+  }
+
+  .vinyl-center-pin {
+    width: 18px;
+    height: 18px;
+    font-size: 0.65rem;
+  }
+
+  .spectrum-bars-deck {
+    height: 34px;
+    gap: 2px;
+    width: 100%;
+  }
+
+  .deck-title {
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+  }
+
+  .deck-description {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+  }
+
+  .deck-schedule-banner {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  .deck-playback-row {
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .time-stamp-current,
+  .time-stamp-total {
+    font-size: 0.72rem;
+    min-width: 32px;
+  }
+
+  .deck-controls-row {
+    gap: 8px;
+    justify-content: space-between;
+  }
+
+  .deck-ctrl-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+
+  .deck-play-master-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 1.05rem;
+    flex-shrink: 0;
+  }
+
+  .deck-volume-wrapper {
+    gap: 6px;
+    font-size: 0.8rem;
+    margin-left: auto;
+  }
+
+  [dir="rtl"] .deck-volume-wrapper {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .deck-volume-slider {
+    width: 50px;
+    max-width: 55px;
+  }
+
+  .sound-channels-deck {
+    padding: 16px 12px;
+    border-radius: var(--radius-lg);
+  }
+
+  .sound-channel-item {
+    padding: 10px 10px;
+    gap: 8px;
+    border-radius: var(--radius-sm);
+  }
+
+  .channel-icon-glow {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+  }
+
+  .channel-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+
+  .channel-name {
+    font-size: 0.88rem;
+    font-weight: 700;
+  }
+
+  .channel-bpm-pill {
+    font-size: 0.65rem;
+    padding: 1px 5px;
+  }
+
+  .channel-meta-sub {
+    font-size: 0.72rem;
+  }
+
+  .channel-time-tag {
+    font-size: 0.72rem;
+    margin-top: 2px;
+  }
+
+  .channel-equalizer-mini {
+    margin-left: 4px;
+    flex-shrink: 0;
+  }
+
+  .back-to-top {
+    bottom: 16px;
+    right: 16px;
+    width: 38px;
+    height: 38px;
+    font-size: 0.95rem;
+  }
+  
+  .rink-bento-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+  .bento-col-8,
+  .bento-col-4,
+  .bento-col-6 {
+    grid-column: span 1;
+    height: 240px;
+  }
+  
+  .hero-btn-group,
+  .cta-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-btn-group .btn,
+  .cta-btns .btn {
+    width: 100%;
+  }
+  
+  .hero-stats-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .cta-banner-winter {
+    padding: 36px 18px;
+  }
+  
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  
+  .auth-box {
+    padding: 24px 18px;
+  }
+  
+  .dash-main-content {
+    padding: 16px 12px;
+  }
+  
+  .dash-panel {
+    padding: 20px 16px;
+    margin-bottom: 20px;
+  }
+
+  .dash-panel-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .dash-panel-header .badge,
+  .dash-panel-header .btn {
+    align-self: flex-start;
+  }
+
+  .session-meta-triplet {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    text-align: left;
+  }
+
+  .session-meta-triplet .meta-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+  }
+
+  .rewards-catalog-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .dash-menu {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 4px;
+  }
+}
+
+/* --- SMALL MOBILE (320px - 380px) --- */
+@media (max-width: 380px) {
+  body {
+    padding-top: 70px;
+  }
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .home-hero-title {
+    font-size: 2rem;
+  }
+  .section-title {
+    font-size: 1.65rem;
+  }
+  .nav-container {
+    height: 70px;
+  }
+  .nav-brand svg {
+    height: 34px;
+  }
+  .icon-btn {
+    width: 34px;
+    height: 34px;
+  }
+  .dashboard-body {
+    padding-top: 104px !important;
+  }
+  .inner-hero {
+    min-height: 300px;
+  }
+}
