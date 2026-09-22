@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initArrivalSteps();
   initSkillPathwayTabs();
   initPricingCalculator();
+  initContactPage();
+  initFaqAccordion();
 });
 
 /* --- PAGE PRELOADER --- */
@@ -645,6 +647,98 @@ function initPricingCalculator() {
 
   calculateSavings();
 }
+
+/* --- CONTACT PAGE INQUIRY & FORM INTERACTIVITY --- */
+function initContactPage() {
+  const contactForm = document.getElementById('contactInquiryForm');
+  const inquiryPills = document.querySelectorAll('.inquiry-pill');
+  const inquiryTypeInput = document.getElementById('inquiryTypeInput');
+  const toast = document.getElementById('contactToast');
+
+  // Pill Selection
+  if (inquiryPills.length > 0) {
+    inquiryPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        inquiryPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        const selectedType = pill.getAttribute('data-type');
+        if (inquiryTypeInput) inquiryTypeInput.value = selectedType;
+      });
+    });
+  }
+
+  // Form Submit Handler
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn ? submitBtn.innerHTML : 'Send Message';
+      
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending Request...';
+      }
+
+      setTimeout(() => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Received!';
+          submitBtn.classList.remove('btn-primary');
+          submitBtn.classList.add('btn-coral');
+        }
+
+        // Show Toast Notification
+        if (toast) {
+          toast.classList.add('show');
+          setTimeout(() => {
+            toast.classList.remove('show');
+          }, 4500);
+        }
+
+        // Reset form
+        contactForm.reset();
+
+        // Restore button state
+        setTimeout(() => {
+          if (submitBtn) {
+            submitBtn.innerHTML = originalText;
+            submitBtn.classList.remove('btn-coral');
+            submitBtn.classList.add('btn-primary');
+          }
+        }, 3000);
+      }, 1000);
+    });
+  }
+}
+
+/* --- FAQ ACCORDION INTERACTIVITY --- */
+function initFaqAccordion() {
+  const faqItems = document.querySelectorAll('.faq-accordion-item');
+  if (!faqItems.length) return;
+
+  faqItems.forEach(item => {
+    const header = item.querySelector('.faq-accordion-header');
+    if (header) {
+      header.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Optional: Close other FAQ items
+        faqItems.forEach(other => {
+          if (other !== item) other.classList.remove('active');
+        });
+
+        // Toggle clicked item
+        if (isActive) {
+          item.classList.remove('active');
+        } else {
+          item.classList.add('active');
+        }
+      });
+    }
+  });
+}
+
 
 
 
