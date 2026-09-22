@@ -1299,9 +1299,16 @@ body.mobile-menu-open {
   padding: 24px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 14px;
   box-shadow: var(--card-shadow);
   transition: var(--transition);
+  height: 100%;
+}
+
+.slot-card .btn {
+  margin-top: auto;
+  width: 100%;
 }
 
 .slot-card:hover {
@@ -2011,11 +2018,35 @@ body.mobile-menu-open {
   border-radius: var(--radius-lg);
   padding: 20px 28px;
   display: grid;
-  grid-template-columns: 74px 2.2fr 1.3fr 1.1fr 160px;
+  grid-template-columns: 68px 1.8fr 220px 120px 150px;
   align-items: center;
   gap: 20px;
   box-shadow: var(--card-shadow);
   transition: var(--transition);
+}
+
+.h2-prog-badge-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.h2-prog-badge {
+  width: 210px;
+  min-width: 210px;
+  max-width: 210px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  border-radius: var(--radius-full);
+  box-sizing: border-box;
 }
 
 .h2-program-item:hover {
@@ -2157,15 +2188,22 @@ body.mobile-menu-open {
     width: 100%;
     text-align: center;
   }
+  .h2-session-row .h2-session-action,
   .h2-program-item .h2-session-action {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 4px;
   }
+  .h2-session-row .h2-reserve-btn,
   .h2-program-item .h2-reserve-btn {
     width: 100%;
     max-width: 240px;
+    margin: 0 auto;
     justify-content: center;
+    text-align: center;
   }
   .hud-audio-bar {
     padding: 16px 14px;
@@ -2470,10 +2508,56 @@ body.mobile-menu-open {
   transition: var(--transition);
 }
 
+select.form-control {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%234FA9D8' stroke-width='2.5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px 16px;
+  padding-right: 38px;
+}
+
+input[type="date"].form-control,
+input[type="time"].form-control {
+  padding-right: 12px;
+}
+
 .form-control:focus {
   border-color: var(--primary-ice);
   background: var(--surface);
   box-shadow: 0 0 0 3px rgba(79, 169, 216, 0.2);
+}
+
+/* Calendar & Time Picker Indicator Contrast in Dark Mode / Dark Cards */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  padding: 4px;
+  margin: 0;
+  opacity: 0.95;
+  transition: var(--transition);
+}
+
+[data-theme="dark"] input[type="date"],
+[data-theme="dark"] input[type="time"],
+.cta-banner-winter input[type="date"],
+.party-inquiry-form-card input[type="date"],
+.auth-box input[type="date"],
+.dashboard-layout input[type="date"] {
+  color-scheme: dark !important;
+}
+
+[data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator,
+[data-theme="dark"] input[type="time"]::-webkit-calendar-picker-indicator,
+.cta-banner-winter input[type="date"]::-webkit-calendar-picker-indicator,
+.party-inquiry-form-card input[type="date"]::-webkit-calendar-picker-indicator,
+.auth-box input[type="date"]::-webkit-calendar-picker-indicator,
+.dashboard-layout input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) brightness(3) contrast(1.5) !important;
+  opacity: 1 !important;
+  cursor: pointer;
 }
 
 .password-toggle-btn {
@@ -3988,9 +4072,16 @@ body.mobile-menu-open {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
   margin-bottom: 20px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--surface-border);
+}
+
+.dash-panel-header .badge {
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .dash-panel-title {
@@ -4057,7 +4148,7 @@ body.mobile-menu-open {
 /* Rewards Card with Images */
 .rewards-catalog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
 
@@ -4065,11 +4156,18 @@ body.mobile-menu-open {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: var(--radius-md);
-  padding: 14px;
+  padding: 16px;
   text-align: center;
   transition: var(--transition);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.reward-card .btn {
+  margin-top: auto;
+  width: 100%;
 }
 
 .reward-card:hover {
@@ -4080,7 +4178,7 @@ body.mobile-menu-open {
 
 .reward-img-wrap {
   width: 100%;
-  height: 120px;
+  height: 130px;
   border-radius: var(--radius-sm);
   overflow: hidden;
   margin-bottom: 12px;
@@ -4109,6 +4207,38 @@ body.mobile-menu-open {
   font-weight: 800;
   display: block;
   margin-bottom: 14px;
+}
+
+/* Gear & Locker Dashboard Grid */
+.dash-gear-locker-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+.dash-gear-box {
+  background: var(--surface-alt);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  transition: var(--transition);
+}
+
+.dash-gear-box:hover {
+  border-color: var(--primary-ice);
+  transform: translateY(-2px);
+}
+
+.dash-gear-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
 }
 
 .guest-pass-form {
@@ -4950,6 +5080,7 @@ body.mobile-menu-open {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
+  align-items: stretch;
 }
 
 .eco-tech-card {
@@ -4961,6 +5092,7 @@ body.mobile-menu-open {
   transition: var(--transition);
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .eco-tech-card:hover {
@@ -4979,18 +5111,15 @@ body.mobile-menu-open {
   align-items: center;
   justify-content: center;
   font-size: 1.4rem;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   flex-shrink: 0;
 }
 
 .eco-tech-card h3 {
   font-size: 1.15rem;
   font-weight: 700;
-  line-height: 1.35;
-  min-height: 52px;
-  margin-bottom: 12px;
-  display: flex;
-  align-items: flex-start;
+  line-height: 1.3;
+  margin-bottom: 8px;
 }
 
 .eco-tech-card p {

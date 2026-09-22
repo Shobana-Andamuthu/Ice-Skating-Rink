@@ -43,6 +43,14 @@
   .dash-stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .dash-stats-grid-ref {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .dash-grid-two-col {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
 }
 
 /* --- TABLETS PORTRAIT (768px - 991px) --- */
@@ -58,6 +66,11 @@
   .eco-tech-grid,
   .dash-stats-grid-ref {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .dash-gear-locker-grid,
+  .rewards-catalog-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
   }
   .roadmap-flow::before {
     display: none;
@@ -214,9 +227,23 @@
   .calc-options-grid,
   .eco-tech-grid,
   .dash-stats-grid-ref,
-  .campus-zones-grid {
+  .campus-zones-grid,
+  .dash-gear-locker-grid,
+  .dash-payment-methods-grid,
+  .rewards-catalog-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  .eco-tech-card {
+    padding: 22px 18px !important;
+  }
+  .eco-tech-card .eco-tech-icon {
+    margin-bottom: 14px !important;
+  }
+  .eco-tech-card h3 {
+    min-height: auto !important;
+    margin-bottom: 8px !important;
   }
 
   .roadmap-flow::before {
@@ -592,6 +619,27 @@
     overflow-x: auto;
     flex-wrap: nowrap;
     padding-bottom: 4px;
+  }
+
+  .dash-stats-grid-ref {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .dash-milestone-banner {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
+  }
+
+  .dash-milestone-banner .btn {
+    width: 100% !important;
+    justify-content: center;
+  }
+
+  .dash-gear-header {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
   }
 }
 
