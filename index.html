@@ -14,6 +14,33 @@
 </head>
 <body>
 
+  <!-- ==================== PAGE PRELOADER ==================== -->
+  <div class="page-preloader" id="pagePreloader" aria-hidden="true">
+    <div class="preloader-content">
+      <div class="preloader-spinner-wrap">
+        <svg class="preloader-snowflake-svg" viewBox="0 0 50 50" fill="none">
+          <circle cx="25" cy="25" r="22" stroke="rgba(79, 169, 216, 0.2)" stroke-width="3"/>
+          <circle cx="25" cy="25" r="22" stroke="url(#iceLoaderGrad)" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="60" class="spinner-ring"/>
+          <defs>
+            <linearGradient id="iceLoaderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#4FA9D8"/>
+              <stop offset="100%" stop-color="#FF6B5A"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="preloader-icon-center">
+          <i class="fas fa-snowflake"></i>
+        </div>
+      </div>
+      <div class="preloader-brand">
+        FROST<span>IVA</span>
+      </div>
+      <div class="preloader-bar">
+        <div class="preloader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
   <!-- ==================== NAVBAR ==================== -->
   <header class="header-wrapper">
     <div class="container nav-container">

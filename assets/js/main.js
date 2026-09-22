@@ -4,6 +4,7 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initPagePreloader();
   initTheme();
   initDirection();
   initMobileMenu();
@@ -17,6 +18,45 @@ document.addEventListener('DOMContentLoaded', () => {
   initSkillPathwayTabs();
   initPricingCalculator();
 });
+
+/* --- PAGE PRELOADER --- */
+function initPagePreloader() {
+  const preloader = document.getElementById('pagePreloader');
+  if (!preloader) return;
+
+  const hidePreloader = () => {
+    preloader.classList.add('loaded');
+    setTimeout(() => {
+      if (preloader.parentNode) {
+        preloader.style.display = 'none';
+      }
+    }, 500);
+  };
+
+  if (document.readyState === 'complete') {
+    setTimeout(hidePreloader, 300);
+  } else {
+    window.addEventListener('load', () => setTimeout(hidePreloader, 300));
+    // Safety fallback
+    setTimeout(hidePreloader, 2000);
+  }
+}
+// Run preloader setup immediately as well
+if (typeof document !== 'undefined') {
+  if (document.readyState === 'complete') {
+    initPagePreloader();
+  } else {
+    window.addEventListener('load', () => {
+      const p = document.getElementById('pagePreloader');
+      if (p) {
+        setTimeout(() => {
+          p.classList.add('loaded');
+          setTimeout(() => { p.style.display = 'none'; }, 500);
+        }, 300);
+      }
+    });
+  }
+}
 
 /* --- THEME TOGGLE (LIGHT / DARK) --- */
 function initTheme() {
