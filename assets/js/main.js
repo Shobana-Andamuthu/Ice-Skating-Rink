@@ -85,6 +85,11 @@ function updateThemeIcons(theme) {
       icon.className = 'fas fa-moon';
     }
   });
+
+  const themeLabels = document.querySelectorAll('.theme-toggle-btn span');
+  themeLabels.forEach(label => {
+    label.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+  });
 }
 
 /* --- LTR / RTL TOGGLE --- */

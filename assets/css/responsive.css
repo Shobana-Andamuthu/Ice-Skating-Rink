@@ -51,6 +51,15 @@
     grid-template-columns: 1fr !important;
     gap: 20px;
   }
+  .dash-gear-locker-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+    gap: 16px;
+  }
+  .dash-main-content,
+  .dash-panel,
+  .dash-gear-box {
+    min-width: 0 !important;
+  }
 }
 
 /* --- TABLETS PORTRAIT (768px - 991px) --- */
@@ -69,7 +78,7 @@
   }
   .dash-gear-locker-grid,
   .rewards-catalog-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
     gap: 16px;
   }
   .roadmap-flow::before {

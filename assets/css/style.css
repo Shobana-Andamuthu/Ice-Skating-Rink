@@ -281,13 +281,17 @@ h1, h2, h3, h4, h5, h6 {
 .badge {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  flex-shrink: 0;
   gap: 6px;
   padding: 5px 12px;
   border-radius: var(--radius-full);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.8px;
+  line-height: 1.2;
 }
 
 .badge-ice {
@@ -300,6 +304,13 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(255, 107, 90, 0.12);
   color: var(--accent-coral);
   border: 1px solid rgba(255, 107, 90, 0.25);
+}
+
+.badge-green,
+.badge-success {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10B981;
+  border: 1px solid rgba(16, 185, 129, 0.28);
 }
 
 .badge-frost {
@@ -606,14 +617,14 @@ body.mobile-menu-open {
   position: fixed;
   top: 0;
   right: 0;
-  width: 320px;
-  max-width: 85vw;
+  width: 360px;
+  max-width: 88vw;
   height: 100vh;
   height: 100dvh;
   background: var(--card-bg);
   border-left: 1px solid var(--card-border);
   z-index: 1002;
-  padding: 24px;
+  padding: 28px 24px;
   display: flex;
   flex-direction: column;
   transform: translateX(100%);
@@ -622,6 +633,15 @@ body.mobile-menu-open {
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
   touch-action: pan-y;
+  box-shadow: -10px 0 35px rgba(16, 42, 67, 0.15);
+}
+
+@media (min-width: 576px) {
+  .mobile-menu {
+    width: 440px;
+    max-width: 82vw;
+    padding: 34px 28px;
+  }
 }
 
 .mobile-menu-overlay.active .mobile-menu {
@@ -632,7 +652,7 @@ body.mobile-menu-open {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   padding-bottom: 16px;
   border-bottom: 1px solid var(--surface-border);
 }
@@ -640,8 +660,8 @@ body.mobile-menu-open {
 .mobile-nav-links {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-bottom: 28px;
+  gap: 14px;
+  margin-bottom: 24px;
 }
 
 .mobile-nav-links .nav-link {
@@ -652,15 +672,57 @@ body.mobile-menu-open {
 .mobile-actions {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
   margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--surface-border);
 }
 
 .mobile-toggles {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
-  margin-bottom: 12px;
+  width: 100%;
+}
+
+.mobile-toggles .theme-toggle-btn,
+.mobile-toggles .rtl-toggle-btn {
+  width: 100% !important;
+  height: 42px !important;
+  border-radius: var(--radius-full) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  font-size: 0.86rem !important;
+  font-weight: 700 !important;
+  padding: 0 12px !important;
+  border: 1px solid var(--surface-border) !important;
+  background: var(--surface-alt) !important;
+  color: var(--text-main) !important;
+  cursor: pointer;
+  transition: var(--transition);
+  box-sizing: border-box;
+}
+
+.mobile-toggles .theme-toggle-btn:hover,
+.mobile-toggles .rtl-toggle-btn:hover {
+  border-color: var(--primary-ice) !important;
+  background: var(--frost-blue) !important;
+  color: var(--deep-navy) !important;
+}
+
+[data-theme="dark"] .mobile-toggles .theme-toggle-btn,
+[data-theme="dark"] .mobile-toggles .rtl-toggle-btn {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border-color: rgba(79, 169, 216, 0.25) !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .mobile-toggles .theme-toggle-btn:hover,
+[data-theme="dark"] .mobile-toggles .rtl-toggle-btn:hover {
+  background: rgba(79, 169, 216, 0.2) !important;
+  border-color: var(--primary-ice) !important;
 }
 
 /* ==========================================================================
@@ -2530,13 +2592,18 @@ input[type="time"].form-control {
   box-shadow: 0 0 0 3px rgba(79, 169, 216, 0.2);
 }
 
-/* Calendar & Time Picker Indicator Contrast in Dark Mode / Dark Cards */
+/* Calendar & Time Picker Indicator in Light & Dark Mode / Dark Cards */
 input[type="date"]::-webkit-calendar-picker-indicator,
 input[type="time"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   padding: 4px;
   margin: 0;
-  opacity: 0.95;
+  opacity: 1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234FA9D8' viewBox='0 0 24 24'%3E%3Cpath d='M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z'/%3E%3C/svg%3E") !important;
+  background-size: 18px 18px !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  filter: none !important;
   transition: var(--transition);
 }
 
@@ -2555,7 +2622,11 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .party-inquiry-form-card input[type="date"]::-webkit-calendar-picker-indicator,
 .auth-box input[type="date"]::-webkit-calendar-picker-indicator,
 .dashboard-layout input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: invert(1) brightness(3) contrast(1.5) !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234FA9D8' viewBox='0 0 24 24'%3E%3Cpath d='M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z'/%3E%3C/svg%3E") !important;
+  background-size: 18px 18px !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  filter: none !important;
   opacity: 1 !important;
   cursor: pointer;
 }
@@ -4238,7 +4309,25 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
+  gap: 10px;
+  margin-bottom: 14px;
+  min-height: 30px;
+}
+
+.dash-gear-header h4 {
+  font-size: 0.98rem;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.25;
+}
+
+.dash-gear-header .badge {
+  flex-shrink: 0;
+  white-space: nowrap;
+  align-self: center;
 }
 
 .guest-pass-form {
@@ -4920,7 +5009,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 .paygo-price-strike {
   font-size: 1.15rem;
-  text-decoration: line-through;
+  text-decoration: none;
   color: #FF8F80;
   font-weight: 700;
 }
