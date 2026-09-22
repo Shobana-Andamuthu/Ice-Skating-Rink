@@ -164,7 +164,7 @@
                 <li><i class="fas fa-check" style="color: var(--primary-ice);"></i> Unlimited juice &amp; soft drinks</li>
                 <li><i class="fas fa-check" style="color: var(--primary-ice);"></i> Free skate pass for the birthday star</li>
               </ul>
-              <a href="#partyInquiry" class="btn btn-outline">Book Silver Package</a>
+              <a href="#partyInquiry" class="btn btn-primary">Book Silver Package</a>
             </div>
           </article>
 
@@ -204,7 +204,7 @@
                 <li><i class="fas fa-check" style="color: var(--primary-ice);"></i> 2 dedicated coaches for private ice games</li>
                 <li><i class="fas fa-check" style="color: var(--primary-ice);"></i> Custom snowflake lighting banner &amp; gift bags</li>
               </ul>
-              <a href="#partyInquiry" class="btn btn-outline">Book VIP Package</a>
+              <a href="#partyInquiry" class="btn btn-primary">Book VIP Package</a>
             </div>
           </article>
         </div>
@@ -234,7 +234,7 @@
 
           <div class="gear-card">
             <div class="gear-card-img">
-              <img src="assets/images/rink-spectator.jpg" alt="Artisan Pizza &amp; Wings" loading="lazy">
+              <img src="assets/images/parties-food-pizza.jpg" alt="Artisan Pizza &amp; Wings" loading="lazy">
             </div>
             <div class="gear-card-body">
               <h3 class="gear-card-title">Stone-Baked Pizza Buffet</h3>
@@ -245,7 +245,7 @@
 
           <div class="gear-card">
             <div class="gear-card-img">
-              <img src="assets/images/rink-atmosphere.jpg" alt="Cosmic Party Lighting" loading="lazy">
+              <img src="assets/images/parties-cosmic-lighting.jpg" alt="Cosmic Party Lighting" loading="lazy">
             </div>
             <div class="gear-card-body">
               <h3 class="gear-card-title">Cosmic Glow Upgrade</h3>
@@ -305,28 +305,28 @@
     <!-- ==================== SECTION 5 — INSTANT PARTY INQUIRY CTA ==================== -->
     <section class="section-pad-sm" id="partyInquiry">
       <div class="container">
-        <div class="cta-banner-winter" style="text-align: left; padding: 50px 40px;">
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
-            <div>
-              <span class="section-eyebrow" style="background: rgba(79, 169, 216, 0.25); color: #DDF4FF; border: 1px solid rgba(79, 169, 216, 0.4);">
+        <div class="cta-banner-winter party-cta-banner">
+          <div class="party-inquiry-grid">
+            <div class="party-inquiry-info">
+              <span class="section-eyebrow" style="background: rgba(79, 169, 216, 0.25); color: #DDF4FF; border: 1px solid rgba(79, 169, 216, 0.4); align-self: flex-start;">
                 <i class="fas fa-calendar-check"></i> Reserve Date
               </span>
-              <h2 class="cta-title" style="font-size: 2.3rem;">Book Your Ice Party Date</h2>
-              <p class="cta-desc" style="margin-bottom: 20px;">
+              <h2 class="cta-title">Book Your Ice Party Date</h2>
+              <p class="cta-desc">
                 Weekend slots fill quickly! Send your preferred date and guest count, and our party coordinator will confirm within 2 hours.
               </p>
               <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.92rem; color: var(--frost-blue);">
-                <div><i class="fas fa-check-circle" style="color: var(--primary-ice); margin-right: 8px;"></i> $50 refundable deposit to hold your slot</div>
-                <div><i class="fas fa-check-circle" style="color: var(--primary-ice); margin-right: 8px;"></i> Free rescheduling up to 7 days prior</div>
+                <div style="display: flex; align-items: center; gap: 8px;"><i class="fas fa-check-circle" style="color: var(--primary-ice);"></i> <span>$50 refundable deposit to hold your slot</span></div>
+                <div style="display: flex; align-items: center; gap: 8px;"><i class="fas fa-check-circle" style="color: var(--primary-ice);"></i> <span>Free rescheduling up to 7 days prior</span></div>
               </div>
             </div>
 
-            <form class="auth-box" style="margin: 0; max-width: 100%;" onsubmit="event.preventDefault(); alert('Party Inquiry Received! A Frostiva coordinator will contact you shortly.');">
+            <form class="auth-box party-inquiry-form-card" onsubmit="event.preventDefault(); alert('Party Inquiry Received! A Frostiva coordinator will contact you shortly.');">
               <div class="form-group">
                 <label class="form-label">Parent / Organizer Name</label>
                 <input type="text" class="form-control" placeholder="e.g. Jessica Miller" required>
               </div>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+              <div class="form-grid-2">
                 <div class="form-group">
                   <label class="form-label">Email Address</label>
                   <input type="email" class="form-control" placeholder="jessica@example.com" required>
@@ -336,7 +336,7 @@
                   <input type="tel" class="form-control" placeholder="(555) 000-0000" required>
                 </div>
               </div>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+              <div class="form-grid-2">
                 <div class="form-group">
                   <label class="form-label">Preferred Date</label>
                   <input type="date" class="form-control" required>

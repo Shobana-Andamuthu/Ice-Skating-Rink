@@ -42,7 +42,7 @@
         <button class="icon-btn rtl-toggle-btn" aria-label="Toggle RTL">
           <span>RTL</span>
         </button>
-        <a href="index.html" class="dash-back-btn" title="Back to Site" aria-label="Back to Site"><i class="fas fa-arrow-left"></i> <span class="desktop-only-txt">Back</span></a>
+        <a href="login.html" class="dash-logout-btn" title="Log Out" aria-label="Log Out"><i class="fas fa-sign-out-alt"></i> <span class="desktop-only-txt">Log Out</span></a>
       </div>
     </div>
 
@@ -85,6 +85,63 @@
 
   <main>
     <div class="dashboard-layout">
+      <!-- DESKTOP SIDEBAR -->
+      <aside class="dash-sidebar" aria-label="Dashboard Navigation">
+        <div class="dash-sidebar-header">
+          <div class="dash-sidebar-user">
+            <div class="dash-user-initials-badge sm">AR</div>
+            <div class="dash-sidebar-user-meta">
+              <strong class="dash-sidebar-username">Alex Rivera</strong>
+              <span class="dash-sidebar-userplan"><i class="fas fa-crown"></i> VIP All-Access</span>
+            </div>
+          </div>
+        </div>
+
+        <nav class="dash-sidebar-nav" aria-label="Sidebar Menu">
+          <div class="dash-nav-section-title">MAIN MENU</div>
+          <button class="dash-nav-item active" data-view="view-overview" data-title="Skater Overview">
+            <i class="fas fa-chart-pie"></i> <span>Overview</span>
+          </button>
+          <button class="dash-nav-item" data-view="view-book-session" data-title="Book a Session">
+            <i class="fas fa-calendar-plus"></i> <span>Book a Session</span>
+          </button>
+          <button class="dash-nav-item" data-view="view-history" data-title="Check-In History">
+            <i class="fas fa-history"></i> <span>Check-In History</span>
+          </button>
+          <button class="dash-nav-item" data-view="view-my-passes" data-title="Membership &amp; Passes">
+            <i class="fas fa-id-card"></i> <span>Membership</span>
+          </button>
+
+          <div class="dash-nav-section-title">ACTIVITIES &amp; GEAR</div>
+          <button class="dash-nav-item" data-view="view-gear-locker" data-title="Blade Care &amp; Locker">
+            <i class="fas fa-tools"></i> <span>Blade &amp; Locker</span>
+          </button>
+          <button class="dash-nav-item" data-view="view-skills-badges" data-title="Skills &amp; Badges">
+            <i class="fas fa-medal"></i> <span>Skills &amp; Badges</span>
+          </button>
+          <button class="dash-nav-item" data-view="view-guest-rewards" data-title="Guest Passes &amp; Rewards">
+            <i class="fas fa-gift"></i> <span>Guest &amp; Rewards</span>
+          </button>
+          <button class="dash-nav-item" data-view="view-hockey" data-title="Hockey Leagues">
+            <i class="fas fa-hockey-puck"></i> <span>Hockey Leagues</span>
+          </button>
+
+          <div class="dash-nav-section-title">SETTINGS</div>
+          <button class="dash-nav-item" data-view="view-payments" data-title="Change Plan &amp; Billing">
+            <i class="fas fa-sync-alt"></i> <span>Change Plan</span>
+          </button>
+          <button class="dash-nav-item" data-view="view-profile" data-title="Profile Settings">
+            <i class="fas fa-user-cog"></i> <span>Profile Settings</span>
+          </button>
+        </nav>
+
+        <div class="dash-sidebar-footer">
+          <a href="login.html" class="dash-sidebar-logout">
+            <i class="fas fa-sign-out-alt"></i> <span>Sign Out</span>
+          </a>
+        </div>
+      </aside>
+
       <!-- MAIN CONTENT AREA -->
       <section class="dash-main-content">
         <!-- User Greeting Header (Matching Screenshot) -->
@@ -575,7 +632,7 @@
             <div class="rewards-catalog-grid">
               <div class="reward-card">
                 <div class="reward-img-wrap">
-                  <img src="assets/images/party-food.jpg" alt="Swiss Hot Cocoa &amp; Treat" class="reward-img">
+                  <img src="assets/images/dashboard-reward-cocoa.jpg" alt="Swiss Hot Cocoa &amp; Treat" class="reward-img">
                 </div>
                 <strong>Swiss Hot Cocoa &amp; Treat</strong>
                 <span class="reward-pts">250 Pts</span>
@@ -584,7 +641,7 @@
 
               <div class="reward-card">
                 <div class="reward-img-wrap">
-                  <img src="assets/images/gear-sharpening.jpg" alt="Precision Blade Sharpening" class="reward-img">
+                  <img src="assets/images/dashboard-reward-sharpening.jpg" alt="Precision Blade Sharpening" class="reward-img">
                 </div>
                 <strong>Precision Blade Sharpening</strong>
                 <span class="reward-pts">600 Pts</span>
@@ -593,7 +650,7 @@
 
               <div class="reward-card">
                 <div class="reward-img-wrap">
-                  <img src="assets/images/session-evening.jpg" alt="VIP Cosmic Glow Entry" class="reward-img">
+                  <img src="assets/images/dashboard-reward-vip.jpg" alt="VIP Cosmic Glow Entry" class="reward-img">
                 </div>
                 <strong>VIP Cosmic Glow Entry</strong>
                 <span class="reward-pts">850 Pts</span>
@@ -716,6 +773,11 @@
       </section>
     </div>
   </main>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
 
   <script src="assets/js/main.js"></script>
 </body>

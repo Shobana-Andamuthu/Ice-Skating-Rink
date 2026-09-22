@@ -257,8 +257,13 @@ function initDashboardTabs() {
       const targetView = item.getAttribute('data-view');
       const viewTitle = item.getAttribute('data-title');
 
-      navItems.forEach(i => i.classList.remove('active'));
-      item.classList.add('active');
+      navItems.forEach(i => {
+        if (i.getAttribute('data-view') === targetView) {
+          i.classList.add('active');
+        } else {
+          i.classList.remove('active');
+        }
+      });
 
       views.forEach(view => {
         if (view.id === targetView) {
