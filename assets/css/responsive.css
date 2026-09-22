@@ -51,14 +51,17 @@
     grid-template-columns: 1fr !important;
     gap: 20px;
   }
-  .dash-gear-locker-grid {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+  .dash-gear-locker-grid,
+  .dash-book-session-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
     gap: 16px;
   }
   .dash-main-content,
   .dash-panel,
-  .dash-gear-box {
+  .dash-gear-box,
+  .slot-card {
     min-width: 0 !important;
+    box-sizing: border-box !important;
   }
 }
 
