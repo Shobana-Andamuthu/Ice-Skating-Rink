@@ -19,10 +19,17 @@
   .nav-menu {
     display: none !important; /* Switch to hamburger menu on tablets / smaller laptops */
   }
-  .nav-actions .btn,
-  .nav-actions .theme-toggle-btn,
+  .nav-actions .header-login-btn,
   .nav-actions .rtl-toggle-btn {
     display: none; /* Accessible inside mobile drawer */
+  }
+  .nav-actions .theme-toggle-btn {
+    display: inline-flex !important;
+  }
+  .nav-actions .header-book-btn {
+    display: inline-flex;
+    padding: 7px 14px;
+    font-size: 0.82rem;
   }
   .hamburger-btn {
     display: flex !important;
@@ -211,8 +218,11 @@
     padding-bottom: 50px;
   }
 
-  .nav-actions .rtl-toggle-btn {
-    display: none; /* Keep top navbar clean: Logo + Theme + Hamburger. RTL is in drawer */
+  .nav-actions .rtl-toggle-btn,
+  .nav-actions .header-login-btn,
+  .nav-actions .header-book-btn,
+  .nav-actions .theme-toggle-btn {
+    display: none !important; /* Mobile navbar top: only Logo + Hamburger. Theme & RTL are in drawer */
   }
 
   .nav-actions {
@@ -852,6 +862,39 @@
     gap: 14px !important;
     margin-top: 18px !important;
     margin-bottom: 30px !important;
+  }
+
+  .auth-box {
+    padding: 26px 18px !important;
+    border-radius: var(--radius-lg) !important;
+  }
+
+  .auth-box-title {
+    font-size: 1.4rem !important;
+  }
+
+  .auth-box-subtitle {
+    font-size: 0.86rem !important;
+  }
+
+  .auth-social-buttons {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  .auth-social-btn {
+    padding: 10px 14px !important;
+    font-size: 0.86rem !important;
+    justify-content: center !important;
+  }
+
+  .h2-selector-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .h2-prog-badge {
+    padding: 6px 14px !important;
+    font-size: 0.74rem !important;
   }
 }
 

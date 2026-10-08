@@ -238,11 +238,16 @@ function initAuthForms() {
   const registerForm = document.getElementById('registerForm');
 
   if (loginTab && registerTab && loginForm && registerForm) {
+    const authTitle = document.getElementById('authTitle');
+    const authSubtitle = document.getElementById('authSubtitle');
+
     loginTab.addEventListener('click', () => {
       loginTab.classList.add('active');
       registerTab.classList.remove('active');
       loginForm.style.display = 'block';
       registerForm.style.display = 'none';
+      if (authTitle) authTitle.textContent = 'Welcome Back';
+      if (authSubtitle) authSubtitle.textContent = 'Sign in to access your sessions, passes, and account dashboard.';
     });
 
     registerTab.addEventListener('click', () => {
@@ -250,6 +255,8 @@ function initAuthForms() {
       loginTab.classList.remove('active');
       registerForm.style.display = 'block';
       loginForm.style.display = 'none';
+      if (authTitle) authTitle.textContent = 'Create Your Account';
+      if (authSubtitle) authSubtitle.textContent = 'Join Frostiva today to book sessions, rentals, and lessons.';
     });
   }
 
